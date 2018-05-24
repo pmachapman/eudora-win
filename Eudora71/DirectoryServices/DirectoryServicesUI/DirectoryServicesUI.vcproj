@@ -23,7 +23,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\QCUtils\public\inc;..\..\OT501\Include;.\inc;.\public\inc;..\System\CritSectionImpl\inc;..\System\CritSectionImpl\public\inc;..\Kernel\public\inc;..\..\Eudora;..\..\EuMemMgr\Include"
+				AdditionalIncludeDirectories="..\..\MAPIHeaders;..\..\QCUtils\public\inc;..\..\OT501\Include;.\inc;.\public\inc;..\System\CritSectionImpl\inc;..\System\CritSectionImpl\public\inc;..\Kernel\public\inc;..\..\Eudora;..\..\EuMemMgr\Include"
 				PreprocessorDefinitions="_DEBUG"
 				StringPooling="TRUE"
 				BasicRuntimeChecks="3"
@@ -73,7 +73,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="1"
 				InlineFunctionExpansion="1"
-				AdditionalIncludeDirectories="..\..\QCUtils\public\inc;..\..\OT501\Include;.\inc;.\public\inc;..\System\CritSectionImpl\inc;..\System\CritSectionImpl\public\inc;..\Kernel\public\inc;..\..\Eudora;..\..\EuMemMgr\Include"
+				AdditionalIncludeDirectories="..\..\MAPIHeaders;..\..\QCUtils\public\inc;..\..\OT501\Include;.\inc;.\public\inc;..\System\CritSectionImpl\inc;..\System\CritSectionImpl\public\inc;..\Kernel\public\inc;..\..\Eudora;..\..\EuMemMgr\Include"
 				PreprocessorDefinitions="NDEBUG"
 				StringPooling="TRUE"
 				RuntimeLibrary="2"

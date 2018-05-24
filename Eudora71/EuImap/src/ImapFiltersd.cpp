@@ -1530,8 +1530,8 @@ int CImapFilterActions::PerformAction(CTocDoc *pTocDoc,
 
 	// This keeps the number of saved actions.
 	iNumSavedXferActions = 0;
-
-	for (int i = 0; i < NUM_FILT_ACTS; i++)
+	int i;
+	for (i = 0; i < NUM_FILT_ACTS; i++)
 	{
 		if (EscapePressed())
 		{

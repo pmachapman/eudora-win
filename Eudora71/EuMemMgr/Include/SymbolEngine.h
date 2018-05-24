@@ -100,7 +100,7 @@ typedef BOOL (CALLBACK *PENUM_LOCAL_VARS_CALLBACK)
                                       PVOID    pContext       ) ;
                                       
 // The UNICODE wrapper on UnDecorateSymbolName.
-DWORD UnDecorateSymbolNameW ( PCWSTR DecoratedName       ,
+DWORD __stdcall UnDecorateSymbolNameW ( PCWSTR DecoratedName       ,
                               PWSTR  UnDecoratedName     ,
                               DWORD  UndecoratedLength   ,
                               DWORD  Flags                ) ;

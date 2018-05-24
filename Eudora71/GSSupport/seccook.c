@@ -61,4 +61,5 @@
  * initialize the cookie to the final value.
  */
 
-DWORD_PTR __security_cookie = DEFAULT_SECURITY_COOKIE;
+// This is defined the the latest VC runtime
+// DWORD_PTR __security_cookie = DEFAULT_SECURITY_COOKIE;

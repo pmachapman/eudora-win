@@ -1506,7 +1506,7 @@ HRESULT CImapDownloader::DoMinimalDownloadUsingHeaders(CUidMap &uidmap,
 
 	// Loop through all messages.
 	CImapFlags			*pFlags = NULL;
-	UidIteratorType		 ci = NULL;
+	UidIteratorType		 ci;
 	for (ci = uidmap.begin(); ci != uidmap.end(); ++ci)
 	{
 		pFlags = (CImapFlags*)(*ci).second;
@@ -1635,7 +1635,7 @@ HRESULT CImapDownloader::DoMinimalDownloadUsingHeadersOnRange(IMAPUID uidFirst,
 		{
 			IMAPUID				 uid = 0;
 			CImapFlags			*pFlags = NULL;
-			UidIteratorType		 ci = NULL;
+			UidIteratorType		 ci;
 			int					 iCount = 0;
 
 			for (ci = uidmap.begin(), iCount = 0; ci != uidmap.end(); ++ci, ++iCount)
@@ -5150,7 +5150,7 @@ BOOL CImapDownloader::ContentIdOfSection(IMAPUID uid, char *sequence, char **Con
 			pLowerHeader.MakeLower();
 
 			// find the first occurence of Content-ID in the lower case version of the headers:
-			char *scan = strstr(pLowerHeader, contentIDHeader);
+			char *scan = (char *)strstr(pLowerHeader, contentIDHeader);
 			if (scan)
 			{
 				// point to the Content-ID: header in the real headers now
@@ -6164,12 +6164,12 @@ static BOOL IsMPAlternativeOrRelated (const char *Buffer)
 	if (!Buffer)
 		return FALSE;
 
-	char *p = strstr( Buffer, CRString(IDS_MIME_MULTIPART) );
+	char *p = (char *)strstr( Buffer, CRString(IDS_MIME_MULTIPART) );
 
 	if (!p)
 		return FALSE;
 
-	p = strchr (Buffer, '/');
+	p = (char *)strchr(Buffer, '/');
 	if (!p)
 		return FALSE;
 

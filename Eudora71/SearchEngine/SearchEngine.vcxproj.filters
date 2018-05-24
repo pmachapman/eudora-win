@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Src">
+      <UniqueIdentifier>{3dac8258-47f5-4ba0-aa6d-a831aa0cc166}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PublicInc">
+      <UniqueIdentifier>{33e0b78c-b484-421d-b4b0-a65d77da41b7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\SearchCriteria.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\SearchEngine.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\SearchResult.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\stdafx.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PublicInc\SearchCriteria.h">
+      <Filter>PublicInc</Filter>
+    </ClInclude>
+    <ClInclude Include="PublicInc\SearchEngine.h">
+      <Filter>PublicInc</Filter>
+    </ClInclude>
+    <ClInclude Include="PublicInc\SearchResult.h">
+      <Filter>PublicInc</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -3,9 +3,9 @@
 
 #include "stdafx.h"
 #include "OLImport.h"
-#include <mapi.h>
-#include <mapiutil.h>
-#include <mapix.h>
+#include "mapi.h"
+#include "mapiutil.h"
+#include "mapix.h"
 #include <string>
 
 //using namespace std;

@@ -1,0 +1,16 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+.vs
+*.aps
+*.user
+Build
+Debug
+Release
+
+# OpenSSL Build Files
+crypto
+inc32
+out32
+tmp32

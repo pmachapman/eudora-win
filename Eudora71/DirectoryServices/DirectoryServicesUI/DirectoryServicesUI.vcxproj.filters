@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Inc">
+      <UniqueIdentifier>{37237ced-9e29-4d6f-b627-d8e7d2ed20ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{e6fafb9a-1482-46bb-97d6-d0028e7d8ff3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Public_Inc">
+      <UniqueIdentifier>{1bbfaba4-7370-4b65-b806-b35d451a1ebc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="inc\DSBounceMessageImpl.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\DSEditImpl.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\DSGenericListCtrlImpl.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\DSGenericPushButtonImpl.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\DSGenericRichEditCtrlImpl.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\DSLeftViewImpl.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\DSListCtrlImpl.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\DSMailImpl.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\DSMainSplitterWndImpl.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\DSPrintEdit.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\DSRECtrlImpl.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\DSResultsTocImpl.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\DSRightViewImpl.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\DSSplitterWndImpl.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\DSUtilsImpl.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\DSViewNewImpl.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\DSWazooWndNewImpl.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\RegisterComponentImpl.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\DSBaseTypes.h">
+      <Filter>Public_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\System\CritSectionImpl\public\inc\DSCritSectionIface.h">
+      <Filter>Public_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\DSEditIface.h">
+      <Filter>Public_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\DSGenericListCtrlIface.h">
+      <Filter>Public_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\DSGenericPushButtonIface.h">
+      <Filter>Public_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\DSGenericRichEditCtrlIface.h">
+      <Filter>Public_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\DSLeftViewIface.h">
+      <Filter>Public_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\DSListCtrlIface.h">
+      <Filter>Public_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\DSMailIface.h">
+      <Filter>Public_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\DSMainSplitterWndIface.h">
+      <Filter>Public_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\DSRECtrlIface.h">
+      <Filter>Public_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\DSResultsTocIface.h">
+      <Filter>Public_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\DSRightViewIface.h">
+      <Filter>Public_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\DSSplitterWndIface.h">
+      <Filter>Public_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\DSUtilsIface.h">
+      <Filter>Public_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\DSViewNewIface.h">
+      <Filter>Public_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\DSWazooWndNewIface.h">
+      <Filter>Public_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\imgcache.h">
+      <Filter>Public_Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\RegisterComponentIface.h">
+      <Filter>Public_Inc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\System\CritSectionImpl\src\DSCritSectionImpl.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DSEditImpl.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DSGenericListCtrlImpl.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DSGenericPushButtonImpl.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DSGenericRichEditCtrlImpl.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DSLeftViewImpl.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DSListCtrlImpl.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DSMailImpl.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DSMainSplitterWndImpl.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DSPrintEdit.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DSRECtrlImpl.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DSResultsTocImpl.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DSRightViewImpl.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DSSplitterWndImpl.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DSUtilsImpl.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DSViewNewImpl.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DSWazooWndNewImpl.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imgcache.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RegisterComponentImpl.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stdafx.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

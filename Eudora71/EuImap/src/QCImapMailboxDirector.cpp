@@ -3489,7 +3489,7 @@ BOOL ExtractNameAndDirname (LPCSTR pBuffer, CString& szNewName, CString& szNewDi
 		// Skip ".
 		str = ++p;
 
-		LPSTR q = strchr (p, '"');
+		LPSTR q = (char *)strchr (p, '"');
 		if (!q)
 		{
 			// We didn't succeed.

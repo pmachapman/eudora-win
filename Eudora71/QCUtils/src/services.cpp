@@ -158,7 +158,7 @@ BOOL IsMainThreadMT()
 // TimeDateStringMT [extern, exported]
 //
 ////////////////////////////////////////////////////////////////////////
-char* TimeDateStringMT(char* pszBuffer, long lSeconds, BOOL bDoDate)
+char* TimeDateStringMT(char* pszBuffer, time_t lSeconds, BOOL bDoDate)
 {
 	return ::TimeDateStringFormatMT(pszBuffer, lSeconds, 0, bDoDate ? "%1 %2" : "%1");
 }
@@ -175,7 +175,7 @@ char* TimeDateStringMT(char* pszBuffer, long lSeconds, BOOL bDoDate)
 //		%4	Timezone
 // Caller should pass in at least a 128-byte buffer
 ////////////////////////////////////////////////////////////////////////
-char* TimeDateStringFormatMT(char* buf, long Seconds, int TimeZoneMinutes, const char* Format)
+char* TimeDateStringFormatMT(char* buf, time_t Seconds, int TimeZoneMinutes, const char* Format)
 {
 	char Time[32];
 	char Date[32];
@@ -631,7 +631,8 @@ char* TrimWhitespaceMT(char* pszBuffer)
 	//
 	char *pszBegin = pszBufPtr++;
 
-	for (char* pszEnd = pszBufPtr; *pszBufPtr; pszBufPtr++)
+	char* pszEnd;
+	for (pszEnd = pszBufPtr; *pszBufPtr; pszBufPtr++)
 		if (!::isspace((int)(unsigned char)*pszBufPtr))
 			pszEnd = pszBufPtr;
 
@@ -1074,7 +1075,7 @@ HRESULT CreateShortcutMT(LPCTSTR Target, LPCTSTR Link, LPCTSTR Arguments /*= NUL
 			Temp.MakeLower();
 			if (Temp.Find(".lnk") == -1)
 				FullLink += ".lnk";
-			WORD wsz[MAX_PATH];
+			WCHAR wsz[MAX_PATH];
 			MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, FullLink, -1, wsz, MAX_PATH);
 
 			hr = piPF->Save(wsz, TRUE);
@@ -2002,7 +2003,7 @@ char* StripAddressMT(char* line)
 	}
 	*t = 0;
 
-	const char* BegAngle = strchr(line, '<');
+	char* BegAngle = strchr(line, '<');
 	char* EndAngle = BegAngle? strchr(BegAngle + 1, '>') : NULL;
 	if (BegAngle && EndAngle && BegAngle < EndAngle)
 	{

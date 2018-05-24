@@ -816,7 +816,8 @@ long JJFileMT::ReadLine_(char* pBuffer, long lSize)
 
 	BOOL bFoundCR = FALSE;
 	
-	for (long lNumRead = 0; lNumRead < lSize; pBuffer++)
+	long lNumRead;
+	for (lNumRead = 0; lNumRead < lSize; pBuffer++)
 	{
 		if (!m_nValidBytes)
 		{

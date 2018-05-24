@@ -332,7 +332,7 @@ private:
 	bool initialized;
 	bool init_linfo();
 
-	friend LNG_GetLanguageInfo( int, LPTSTR );
+	friend int LNG_GetLanguageInfo( int, LPTSTR );
 };
 
 // Frankenstein

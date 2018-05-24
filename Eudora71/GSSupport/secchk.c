@@ -38,7 +38,7 @@
 *
 *******************************************************************************/
 
-#include <..\crt\src\sect_attribs.h>
+#include "sect_attribs.h"
 //#include <..\crt\src\internal.h>
 #include <windows.h>
 #include <stdlib.h>
@@ -58,10 +58,10 @@ extern DWORD_PTR __security_cookie;
  */
 
 typedef void (__cdecl *_PVFV)(void);	// from CRT's internal.h
-#pragma data_seg(".CRT$XCAA")
+/*#pragma data_seg(".CRT$XCAA")
 extern void __cdecl __security_init_cookie(void);
 static _CRTALLOC(".CRT$XCAA") _PVFV init_cookie = __security_init_cookie;
-#pragma data_seg()
+#pragma data_seg()*/
 
 static void __cdecl report_failure(void);
 

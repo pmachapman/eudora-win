@@ -63,7 +63,6 @@ CSearchUtil::CSearchUtil()
 {
 	m_pMultSearchCriteria	= NULL;
 	m_pCriteriaList			= NULL;
-	m_Iterator				= NULL;
 }
 
 
@@ -103,7 +102,7 @@ BOOL CSearchUtil::Initialize (MultSearchCriteria* pMultSearchCriteria)
 	if (m_pCriteriaList)
 		m_Iterator = m_pCriteriaList->begin();
 	else
-		m_Iterator = NULL;
+		m_Iterator = m_pCriteriaList->end();
 
 	return TRUE;
 }
@@ -116,7 +115,7 @@ SearchCriteria* CSearchUtil::GetNextCriterion ()
 {
 	SearchCriteria* pCurCriterion = NULL;
 
-	if ( m_pCriteriaList && (m_Iterator != NULL) && (m_Iterator != m_pCriteriaList->end()) )
+	if ( m_pCriteriaList && (m_Iterator != m_pCriteriaList->end()) && (m_Iterator != m_pCriteriaList->end()) )
 	{
 		pCurCriterion = &(*m_Iterator);
 
@@ -155,7 +154,7 @@ BOOL CSearchUtil::IsOpAND(SearchCriteria* pCriterion)
 //
 BOOL CSearchUtil::HasNext()
 {
-	return ( m_pCriteriaList && (m_Iterator != NULL) && (m_Iterator != m_pCriteriaList->end()) );
+	return ( m_pCriteriaList && (m_Iterator != m_pCriteriaList->end()) && (m_Iterator != m_pCriteriaList->end()) );
 }
 
 

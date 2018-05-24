@@ -1,0 +1,610 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{d052571d-67b2-49b6-9bf0-f2c8c18191ab}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\icons\Ad.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\AdBlankTime.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\AdwareButton.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\anetwork.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\attach.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\attach.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\attach_d.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\attachnfound.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\autocomp.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\binhex.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\blah.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\ChangeRegistrationButton.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\checking.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\checkmar.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\columns.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\compmess.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\CompMsgSettings.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\comptbar.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\ContentConcentrator.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\DateDisp.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\defattach.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\defreq.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\deftool.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\DeleteFromServer.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\DemographicsButton.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\Digits_4x5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\DirectoryServices.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\display.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\DownloadFromServer.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\edit.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\eudbyqc.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\eudora.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\EudoraInfo.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\EXTRWARN.ICO">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\fieldcom.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\FileBrowse.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\filters.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\filters.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\filtrep.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\FindVersionsButton.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\FIRST.ICO">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\fontdisp.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\FreeButton.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\FullFeature.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\getatten.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\getstart.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\havemail.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\havesend.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\help.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\hosts.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\icon1.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\idr_sear.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\idr_Stats.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\idr_task.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\il_common16.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\il_common32.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\il_mailtree.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\il_mood_m.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\il_status.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\il_statusm.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\il_TaskStatus.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\Imfilters.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ImportBanner.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\InternetDialup.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\Junk.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\JunkExtras.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\kerberos.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\labels.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\LinkHistory.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\LinkHistoryTypes.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\locked.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\lookup.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\mailbox.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\mailboxs.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\MailExpl.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\mapi.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\mboxes.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\mime.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\miscell.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\MoodCat.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\MoodMail.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\moodwatch_1.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\moodwatch_2.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\moodwatch_3.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\mw32score1.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\mw32score2.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\NewBook.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\newfile.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\NewNick.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\nickname.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\nicktree.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\nomail.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\NOTRANS.ICO">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\options.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\PaidButton.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\PeanutToolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\PERSONA.ICO">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\personal.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\phigh.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\phighest.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\plow.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\plowest.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\pmenuhigh.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\pmenuhighest.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\pmenulow.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\pmenulowest.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\pmenunormal.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\pnormal.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\prop_mult_win.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\prop_mult_wins.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\prop_tac.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\proptacU.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\qclogo.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\qclogomask.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\readmess.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\RegisterButton.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\Remove.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\replying.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\RTB1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\safety.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\sdelete.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\search.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\secure.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\sending.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\sendmail.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\setcat.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\SETTAUTO.ICO">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\sfetch.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\sfetchde.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\sig.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\signatur.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\signone.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\sleave.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\SortByAttachment.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\SortByDate.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\SortByLabel.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\SortByMood.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\SortByPriority.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\SortBySender.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\SortByServerStatus.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\SortBySize.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\SortByStatus.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\SortBySubject.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\SpellBrush.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\spelling.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\StatBarTaskStatusIL.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\stationery.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\Stats.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\StatusForwarded.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\StatusQueued.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\StatusRead.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\StatusRecovered.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\StatusRedirect.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\StatusReplied.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\StatusSendable.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\StatusSent.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\StatusTimeQueued.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\statusun.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\StatusUnread.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\StatusUnsendable.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\StatusUnsent.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\styltext.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\Swap.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\TaskError.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\TaskStatus.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\TaskStatusSetting.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\tbar16.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\tbar16a.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\tbar16b.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\tbar32.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\tbar32a.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\tbar32b.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\towtruck.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\TRACE.ICO">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\transfer.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\urstatus.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\uuencode.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\viewmail.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\WizWelcome.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icons\BossProtector.ico" />
+    <Image Include="res\icons\certbits.bmp" />
+    <Image Include="res\icons\ChiliBrush.bmp" />
+    <Image Include="res\icons\FindMessages.ico" />
+    <Image Include="res\icons\NonHWordBrush.bmp" />
+    <Image Include="res\icons\qclogo.bmp" />
+    <Image Include="res\icons\qclogomask.bmp" />
+    <Image Include="res\icons\SortByJunk.bmp" />
+    <Image Include="res\icons\status_s.bmp" />
+    <Image Include="res\icons\WebBrowser.ico" />
+    <Image Include="res\icons\X1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\ARROWCOP.CUR">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\empty.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\fpainter.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\launch.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\morehelp.html">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\pointer_.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\UStats.html">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="EudoraRes.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="res\AuditPreamble.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="res\Credits.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="res\credits2.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="res\newmail.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="EudoraRes.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="EudoraRes.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+</Project>

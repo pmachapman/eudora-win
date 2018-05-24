@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{2520de27-33b6-4562-917f-c586266f6e8f}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{7d37c3e2-139e-4f4f-81b3-cc3cc5f40995}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Regex">
+      <UniqueIdentifier>{e7cfd5ab-1cc8-4412-906f-49ac6aa051f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Regex\Src">
+      <UniqueIdentifier>{c66aebc8-0697-4ae4-a198-dab8fc45d8e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Regex\Include">
+      <UniqueIdentifier>{e97b3ee6-da00-451f-b8e4-c73c648c296a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{3b42dd0a-0d1a-4a46-9143-249cead2d561}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Bitmap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DebugNewHelpers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gssapi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jjfile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\qcsecfail.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\QCUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GSSupport\secchk.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GSSupport\seccinit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GSSupport\seccook.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\services.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Regex\Src\regcomp.cpp">
+      <Filter>Regex\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Regex\Src\regerror.cpp">
+      <Filter>Regex\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Regex\Src\regexec.cpp">
+      <Filter>Regex\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Regex\Src\RegExpr.cpp">
+      <Filter>Regex\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Regex\Src\regfree.cpp">
+      <Filter>Regex\Src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\QCUtils.def">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\QCUtilsVer.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="public\inc\AutoSerializedRegionIface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Bitmap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\debug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\gssapi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\gssapi_generic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\gssapi_krb5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\hsregex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\jjfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\krb5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\os.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\QCError.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\qcsecfail.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\QCUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\services.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Regex\Include\ap_ctype.h">
+      <Filter>Regex\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Regex\Include\cclass.h">
+      <Filter>Regex\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Regex\Include\cname.h">
+      <Filter>Regex\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Regex\Include\regex2.h">
+      <Filter>Regex\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Regex\Include\regexutils.h">
+      <Filter>Regex\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\sect_attribs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GSSupport\sect_attribs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

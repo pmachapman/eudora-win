@@ -255,7 +255,7 @@ int ImapHeaderDesc::Read(CImapDownloader *pRW)
 					break;
 				case hReceived:
 					{
-						char* comma = strchr((const char*)l822s.m_Token, ',');
+						char* comma = (char *)strchr((const char*)l822s.m_Token, ',');
 						if (comma && !*m_receivedDate)
 						{
 							strncpy(m_receivedDate, ::TrimWhitespaceMT(comma + 1), sizeof(m_receivedDate) - 1);

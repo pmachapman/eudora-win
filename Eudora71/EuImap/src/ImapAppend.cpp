@@ -1404,7 +1404,7 @@ void CImapAppend::NewMessageID (CString& szBuffer)
 
 	*pPtr++ = '<';
 
-	LPSTR pVer = strchr(Version, ' ');
+	char* pVer = (char*)strchr(Version, ' ');
 	if (pVer)
 		pVer++;
 	pVer = strchr (pVer, ' ');
@@ -1503,7 +1503,7 @@ long APPENDEncodingType ( const char* fname, MIMEMap& mm )
 	BOOL IsTypeText = FALSE;
 	unsigned long NumCharsOnLine = 0;
 	BYTE ch, LastCh;
-	char* p;
+	const char* p;
 
 	p = strrchr(fname, '.');
 	if (p)

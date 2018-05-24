@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Exported Interface">
+      <UniqueIdentifier>{d97fed27-6dfb-4e4e-9bd0-3ec9d6898c1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Private Header Files">
+      <UniqueIdentifier>{a7d0d200-15c1-4f55-9b72-ffa0f1d7a88a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{930279dc-352e-4074-8471-591a6d397e83}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="public\inc\exports.h">
+      <Filter>Exported Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\Imap.h">
+      <Filter>Exported Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="src\imapfr.h">
+      <Filter>Exported Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="src\com_err.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CramMd5.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ImapDefs.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ImapGssapi.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ImapUtil.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ImGui.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\krb5.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\krbv4.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\md5.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\misc.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mm.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MyTypes.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\network.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\osdep.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\profile.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\proto.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\resource.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rfc822.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stdafx.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Stream.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\win-mac.h">
+      <Filter>Private Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\CramMd5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Imap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImapGssapi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImapStream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImapUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImGui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\krbv4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\md5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\misc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MyTypes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Network.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\osdep.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Proto.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rfc822.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GSSupport\secchk.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GSSupport\seccinit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GSSupport\seccook.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Stream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\Imap.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

@@ -49,7 +49,7 @@ public:
 
 // Overrides
 public:
-	virtual OnInitMenuPopup(UINT nIndex, BOOL bSysMenu);
+	virtual int OnInitMenuPopup(UINT nIndex, BOOL bSysMenu);
 protected:
 	virtual BOOL BuildMenu(UINT nIndex, BOOL bSysMenu) = 0;
 

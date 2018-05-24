@@ -113,7 +113,7 @@ static int LOCAL_CheckName(const char* Dir, const char* FName, char* FinalFname,
 		DirName[strlen(DirName) - 1] = NULL;
 
 	int TryNum = 1, len;
-	char tmp[255], *ptr, *dot;
+	char tmp[255], *dot;
 	int BaseLen;
 	
 	//gets the string of DOS reserved device names
@@ -132,7 +132,7 @@ static int LOCAL_CheckName(const char* Dir, const char* FName, char* FinalFname,
 		int Difference = (strlen(DirName) + strlen(FName))- (_MAX_PATH - 2);
 		strncat(FinalFname, FName, (strlen(FName)-Difference));
 
-		char * floater;
+		const char * floater;
 		floater = strrchr(FName, '.');
 		
 		if (floater)	// There's a period, so there's an extension.
@@ -158,7 +158,7 @@ static int LOCAL_CheckName(const char* Dir, const char* FName, char* FinalFname,
 	BOOL isReserved = FALSE;
 	pReserved = (char *)(LPCTSTR)sReservedWords;
 	CString sResWord;
-	char *DOSptr;
+	const char *DOSptr;
 	//store in tmp the file name without the extension
 	DOSptr = strchr(FName, '.');
 	len = (DOSptr? DOSptr - FName : strlen(FName));
@@ -195,7 +195,7 @@ static int LOCAL_CheckName(const char* Dir, const char* FName, char* FinalFname,
 
 			//if there are still device names to compare
 			if (DOSptr)
-				pReserved = DOSptr + 1;
+				pReserved = (char *)DOSptr + 1;
 			else
 				break;
 		}
@@ -207,6 +207,7 @@ static int LOCAL_CheckName(const char* Dir, const char* FName, char* FinalFname,
 		// one of the reserved DOS device names
 		pReserved = (char *)(LPCTSTR)sReservedWords;
 
+		const char *ptr;
 		ptr = strrchr(FName, '.');
 		len = (ptr? ptr - FName : strlen(FName));
 		if (bLongFileNameSupport)

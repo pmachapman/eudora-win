@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName>OT501</SccProjectName>
+    <SccAuxPath />
+    <SccLocalPath>.</SccLocalPath>
+    <SccProvider>MSSCCI:Perforce SCM</SccProvider>
+    <Keyword>MakeFileProj</Keyword>
+    <ProjectGuid>{36EB689A-7C2C-4C2E-8F1C-744FDD4DDFA2}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.27625.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\OT501__4\</OutDir>
+    <IntDir>.\OT501__4\</IntDir>
+    <NMakeBuildCommandLine>NMAKE /f build50.mak ota50r</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>NMAKE /f build50.mak ota50r /a</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>echo === Must clean OT501 manually ===</NMakeCleanCommandLine>
+    <NMakeOutput>..\..\Lib\Release\OTA50R.LIB</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\OT501___\</OutDir>
+    <IntDir>.\OT501___\</IntDir>
+    <NMakeBuildCommandLine>NMAKE /f build50.mak ota50d</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>NMAKE /f build50.mak ota50d /a</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>echo === Must clean OT501 manually ===</NMakeCleanCommandLine>
+    <NMakeOutput>..\..\Lib\Debug\OTA50D.LIB</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="controls\browedit.cpp" />
+    <ClCompile Include="controls\calc\CalcBtn.cpp" />
+    <ClCompile Include="controls\calc\SecCalc.cpp" />
+    <ClCompile Include="controls\calendar\Calendar.cpp" />
+    <ClCompile Include="controls\calendar\CalTitle.cpp" />
+    <ClCompile Include="controls\calendar\DayBar.cpp" />
+    <ClCompile Include="controls\calendar\DayBox.cpp" />
+    <ClCompile Include="controls\calendar\Panel.cpp" />
+    <ClCompile Include="controls\curredit.cpp" />
+    <ClCompile Include="controls\datetime\DTButton.cpp" />
+    <ClCompile Include="controls\datetime\DTChange.cpp" />
+    <ClCompile Include="controls\datetime\DTCtrl.cpp" />
+    <ClCompile Include="controls\datetime\DTGadget.cpp" />
+    <ClCompile Include="controls\datetime\DTList.cpp" />
+    <ClCompile Include="controls\datetime\DTNumerc.cpp" />
+    <ClCompile Include="controls\datetime\DTParser.cpp" />
+    <ClCompile Include="controls\datetime\DTSpin.cpp" />
+    <ClCompile Include="controls\datetime\DTStatic.cpp" />
+    <ClCompile Include="controls\DropEdit.cpp" />
+    <ClCompile Include="controls\listctrl\slstctip.cpp" />
+    <ClCompile Include="controls\listctrl\slstctl.cpp" />
+    <ClCompile Include="controls\lstbxclr.cpp" />
+    <ClCompile Include="controls\lstbxedt.cpp" />
+    <ClCompile Include="controls\sbarcust.cpp" />
+    <ClCompile Include="controls\Secbtns.cpp" />
+    <ClCompile Include="controls\Secmedit.cpp" />
+    <ClCompile Include="controls\Secwell.cpp" />
+    <ClCompile Include="controls\tabctrl\tabctrl.cpp" />
+    <ClCompile Include="controls\tabctrl\tabctrl3.cpp" />
+    <ClCompile Include="controls\tabctrl\tabctrlb.cpp" />
+    <ClCompile Include="controls\tabctrl\tabwnd.cpp" />
+    <ClCompile Include="controls\tabctrl\tabwnd3.cpp" />
+    <ClCompile Include="controls\tabctrl\tabwndb.cpp" />
+    <ClCompile Include="controls\treectrl\TrCtlX.cpp" />
+    <ClCompile Include="controls\treectrl\TreeNode.cpp" />
+    <ClCompile Include="docking\sbarcore.cpp" />
+    <ClCompile Include="docking\sbardlg.cpp" />
+    <ClCompile Include="docking\sbardock.cpp" />
+    <ClCompile Include="docking\sbarmgr.cpp" />
+    <ClCompile Include="docking\sbarstat.cpp" />
+    <ClCompile Include="docking\Sbartool.cpp" />
+    <ClCompile Include="docking\sdockcnt.cpp" />
+    <ClCompile Include="docking\sdocksta.cpp" />
+    <ClCompile Include="image\Jpeg\Jcapimin.cpp" />
+    <ClCompile Include="image\Jpeg\Jcapistd.cpp" />
+    <ClCompile Include="image\Jpeg\Jcarith.cpp" />
+    <ClCompile Include="image\Jpeg\Jccoefct.cpp" />
+    <ClCompile Include="image\Jpeg\Jccolor.cpp" />
+    <ClCompile Include="image\Jpeg\Jcdctmgr.cpp" />
+    <ClCompile Include="image\Jpeg\Jchuff.cpp" />
+    <ClCompile Include="image\Jpeg\Jcinit.cpp" />
+    <ClCompile Include="image\Jpeg\Jcmainct.cpp" />
+    <ClCompile Include="image\Jpeg\Jcmarker.cpp" />
+    <ClCompile Include="image\Jpeg\Jcmaster.cpp" />
+    <ClCompile Include="image\Jpeg\Jcomapi.cpp" />
+    <ClCompile Include="image\Jpeg\Jcparam.cpp" />
+    <ClCompile Include="image\Jpeg\Jcphuff.cpp" />
+    <ClCompile Include="image\Jpeg\Jcprepct.cpp" />
+    <ClCompile Include="image\Jpeg\Jcsample.cpp" />
+    <ClCompile Include="image\Jpeg\Jctrans.cpp" />
+    <ClCompile Include="image\Jpeg\Jdapimin.cpp" />
+    <ClCompile Include="image\Jpeg\Jdapistd.cpp" />
+    <ClCompile Include="image\Jpeg\Jdarith.cpp" />
+    <ClCompile Include="image\Jpeg\Jdatadst.cpp" />
+    <ClCompile Include="image\Jpeg\Jdatasrc.cpp" />
+    <ClCompile Include="image\Jpeg\Jdcoefct.cpp" />
+    <ClCompile Include="image\Jpeg\Jdcolor.cpp" />
+    <ClCompile Include="image\Jpeg\Jddctmgr.cpp" />
+    <ClCompile Include="image\Jpeg\Jdhuff.cpp" />
+    <ClCompile Include="image\Jpeg\Jdinput.cpp" />
+    <ClCompile Include="image\Jpeg\Jdmainct.cpp" />
+    <ClCompile Include="image\Jpeg\Jdmarker.cpp" />
+    <ClCompile Include="image\Jpeg\Jdmaster.cpp" />
+    <ClCompile Include="image\Jpeg\Jdmerge.cpp" />
+    <ClCompile Include="image\Jpeg\Jdphuff.cpp" />
+    <ClCompile Include="image\Jpeg\Jdpostct.cpp" />
+    <ClCompile Include="image\Jpeg\Jdsample.cpp" />
+    <ClCompile Include="image\Jpeg\Jdtrans.cpp" />
+    <ClCompile Include="image\Jpeg\Jerror.cpp" />
+    <ClCompile Include="image\Jpeg\Jfdctflt.cpp" />
+    <ClCompile Include="image\Jpeg\Jfdctfst.cpp" />
+    <ClCompile Include="image\Jpeg\Jfdctint.cpp" />
+    <ClCompile Include="image\Jpeg\Jidctflt.cpp" />
+    <ClCompile Include="image\Jpeg\Jidctfst.cpp" />
+    <ClCompile Include="image\Jpeg\Jidctint.cpp" />
+    <ClCompile Include="image\Jpeg\Jidctred.cpp" />
+    <ClCompile Include="image\Jpeg\Jmemansi.cpp" />
+    <ClCompile Include="image\Jpeg\Jmemmgr.cpp" />
+    <ClCompile Include="image\Jpeg\Jquant1.cpp" />
+    <ClCompile Include="image\Jpeg\Jquant2.cpp" />
+    <ClCompile Include="image\Jpeg\Jutils.cpp" />
+    <ClCompile Include="image\Secdib.cpp" />
+    <ClCompile Include="image\Secdsp.cpp" />
+    <ClCompile Include="image\Secgif.cpp" />
+    <ClCompile Include="image\Secimage.cpp" />
+    <ClCompile Include="image\Secjpeg.cpp" />
+    <ClCompile Include="image\Secpcx.cpp" />
+    <ClCompile Include="image\Sectarga.cpp" />
+    <ClCompile Include="image\Sectiff.cpp" />
+    <ClCompile Include="image\Tiff\Tif_aux.cpp" />
+    <ClCompile Include="image\Tiff\Tif_ccit.cpp" />
+    <ClCompile Include="image\Tiff\Tif_clos.cpp" />
+    <ClCompile Include="image\Tiff\Tif_comp.cpp" />
+    <ClCompile Include="image\Tiff\Tif_dir.cpp" />
+    <ClCompile Include="image\Tiff\Tif_diri.cpp" />
+    <ClCompile Include="image\Tiff\Tif_dirr.cpp" />
+    <ClCompile Include="image\Tiff\Tif_dirw.cpp" />
+    <ClCompile Include="image\Tiff\Tif_dump.cpp" />
+    <ClCompile Include="image\Tiff\Tif_erro.cpp" />
+    <ClCompile Include="image\Tiff\Tif_fax3.cpp" />
+    <ClCompile Include="image\Tiff\Tif_fax4.cpp" />
+    <ClCompile Include="image\Tiff\Tif_flus.cpp" />
+    <ClCompile Include="image\Tiff\Tif_geti.cpp" />
+    <ClCompile Include="image\Tiff\Tif_jpeg.cpp" />
+    <ClCompile Include="image\Tiff\Tif_lzw.cpp" />
+    <ClCompile Include="image\Tiff\Tif_msdo.cpp" />
+    <ClCompile Include="image\Tiff\Tif_open.cpp" />
+    <ClCompile Include="image\Tiff\Tif_pack.cpp" />
+    <ClCompile Include="image\Tiff\Tif_prin.cpp" />
+    <ClCompile Include="image\Tiff\Tif_read.cpp" />
+    <ClCompile Include="image\Tiff\Tif_stri.cpp" />
+    <ClCompile Include="image\Tiff\Tif_swab.cpp" />
+    <ClCompile Include="image\Tiff\Tif_thun.cpp" />
+    <ClCompile Include="image\Tiff\Tif_tile.cpp" />
+    <ClCompile Include="image\Tiff\Tif_vers.cpp" />
+    <ClCompile Include="image\Tiff\Tif_warn.cpp" />
+    <ClCompile Include="image\Tiff\Tif_writ.cpp" />
+    <ClCompile Include="mdi\fdichild.cpp" />
+    <ClCompile Include="mdi\fdimain.cpp" />
+    <ClCompile Include="mdi\Sectlf.cpp" />
+    <ClCompile Include="mdi\Secwb.cpp" />
+    <ClCompile Include="mdi\swinfrm.cpp" />
+    <ClCompile Include="mdi\swinmdi.cpp" />
+    <ClCompile Include="secaux.cpp" />
+    <ClCompile Include="Secdll.cpp" />
+    <ClCompile Include="Stdafx.cpp" />
+    <ClCompile Include="ui\ctoolbar\tbarcust.cpp" />
+    <ClCompile Include="ui\ctoolbar\tbarmgr.cpp" />
+    <ClCompile Include="ui\ctoolbar\tbarpage.cpp" />
+    <ClCompile Include="ui\ctoolbar\tbarsdlg.cpp" />
+    <ClCompile Include="ui\ctoolbar\tbartrck.cpp" />
+    <ClCompile Include="ui\ctoolbar\tbtn2prt.cpp" />
+    <ClCompile Include="ui\ctoolbar\tbtncmbo.cpp" />
+    <ClCompile Include="ui\ctoolbar\tbtnstd.cpp" />
+    <ClCompile Include="ui\ctoolbar\tbtnwnd.cpp" />
+    <ClCompile Include="ui\secbmpdg.cpp" />
+    <ClCompile Include="ui\secsplsh.cpp" />
+    <ClCompile Include="ui\sectod.cpp" />
+    <ClCompile Include="ui\secwsmgr.cpp" />
+    <ClCompile Include="ui\shortcut\SCutAccl.cpp" />
+    <ClCompile Include="ui\shortcut\SCutCmds.cpp" />
+    <ClCompile Include="ui\shortcut\SCutDlg.cpp" />
+    <ClCompile Include="ui\shortcut\SCutKDlg.cpp" />
+    <ClCompile Include="ui\thumnail\Sectnbmp.cpp" />
+    <ClCompile Include="ui\thumnail\Sectndc.cpp" />
+    <ClCompile Include="ui\thumnail\Sectndlg.cpp" />
+    <ClCompile Include="ui\thumnail\Sectndoc.cpp" />
+    <ClCompile Include="ui\thumnail\Sectnvw.cpp" />
+    <ClCompile Include="ui\thumnail\Sectnwin.cpp" />
+    <ClCompile Include="ui\toolsmnu\usertool.cpp" />
+    <ClCompile Include="ui\toolsmnu\usrtldlg.cpp" />
+    <ClCompile Include="utility\crypt\Blackbox.cpp" />
+    <ClCompile Include="utility\crypt\Cryptfil.cpp" />
+    <ClCompile Include="utility\crypt\Rotor.cpp" />
+    <ClCompile Include="utility\filesys.cpp" />
+    <ClCompile Include="utility\Seccomp.cpp" />
+    <ClCompile Include="utility\Secrand.cpp" />
+    <ClCompile Include="utility\Secreg.cpp" />
+    <ClCompile Include="utility\slocale.cpp" />
+    <ClCompile Include="utility\zlib\Adler32.cpp" />
+    <ClCompile Include="utility\zlib\compfile.cpp" />
+    <ClCompile Include="utility\zlib\Compress.cpp" />
+    <ClCompile Include="utility\zlib\Crc32.cpp" />
+    <ClCompile Include="utility\zlib\Deflate.cpp" />
+    <ClCompile Include="utility\zlib\Gzio.cpp" />
+    <ClCompile Include="utility\zlib\Infblock.cpp" />
+    <ClCompile Include="utility\zlib\Infcodes.cpp" />
+    <ClCompile Include="utility\zlib\Inffast.cpp" />
+    <ClCompile Include="utility\zlib\Inflate.cpp" />
+    <ClCompile Include="utility\zlib\Inftrees.cpp" />
+    <ClCompile Include="utility\zlib\Infutil.cpp" />
+    <ClCompile Include="utility\zlib\Trees.cpp" />
+    <ClCompile Include="utility\zlib\Uncompr.cpp" />
+    <ClCompile Include="utility\zlib\Zutil.cpp" />
+    <ClCompile Include="views\Panview.cpp" />
+    <ClCompile Include="views\Panwnd.cpp" />
+    <ClCompile Include="views\Zoomview.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="build50.mak" />
+    <None Include="OTA50D\OTA50D.bsc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Include\Blackbox.h" />
+    <ClInclude Include="..\Include\browedit.h" />
+    <ClInclude Include="..\Include\CalcBtn.h" />
+    <ClInclude Include="..\Include\Calendar.h" />
+    <ClInclude Include="..\Include\caltitle.h" />
+    <ClInclude Include="..\Include\Cderror.h" />
+    <ClInclude Include="..\Include\Cdjpeg.h" />
+    <ClInclude Include="..\Include\compeng.h" />
+    <ClInclude Include="..\Include\Cryptfil.h" />
+    <ClInclude Include="..\Include\curredit.h" />
+    <ClInclude Include="..\Include\DayBar.h" />
+    <ClInclude Include="..\Include\DayBox.h" />
+    <ClInclude Include="..\Include\Deflate.h" />
+    <ClInclude Include="..\Include\DropEdit.h" />
+    <ClInclude Include="..\Include\DTCtrl.h" />
+    <ClInclude Include="..\Include\DTGadget.h" />
+    <ClInclude Include="..\Include\fdichild.h" />
+    <ClInclude Include="..\Include\fdimain.h" />
+    <ClInclude Include="..\Include\filesys.h" />
+    <ClInclude Include="..\Include\G3states.h" />
+    <ClInclude Include="..\Include\Gxtchar.h" />
+    <ClInclude Include="..\Include\Infcodes.h" />
+    <ClInclude Include="..\Include\Inffast.h" />
+    <ClInclude Include="..\Include\Infutil.h" />
+    <ClInclude Include="..\Include\Jchuff.h" />
+    <ClInclude Include="..\Include\Jconfig.h" />
+    <ClInclude Include="..\Include\Jdct.h" />
+    <ClInclude Include="..\Include\Jdhuff.h" />
+    <ClInclude Include="..\Include\Jerror.h" />
+    <ClInclude Include="..\Include\Jinclude.h" />
+    <ClInclude Include="..\Include\Jmemdos.h" />
+    <ClInclude Include="..\Include\Jmemsys.h" />
+    <ClInclude Include="..\Include\Jmorecfg.h" />
+    <ClInclude Include="..\Include\Jpegdata.h" />
+    <ClInclude Include="..\Include\Jpegint.h" />
+    <ClInclude Include="..\Include\Jpeglib.h" />
+    <ClInclude Include="..\Include\Jversion.h" />
+    <ClInclude Include="..\Include\lstbxclr.h" />
+    <ClInclude Include="..\Include\lstbxedt.h" />
+    <ClInclude Include="..\Include\Panel.h" />
+    <ClInclude Include="..\Include\Rotor.h" />
+    <ClInclude Include="..\Include\SafetyPal.h" />
+    <ClInclude Include="..\Include\sbarcore.h" />
+    <ClInclude Include="..\Include\sbarcust.h" />
+    <ClInclude Include="..\Include\sbardlg.h" />
+    <ClInclude Include="..\Include\sbardock.h" />
+    <ClInclude Include="..\Include\sbarmgr.h" />
+    <ClInclude Include="..\Include\sbarstat.h" />
+    <ClInclude Include="..\Include\Sbartool.h" />
+    <ClInclude Include="..\Include\SCutAccl.h" />
+    <ClInclude Include="..\Include\SCutCmds.h" />
+    <ClInclude Include="..\Include\SCutDlg.h" />
+    <ClInclude Include="..\Include\scutkdlg.h" />
+    <ClInclude Include="..\Include\sdockcnt.h" />
+    <ClInclude Include="..\Include\sdocksta.h" />
+    <ClInclude Include="..\Include\Secall.h" />
+    <ClInclude Include="..\Include\secaux.h" />
+    <ClInclude Include="..\Include\Secbmpdg.h" />
+    <ClInclude Include="..\Include\Secbtns.h" />
+    <ClInclude Include="..\Include\SecCalc.h" />
+    <ClInclude Include="..\Include\seccomp.h" />
+    <ClInclude Include="..\Include\Secdib.h" />
+    <ClInclude Include="..\Include\Secdll.h" />
+    <ClInclude Include="..\Include\Secgif.h" />
+    <ClInclude Include="..\Include\Secimage.h" />
+    <ClInclude Include="..\Include\Secimpl.h" />
+    <ClInclude Include="..\Include\Secjpeg.h" />
+    <ClInclude Include="..\Include\Secmedit.h" />
+    <ClInclude Include="..\Include\Secpanvw.h" />
+    <ClInclude Include="..\Include\Secpanwn.h" />
+    <ClInclude Include="..\Include\Secpcx.h" />
+    <ClInclude Include="..\Include\Secrand.h" />
+    <ClInclude Include="..\Include\Secreg.h" />
+    <ClInclude Include="..\Include\Secres.h" />
+    <ClInclude Include="..\Include\Secsplsh.h" />
+    <ClInclude Include="..\Include\Sectarga.h" />
+    <ClInclude Include="..\Include\sectchar.h" />
+    <ClInclude Include="..\Include\Sectiff.h" />
+    <ClInclude Include="..\Include\Sectlf.h" />
+    <ClInclude Include="..\Include\Sectnbmp.h" />
+    <ClInclude Include="..\Include\Sectndc.h" />
+    <ClInclude Include="..\Include\Sectndlg.h" />
+    <ClInclude Include="..\Include\Sectndoc.h" />
+    <ClInclude Include="..\Include\Sectnvw.h" />
+    <ClInclude Include="..\Include\Sectnwin.h" />
+    <ClInclude Include="..\Include\Sectod.h" />
+    <ClInclude Include="..\Include\Secver.h" />
+    <ClInclude Include="..\Include\Secwb.h" />
+    <ClInclude Include="..\Include\Secwell.h" />
+    <ClInclude Include="..\Include\secwsmgr.h" />
+    <ClInclude Include="..\Include\Seczmvw.h" />
+    <ClInclude Include="..\Include\slocale.h" />
+    <ClInclude Include="..\Include\slstctip.h" />
+    <ClInclude Include="..\Include\slstctl.h" />
+    <ClInclude Include="..\Include\swinfrm.h" />
+    <ClInclude Include="..\Include\swinmdi.h" />
+    <ClInclude Include="..\Include\T4.h" />
+    <ClInclude Include="..\Include\tabctrl.h" />
+    <ClInclude Include="..\Include\tabctrl3.h" />
+    <ClInclude Include="..\Include\tabctrlb.h" />
+    <ClInclude Include="..\Include\tabwnd.h" />
+    <ClInclude Include="..\Include\tabwnd3.h" />
+    <ClInclude Include="..\Include\tabwndb.h" />
+    <ClInclude Include="..\Include\tbarcust.h" />
+    <ClInclude Include="..\Include\tbarmgr.h" />
+    <ClInclude Include="..\Include\tbarpage.h" />
+    <ClInclude Include="..\Include\tbarsdlg.h" />
+    <ClInclude Include="..\Include\tbartrck.h" />
+    <ClInclude Include="..\Include\tbtn2prt.h" />
+    <ClInclude Include="..\Include\tbtncmbo.h" />
+    <ClInclude Include="..\Include\tbtnstd.h" />
+    <ClInclude Include="..\Include\tbtnwnd.h" />
+    <ClInclude Include="..\Include\Tiff.h" />
+    <ClInclude Include="..\Include\Tiffbase.h" />
+    <ClInclude Include="..\Include\Tiffcomp.h" />
+    <ClInclude Include="..\Include\Tiffconf.h" />
+    <ClInclude Include="..\Include\Tiffio.h" />
+    <ClInclude Include="..\Include\Tiffiop.h" />
+    <ClInclude Include="..\Include\Tif_fax3.h" />
+    <ClInclude Include="..\Include\TraceFile.h" />
+    <ClInclude Include="..\Include\TrCtlX.h" />
+    <ClInclude Include="..\Include\TreeNode.h" />
+    <ClInclude Include="..\Include\usertool.h" />
+    <ClInclude Include="..\Include\usrtldlg.h" />
+    <ClInclude Include="..\Include\Zconf.h" />
+    <ClInclude Include="..\Include\Zlib.h" />
+    <ClInclude Include="..\Include\Zutil.h" />
+    <ClInclude Include="Stdafx.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

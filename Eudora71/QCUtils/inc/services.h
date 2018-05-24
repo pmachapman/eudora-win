@@ -14,8 +14,8 @@ __declspec(dllexport) BOOL IsMainThreadMT();
 //
 // Generic time formatting routines.
 //
-__declspec(dllexport) char* TimeDateStringMT(char* buf, long Seconds, BOOL DoDate);
-__declspec(dllexport) char* TimeDateStringFormatMT(char* buf, long Seconds, int TimeZoneMinutes, const char* Format);
+__declspec(dllexport) char* TimeDateStringMT(char* buf, time_t Seconds, BOOL DoDate);
+__declspec(dllexport) char* TimeDateStringFormatMT(char* buf, time_t Seconds, int TimeZoneMinutes, const char* Format);
 __declspec(dllexport) CString FormatTimeMT( time_t theTime, const char * pFormat );
 __declspec(dllexport) HRESULT GetGMTOffsetMT(const char* pszTimeZone, int* pOffset);
 
@@ -34,7 +34,7 @@ public:
 protected:
 	// Don't allow copy constructor or assignment operator
 	CSortedStringListMT(CSortedStringListMT & in_copy);
-	operator=(CSortedStringListMT & in_rhs);
+	CSortedStringListMT &operator=(CSortedStringListMT & in_rhs);
 };
 
 //

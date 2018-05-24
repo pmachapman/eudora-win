@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <RootNamespace>EudoraOldIcons</RootNamespace>
+    <SccProjectName>EudoraOldIcons</SccProjectName>
+    <SccAuxPath />
+    <SccLocalPath>.</SccLocalPath>
+    <SccProvider>MSSCCI:Perforce SCM</SccProvider>
+    <Keyword>MFCProj</Keyword>
+    <ProjectGuid>{8D8CC924-3876-4418-BAFF-D08E2139FC92}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.27625.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Build\Debug\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Build\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\QCUtils\public\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)EudoraOldIcons.epi</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ModuleDefinitionFile>.\EudoraOldIcons.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/EudoraOldIcons.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\QCUtils\public\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/IGNORE:4089 %(AdditionalOptions)</AdditionalOptions>
+      <OutputFile>$(OutDir)EudoraOldIcons.epi</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ModuleDefinitionFile>.\EudoraOldIcons.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/EudoraOldIcons.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="EudoraOldIcons.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="EudoraOldIcons.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="EudoraOldIcons.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="StdAfx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\icons\acap.ico" />
+    <Image Include="res\icons\Ad.ico" />
+    <Image Include="res\icons\AdwareButton.bmp" />
+    <Image Include="res\icons\anetwork.ico" />
+    <Image Include="res\icons\attach.bmp" />
+    <Image Include="res\icons\attach.ico" />
+    <Image Include="res\icons\attachnfound.ico" />
+    <Image Include="res\icons\attach_d.ico" />
+    <Image Include="res\icons\autocomp.bmp" />
+    <Image Include="res\icons\binhex.bmp" />
+    <Image Include="res\icons\blah.bmp" />
+    <Image Include="res\icons\certbits.bmp" />
+    <Image Include="res\icons\ChangeRegistrationButton.bmp" />
+    <Image Include="res\icons\checking.ico" />
+    <Image Include="res\icons\checkmar.bmp" />
+    <Image Include="res\icons\ChiliBrush.bmp" />
+    <Image Include="res\icons\columns.ico" />
+    <Image Include="res\icons\compmess.ico" />
+    <Image Include="res\icons\CompMsgSettings.ico" />
+    <Image Include="res\icons\comptbar.bmp" />
+    <Image Include="res\icons\ContentConcentrator.ico" />
+    <Image Include="res\icons\DateDisp.ico" />
+    <Image Include="res\icons\defattach.ico" />
+    <Image Include="res\icons\defreq.ico" />
+    <Image Include="res\icons\deftool.ico" />
+    <Image Include="res\icons\DeleteFromServer.bmp" />
+    <Image Include="res\icons\DemographicsButton.bmp" />
+    <Image Include="res\icons\Digits_4x5.bmp" />
+    <Image Include="res\icons\DirectoryServices.ico" />
+    <Image Include="res\icons\display.ico" />
+    <Image Include="res\icons\DownloadFromServer.bmp" />
+    <Image Include="res\icons\edit.bmp" />
+    <Image Include="res\icons\eudora.ico" />
+    <Image Include="res\icons\EudoraInfo.ico" />
+    <Image Include="res\icons\EXTRWARN.ICO" />
+    <Image Include="res\icons\fieldcom.ico" />
+    <Image Include="res\icons\FileBrowse.ico" />
+    <Image Include="res\icons\filters.bmp" />
+    <Image Include="res\icons\filters.ico" />
+    <Image Include="res\icons\filtrep.ico" />
+    <Image Include="res\icons\FindVersionsButton.bmp" />
+    <Image Include="res\icons\first.ico" />
+    <Image Include="res\icons\fontdisp.ico" />
+    <Image Include="res\icons\FreeButton.bmp" />
+    <Image Include="res\icons\FullFeature.bmp" />
+    <Image Include="res\icons\getatten.ico" />
+    <Image Include="res\icons\getstart.ico" />
+    <Image Include="res\icons\havemail.ico" />
+    <Image Include="res\icons\havesend.ico" />
+    <Image Include="res\icons\help.ico" />
+    <Image Include="res\icons\hosts.ico" />
+    <Image Include="res\icons\icon1.ico" />
+    <Image Include="res\icons\idr_sear.ico" />
+    <Image Include="res\icons\idr_Stats.ico" />
+    <Image Include="res\icons\idr_task.ico" />
+    <Image Include="res\icons\il_common16.bmp" />
+    <Image Include="res\icons\il_common32.bmp" />
+    <Image Include="res\icons\il_mailtree.bmp" />
+    <Image Include="res\icons\il_mood_m.bmp" />
+    <Image Include="res\icons\il_status.bmp" />
+    <Image Include="res\icons\il_statusm.bmp" />
+    <Image Include="res\icons\il_TaskStatus.bmp" />
+    <Image Include="res\icons\Imfilters.ico" />
+    <Image Include="res\icons\InternetDialup.ico" />
+    <Image Include="res\icons\Junk.ico" />
+    <Image Include="res\icons\JunkExtras.ico" />
+    <Image Include="res\icons\kerberos.ico" />
+    <Image Include="res\icons\labels.ico" />
+    <Image Include="res\icons\LinkHistory.ico" />
+    <Image Include="res\icons\LinkHistoryTypes.bmp" />
+    <Image Include="res\icons\locked.bmp" />
+    <Image Include="res\icons\lookup.ico" />
+    <Image Include="res\icons\mailbox.ico" />
+    <Image Include="res\icons\mailboxs.ico" />
+    <Image Include="res\icons\MailExpl.ico" />
+    <Image Include="res\icons\mapi.ico" />
+    <Image Include="res\icons\mboxes.ico" />
+    <Image Include="res\icons\mime.bmp" />
+    <Image Include="res\icons\miscell.ico" />
+    <Image Include="res\icons\MoodCat.ico" />
+    <Image Include="res\icons\MoodMail.bmp" />
+    <Image Include="res\icons\moodwatch_1.ico" />
+    <Image Include="res\icons\moodwatch_2.ico" />
+    <Image Include="res\icons\moodwatch_3.ico" />
+    <Image Include="res\icons\mw32score1.ico" />
+    <Image Include="res\icons\mw32score2.ico" />
+    <Image Include="res\icons\NewBook.bmp" />
+    <Image Include="res\icons\newfile.ico" />
+    <Image Include="res\icons\NewNick.bmp" />
+    <Image Include="res\icons\nickname.ico" />
+    <Image Include="res\icons\nicktree.bmp" />
+    <Image Include="res\icons\nomail.ico" />
+    <Image Include="res\icons\NonHWordBrush.bmp" />
+    <Image Include="res\icons\NOTRANS.ICO" />
+    <Image Include="res\icons\options.ico" />
+    <Image Include="res\icons\PaidButton.bmp" />
+    <Image Include="res\icons\PeanutToolbar.bmp" />
+    <Image Include="res\icons\PERSONA.ICO" />
+    <Image Include="res\icons\personal.ico" />
+    <Image Include="res\icons\phigh.bmp" />
+    <Image Include="res\icons\phighest.bmp" />
+    <Image Include="res\icons\plow.bmp" />
+    <Image Include="res\icons\plowest.bmp" />
+    <Image Include="res\icons\pmenuhigh.bmp" />
+    <Image Include="res\icons\pmenuhighest.bmp" />
+    <Image Include="res\icons\pmenulow.bmp" />
+    <Image Include="res\icons\pmenulowest.bmp" />
+    <Image Include="res\icons\pmenunormal.bmp" />
+    <Image Include="res\icons\pnormal.bmp" />
+    <Image Include="res\icons\proptacU.bmp" />
+    <Image Include="res\icons\prop_mult_win.bmp" />
+    <Image Include="res\icons\prop_mult_wins.bmp" />
+    <Image Include="res\icons\prop_tac.bmp" />
+    <Image Include="res\icons\qclogo.bmp" />
+    <Image Include="res\icons\qclogomask.bmp" />
+    <Image Include="res\icons\readmess.ico" />
+    <Image Include="res\icons\RegisterButton.bmp" />
+    <Image Include="res\icons\Remove.bmp" />
+    <Image Include="res\icons\replying.ico" />
+    <Image Include="res\icons\RTB1.bmp" />
+    <Image Include="res\icons\safety.bmp" />
+    <Image Include="res\icons\sdelete.bmp" />
+    <Image Include="res\icons\search.ico" />
+    <Image Include="res\icons\secure.ico" />
+    <Image Include="res\icons\sending.ico" />
+    <Image Include="res\icons\sendmail.ico" />
+    <Image Include="res\icons\setcat.ico" />
+    <Image Include="res\icons\SETTAUTO.ICO" />
+    <Image Include="res\icons\sfetch.bmp" />
+    <Image Include="res\icons\sfetchde.bmp" />
+    <Image Include="res\icons\sig.bmp" />
+    <Image Include="res\icons\signatur.ico" />
+    <Image Include="res\icons\signone.bmp" />
+    <Image Include="res\icons\sleave.bmp" />
+    <Image Include="res\icons\SortByAttachment.bmp" />
+    <Image Include="res\icons\SortByDate.bmp" />
+    <Image Include="res\icons\SortByJunk.bmp" />
+    <Image Include="res\icons\SortByLabel.bmp" />
+    <Image Include="res\icons\SortByMood.bmp" />
+    <Image Include="res\icons\SortByPriority.bmp" />
+    <Image Include="res\icons\SortBySender.bmp" />
+    <Image Include="res\icons\SortByServerStatus.bmp" />
+    <Image Include="res\icons\SortBySize.bmp" />
+    <Image Include="res\icons\SortByStatus.bmp" />
+    <Image Include="res\icons\SortBySubject.bmp" />
+    <Image Include="res\icons\SpellBrush.bmp" />
+    <Image Include="res\icons\spelling.ico" />
+    <Image Include="res\icons\StatBarTaskStatusIL.bmp" />
+    <Image Include="res\icons\stationery.ico" />
+    <Image Include="res\icons\Stats.ico" />
+    <Image Include="res\icons\StatusForwarded.bmp" />
+    <Image Include="res\icons\StatusQueued.bmp" />
+    <Image Include="res\icons\StatusRead.bmp" />
+    <Image Include="res\icons\StatusRecovered.bmp" />
+    <Image Include="res\icons\StatusRedirect.bmp" />
+    <Image Include="res\icons\StatusReplied.bmp" />
+    <Image Include="res\icons\StatusSendable.bmp" />
+    <Image Include="res\icons\StatusSent.bmp" />
+    <Image Include="res\icons\StatusTimeQueued.bmp" />
+    <Image Include="res\icons\statusun.bmp" />
+    <Image Include="res\icons\StatusUnread.bmp" />
+    <Image Include="res\icons\StatusUnsendable.bmp" />
+    <Image Include="res\icons\StatusUnsent.bmp" />
+    <Image Include="res\icons\status_s.bmp" />
+    <Image Include="res\icons\styltext.ico" />
+    <Image Include="res\icons\Swap.bmp" />
+    <Image Include="res\icons\TaskError.bmp" />
+    <Image Include="res\icons\TaskStatus.ico" />
+    <Image Include="res\icons\TaskStatusSetting.ico" />
+    <Image Include="res\icons\tbar16.bmp" />
+    <Image Include="res\icons\tbar16a.bmp" />
+    <Image Include="res\icons\tbar16b.bmp" />
+    <Image Include="res\icons\tbar32.bmp" />
+    <Image Include="res\icons\tbar32a.bmp" />
+    <Image Include="res\icons\tbar32b.bmp" />
+    <Image Include="res\icons\towtruck.ico" />
+    <Image Include="res\icons\TRACE.ICO" />
+    <Image Include="res\icons\transfer.bmp" />
+    <Image Include="res\icons\urstatus.bmp" />
+    <Image Include="res\icons\uuencode.bmp" />
+    <Image Include="res\icons\viewmail.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

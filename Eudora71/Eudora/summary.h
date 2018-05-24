@@ -502,11 +502,17 @@ class CSumList
 	CSummary*&				GetHead()
 								{ return reinterpret_cast<CSummary *&>( m_ObList.GetHead() ); }
 	const CSummary*&		GetHead() const
-								{ return reinterpret_cast<const CSummary *&>( m_ObList.GetHead() ); }
+	{
+		const CObject* obj = m_ObList.GetHead();
+		return reinterpret_cast<const CSummary *&>(obj);
+	}
 	CSummary*&				GetTail()
 								{ return reinterpret_cast<CSummary *&>( m_ObList.GetHead() ); }
 	const CSummary*&		GetTail() const
-								{ return reinterpret_cast<const CSummary *&>( m_ObList.GetHead() ); }
+	{
+		const CObject* obj = m_ObList.GetHead();
+		return reinterpret_cast<const CSummary *&>(obj);
+	}
 
   // === Operations ===
 	// get head or tail (and remove it) - don't call on empty list!
@@ -528,17 +534,26 @@ class CSumList
 	CSummary *&				GetNext(POSITION& rPosition)
 								{ return reinterpret_cast<CSummary *&>( m_ObList.GetNext(rPosition) ); }
 	const CSummary *&		GetNext(POSITION& rPosition) const
-								{ return reinterpret_cast<const CSummary *&>( m_ObList.GetNext(rPosition) ); }
+	{
+		const CObject* obj = m_ObList.GetNext(rPosition);
+		return reinterpret_cast<const CSummary *&>(obj);
+	}
 	CSummary *&				GetPrev(POSITION& rPosition)
 								{ return reinterpret_cast<CSummary *&>( m_ObList.GetPrev(rPosition) ); }
 	const CSummary *&		GetPrev(POSITION& rPosition) const
-								{ return reinterpret_cast<const CSummary *&>( m_ObList.GetPrev(rPosition) ); }
+	{
+		const CObject* obj = m_ObList.GetPrev(rPosition);
+		return reinterpret_cast<const CSummary *&>(obj);
+	}
 
 	// getting/modifying an element at a given position
 	CSummary *&				GetAt(POSITION position)
 								{ return reinterpret_cast<CSummary *&>( m_ObList.GetAt(position) ); }
 	const CSummary *&		GetAt(POSITION position) const
-								{ return reinterpret_cast<const CSummary *&>( m_ObList.GetAt(position) ); }
+	{
+		const CObject* obj = m_ObList.GetAt(position);
+		return reinterpret_cast<const CSummary *&>(obj);
+	}
 	void					SetAt(POSITION position, CSummary * in_pSummary);
 	void					RemoveAt(POSITION position);
 

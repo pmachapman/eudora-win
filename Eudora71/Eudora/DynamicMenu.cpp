@@ -78,7 +78,7 @@ CDynamicMenu::~CDynamicMenu()
 // Deletes any CDynamicMenus that are in the passed in menu.
 // If bRemoveItems is TRUE, then delete the menu items as well.
 /////////////////////////////////////////////////////////////////////////////
-/*virtual*/ CDynamicMenu::OnInitMenuPopup(UINT nIndex, BOOL bSysMenu)
+/*virtual*/ int CDynamicMenu::OnInitMenuPopup(UINT nIndex, BOOL bSysMenu)
 {
 	// If it's the first time displaying this menu we need to build the menu items.
 	// Menus are either empty, or the have only a separator in them (which act as

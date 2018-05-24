@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Src">
+      <UniqueIdentifier>{a202c003-4a90-418a-aa41-f9688390ccf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PrivateInc">
+      <UniqueIdentifier>{6cff2e98-ff54-421c-94ec-64551ea0bfaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PublicInc">
+      <UniqueIdentifier>{7d811069-d1fa-4247-8641-727c13b144f2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\stdafx.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\WizardAcapPage.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\WizardClientPage.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\WizardConfirmPage.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\WizardFinishPage.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\WizardImapDirPage.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\WizardImportPage.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\WizardInServerPage.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\WizardLoginPage.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\WizardOutServerPage.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\WizardPersNamePage.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\WizardPropSheet.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\WizardRetAddPage.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\WizardWelcomePage.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\WizardYourNamePage.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PrivateInc\WizardAcapPage.h">
+      <Filter>PrivateInc</Filter>
+    </ClInclude>
+    <ClInclude Include="PrivateInc\WizardClientPage.h">
+      <Filter>PrivateInc</Filter>
+    </ClInclude>
+    <ClInclude Include="PrivateInc\WizardConfirmpage.h">
+      <Filter>PrivateInc</Filter>
+    </ClInclude>
+    <ClInclude Include="PrivateInc\WizardFinishPage.h">
+      <Filter>PrivateInc</Filter>
+    </ClInclude>
+    <ClInclude Include="PrivateInc\WizardImapDirPage.h">
+      <Filter>PrivateInc</Filter>
+    </ClInclude>
+    <ClInclude Include="PrivateInc\WizardImportPage.h">
+      <Filter>PrivateInc</Filter>
+    </ClInclude>
+    <ClInclude Include="PrivateInc\WizardInServerPage.h">
+      <Filter>PrivateInc</Filter>
+    </ClInclude>
+    <ClInclude Include="PrivateInc\WizardLoginPage.h">
+      <Filter>PrivateInc</Filter>
+    </ClInclude>
+    <ClInclude Include="PrivateInc\WizardOutServerPage.h">
+      <Filter>PrivateInc</Filter>
+    </ClInclude>
+    <ClInclude Include="PrivateInc\WizardPersNamePage.h">
+      <Filter>PrivateInc</Filter>
+    </ClInclude>
+    <ClInclude Include="PrivateInc\WizardRetAddPage.h">
+      <Filter>PrivateInc</Filter>
+    </ClInclude>
+    <ClInclude Include="PrivateInc\WizardWelcomePage.h">
+      <Filter>PrivateInc</Filter>
+    </ClInclude>
+    <ClInclude Include="PrivateInc\WizardYourNamePage.h">
+      <Filter>PrivateInc</Filter>
+    </ClInclude>
+    <ClInclude Include="PublicInc\WizardPropSheet.h">
+      <Filter>PublicInc</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

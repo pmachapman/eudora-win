@@ -197,7 +197,7 @@ static void do_date (char *date,char *prefix,char *fmt,int suffix, time_t tTime)
 	{			/* append timezone suffix if desired */
 		char *tz;
 		tzset ();			/* get timezone from TZ environment stuff */
-		tz = tzname[daylight ? (((struct tm *) t)->tm_isdst > 0) : 0];
+		tz = _tzname[_daylight ? (((struct tm *) t)->tm_isdst > 0) : 0];
 		if (tz && tz[0]) sprintf (date + strlen (date)," (%s)",tz);
 	}
 }

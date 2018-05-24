@@ -81,7 +81,7 @@ void PlistCInfoResetDayStuff(PlistCInfoPtr pcip);
 int PlistCInfoResetDayProc(void *dbRef, PlaylistRecPtr plrp, EntryRecPtr erp, PlaylistRecPtr plrpWas, EntryRecPtr erpWas, long refCon );
 
 // ugly extern import of cool looper
-typedef (*adproc)( void *dbRef, PlaylistRecPtr plrp, EntryRecPtr erp, PlaylistRecPtr plrpWas, EntryRecPtr erpWas, void *userRef );
+typedef int (*adproc)( void *dbRef, PlaylistRecPtr plrp, EntryRecPtr erp, PlaylistRecPtr plrpWas, EntryRecPtr erpWas, void *userRef );
 extern int ForEntriesDo( void *dbRef, adproc proc, int startPlaylistID, int startServerID, int startEntryID, void *userRef );
 // end ugly
 int PlistCInfoResetDayProc(void *dbRef, PlaylistRecPtr plrp, EntryRecPtr erp, PlaylistRecPtr plrpWas, EntryRecPtr erpWas, void *userRef );

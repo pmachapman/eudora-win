@@ -477,7 +477,7 @@ public:
 						char **out_desc,
 						long *out_code);
 
-	virtual IsInYerFace() { return (m_TLflags & EMSF_TOOLBAR_PRESENCE);}
+	virtual BOOL IsInYerFace() { return (m_TLflags & EMSF_TOOLBAR_PRESENCE);}
 
 	ModeTypeEnum ModeNeeded()  {return m_TransAPI ? m_TransAPI->ModeNeeded() : EMS_ModeFree;}
 
@@ -510,8 +510,8 @@ public:
 
 	virtual operator emsMenu() const{ return m_MenuItem; }
 
-	virtual GetIcon(HICON &icn);
-	virtual IsInYerFace() { return (m_MenuItem.flags & EMSF_TOOLBAR_PRESENCE);}
+	virtual BOOL GetIcon(HICON &icn);
+	virtual BOOL IsInYerFace() { return (m_MenuItem.flags & EMSF_TOOLBAR_PRESENCE);}
 
 
 
@@ -527,7 +527,7 @@ class CSpecial : public CAttacher
 public:
 	CSpecial(CTransAPI *pTAPI, long ID);
 	long virtual MenuHook(CCompMessageDoc* msg);
-	virtual GetIcon(HICON &icn);
+	virtual BOOL GetIcon(HICON &icn);
 };	
 
 // Forward decl.

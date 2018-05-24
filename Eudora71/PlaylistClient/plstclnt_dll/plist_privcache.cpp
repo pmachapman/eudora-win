@@ -382,7 +382,7 @@ char *PrivCacheURL2Path(PrivCachePtr pcp, const char *url, char *path)
 {
 	unsigned int hash = PrivCacheHash(url);
 	
-	char *extension = strrchr(url,'.');
+	char *extension = (char*)strrchr(url,'.');
 	if (!extension || strlen(extension)>5) extension = ".dat";
 	
 	sprintf(path,"%s\\%08x%s",pcp->dir,hash,extension);

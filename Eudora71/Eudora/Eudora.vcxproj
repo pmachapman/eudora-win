@@ -1,0 +1,1051 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <RootNamespace>Eudora</RootNamespace>
+    <SccProjectName>Eudora</SccProjectName>
+    <SccAuxPath />
+    <SccLocalPath>..</SccLocalPath>
+    <SccProvider>MSSCCI:Perforce SCM</SccProvider>
+    <Keyword>AtlProj</Keyword>
+    <ProjectGuid>{B94694FC-1EAC-4E90-9006-E40CF1C85041}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <UseOfAtl>Static</UseOfAtl>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <UseOfAtl>Static</UseOfAtl>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.27625.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\Bin\Debug\</OutDir>
+    <IntDir>.\Build\Debug\</IntDir>
+    <LinkIncremental />
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\Bin\Release\</OutDir>
+    <IntDir>.\Build\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\SearchEngine\PublicInc;..\SpeechSDK\Include;..\AccountWizard\PublicInc;..\PaigeDLL\PGHEADER;..\Qt3.x\CIncludes;..\QCUtils\public\inc;..\QCSocket\inc;..\OT501\Include;..\EuImap\public\inc;..\imapdll\public\inc;..\DirectoryServices\DirectoryServicesUI\public\inc;..\PlaylistClient\plstclnt_dll;..\EuLang\public\inc;..\EuMemMgr\Include;..\tae;..\expat\Source\lib;..\QCSSL\public\inc;..\QCSSL\SSLPlus\include;..\QCSSL\SSLPlus\tools\securitybuilder\win32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;COMMERCIAL;WIN32;_WINDOWS;OEMRESOURCE;WIN32_COMPILE;IMAP4;EXPFLAG;THREADED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <UndefinePreprocessorDefinitions>EXPIRING;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Paige32d.lib;imap.lib;QCSocket.lib;wininet.lib;DirectoryServicesUI.lib;QCUtils.lib;EuMemMgr.lib;winmm.lib;vfw32.lib;sscewd32.lib;EuImap.lib;AccountWizard.lib;qtmlclient.lib;spchwrap.lib;libpng.lib;zlib.lib;eulang.lib;libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\Lib\Debug;..\Qt3.x\Libraries;..\SpeechSDK\Lib;..\expat\Libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libc.lib;libcmt.lib;msvcrt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <HeaderFileName />
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\OT501\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MinSpace</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\SearchEngine\PublicInc;..\SpeechSDK\Include;..\AccountWizard\PublicInc;..\PaigeDLL\PGHEADER;..\Qt3.x\CIncludes;..\QCUtils\public\inc;..\QCSocket\inc;..\OT501\Include;..\EuImap\public\inc;..\imapdll\public\inc;..\DirectoryServices\DirectoryServicesUI\public\inc;..\PlaylistClient\plstclnt_dll;..\EuLang\public\inc;..\EuMemMgr\Include;..\tae;..\expat\Source\lib;..\QCSSL\public\inc;..\QCSSL\SSLPlus\include;..\QCSSL\SSLPlus\tools\securitybuilder\win32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;COMMERCIAL=1;WIN32;_WINDOWS;OEMRESOURCE;WIN32_COMPILE;IMAP4;EXPFLAG;THREADED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Paige32.lib;Imap.lib;wininet.lib;vfw32.lib;DirectoryServicesUI.lib;QCUtils.lib;EuMemMgr.lib;winmm.lib;sscewd32.lib;EuImap.lib;AccountWizard.lib;qtmlclient.lib;spchwrap.lib;libpng.lib;zlib.lib;eulang.lib;libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\Lib\Release;..\Qt3.x\Libraries;..\SpeechSDK\Lib;..\expat\Libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libc.lib;libcmt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <HeaderFileName />
+    </Midl>
+    <PostBuildEvent>
+      <Command>call ..\BinTools\PostProcessRel Eudora
+cd $(SolutionDir)
+MakeDox.pl Eudora.sln DevDox
+</Command>
+    </PostBuildEvent>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\OT501\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\GSSupport\secchk.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\GSSupport\seccinit.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\GSSupport\seccook.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\PlaylistClient\plstclnt_dll\xml_parser_base.cpp" />
+    <ClCompile Include="..\regcode\regcode_charsets.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\regcode\regcode_v2.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\tae\TAE.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\tae\TAECommon.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\tae\TAEDictionary.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\tae\TAEText.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="3dformv.cpp" />
+    <ClCompile Include="AboutDlg.cpp" />
+    <ClCompile Include="AboutEMS.cpp" />
+    <ClCompile Include="acapdlg.cpp" />
+    <ClCompile Include="address.cpp" />
+    <ClCompile Include="AdView.cpp" />
+    <ClCompile Include="AdWazooBar.cpp" />
+    <ClCompile Include="AdWazooWnd.cpp" />
+    <ClCompile Include="AMBIENTS.CPP" />
+    <ClCompile Include="AuditEvents.cpp" />
+    <ClCompile Include="AuditLog.cpp" />
+    <ClCompile Include="AuthRPA.cpp" />
+    <ClCompile Include="AutoCompleteSearcher.cpp" />
+    <ClCompile Include="Automation.cpp" />
+    <ClCompile Include="Base64.cpp" />
+    <ClCompile Include="binhex.cpp" />
+    <ClCompile Include="BlahBlahBlahView.cpp" />
+    <ClCompile Include="bmpcombo.cpp" />
+    <ClCompile Include="BossProtector.cpp" />
+    <ClCompile Include="Bstr.cpp" />
+    <ClCompile Include="CAdFailureNagTask.cpp" />
+    <ClCompile Include="CAuditNagTask.cpp" />
+    <ClCompile Include="CDemoExpireNagTask.cpp" />
+    <ClCompile Include="CertManagerDlg.cpp" />
+    <ClCompile Include="CFullFeatureNagTask.cpp" />
+    <ClCompile Include="changeq.cpp" />
+    <ClCompile Include="ClipboardMgr.cpp" />
+    <ClCompile Include="CNagManager.cpp" />
+    <ClCompile Include="CNagTask.cpp" />
+    <ClCompile Include="COLORLIS.CPP" />
+    <ClCompile Include="ColorToolbarButton.cpp" />
+    <ClCompile Include="ComboBoxEnhanced.cpp" />
+    <ClCompile Include="CompMessageFrame.cpp" />
+    <ClCompile Include="compmsgd.cpp" />
+    <ClCompile Include="ConConMessage.cpp" />
+    <ClCompile Include="ConConProfile.cpp" />
+    <ClCompile Include="ContainerView.cpp" />
+    <ClCompile Include="ContentConcentrator.cpp" />
+    <ClCompile Include="controls.cpp" />
+    <ClCompile Include="Convhtml.cpp" />
+    <ClCompile Include="CoolButton.cpp" />
+    <ClCompile Include="CRegisterNagTask.cpp" />
+    <ClCompile Include="CUpdateNagTask.cpp" />
+    <ClCompile Include="cursor.cpp" />
+    <ClCompile Include="ddeclien.cpp" />
+    <ClCompile Include="ddeserve.cpp" />
+    <ClCompile Include="ddestr.cpp" />
+    <ClCompile Include="doc.cpp" />
+    <ClCompile Include="DockBar.cpp" />
+    <ClCompile Include="DynamicMailboxMenu.cpp" />
+    <ClCompile Include="DynamicMenu.cpp" />
+    <ClCompile Include="DynamicPersonalityMenu.cpp" />
+    <ClCompile Include="DynamicPluginMenu.cpp" />
+    <ClCompile Include="DynamicRecipientMenu.cpp" />
+    <ClCompile Include="DynamicSavedSearchMenu.cpp" />
+    <ClCompile Include="DynamicStationeryMenu.cpp" />
+    <ClCompile Include="ehlo.cpp" />
+    <ClCompile Include="EmoticonManager.cpp" />
+    <ClCompile Include="EmoticonMenu.cpp" />
+    <ClCompile Include="EmoticonToolbarButton.cpp" />
+    <ClCompile Include="etf2html.cpp" />
+    <ClCompile Include="eudora.cpp" />
+    <ClCompile Include="EudoraExe.cpp" />
+    <ClCompile Include="eudordoc.cpp" />
+    <ClCompile Include="eudorvw.cpp" />
+    <ClCompile Include="eugraph.cpp" />
+    <ClCompile Include="ExceptionHandler.cpp" />
+    <ClCompile Include="ExtLaunchMgr.cpp" />
+    <ClCompile Include="FaceNameDialog.cpp" />
+    <ClCompile Include="FaceTime.cpp" />
+    <ClCompile Include="FileBrowseView.cpp" />
+    <ClCompile Include="FileBrowseWazooWnd.cpp" />
+    <ClCompile Include="FileLineReader.cpp" />
+    <ClCompile Include="fileutil.cpp" />
+    <ClCompile Include="FilterReportView.cpp" />
+    <ClCompile Include="FilterReportWazooWnd.cpp" />
+    <ClCompile Include="filtersd.cpp" />
+    <ClCompile Include="filtersv.cpp" />
+    <ClCompile Include="FiltersWazooWnd.cpp" />
+    <ClCompile Include="FindDlg.cpp" />
+    <ClCompile Include="font.cpp" />
+    <ClCompile Include="GenericReader.cpp" />
+    <ClCompile Include="GetMail.cpp" />
+    <ClCompile Include="GoogleDesktopComponentRegistration.cpp" />
+    <ClCompile Include="guiutils.cpp" />
+    <ClCompile Include="header.cpp" />
+    <ClCompile Include="headervw.cpp" />
+    <ClCompile Include="helpcntx.cpp" />
+    <ClCompile Include="helpxdlg.cpp" />
+    <ClCompile Include="hexbin.cpp" />
+    <ClCompile Include="hostlist.cpp" />
+    <ClCompile Include="html2text.cpp" />
+    <ClCompile Include="HTMLUtils.cpp" />
+    <ClCompile Include="IADVSINK.CPP" />
+    <ClCompile Include="ICLISITE.CPP" />
+    <ClCompile Include="IDocHostShowUI.cpp" />
+    <ClCompile Include="IDocHostUIHandler.cpp" />
+    <ClCompile Include="IDOCSITE.CPP" />
+    <ClCompile Include="IIPSITE.CPP" />
+    <ClCompile Include="ImportAdvDlog.cpp" />
+    <ClCompile Include="ImportMailDlog.cpp" />
+    <ClCompile Include="InsertLinkDialog.cpp" />
+    <ClCompile Include="JunkMail.cpp" />
+    <ClCompile Include="Kerberos.cpp" />
+    <ClCompile Include="LabelComboBox.cpp" />
+    <ClCompile Include="lex822.cpp" />
+    <ClCompile Include="LHOfflineLinkDialog.cpp" />
+    <ClCompile Include="LHRemindDialog.cpp" />
+    <ClCompile Include="LinkHistoryList.cpp" />
+    <ClCompile Include="LinkHistoryManager.cpp" />
+    <ClCompile Include="LinkHistoryWazooWnd.cpp" />
+    <ClCompile Include="ListCtrlEx.cpp" />
+    <ClCompile Include="mainfrm.cpp" />
+    <ClCompile Include="MakeFilter.cpp" />
+    <ClCompile Include="mapicmc.cpp" />
+    <ClCompile Include="MAPIImport.cpp" />
+    <ClCompile Include="mapiinst.cpp" />
+    <ClCompile Include="mboxtree.cpp" />
+    <ClCompile Include="MBoxTreeCtrlCheck.cpp" />
+    <ClCompile Include="MboxWazooWnd.cpp" />
+    <ClCompile Include="md5.cpp" />
+    <ClCompile Include="mdichild.cpp" />
+    <ClCompile Include="mdidrag.cpp" />
+    <ClCompile Include="mime.cpp" />
+    <ClCompile Include="MIMEMap.cpp" />
+    <ClCompile Include="MimeStorage.cpp" />
+    <ClCompile Include="ModifyAcctDlgs.cpp" />
+    <ClCompile Include="ModifyAcctSheet.cpp" />
+    <ClCompile Include="MoodMailStatic.cpp" />
+    <ClCompile Include="MoodWatch.cpp" />
+    <ClCompile Include="MoreHelpWnd.cpp" />
+    <ClCompile Include="msgdoc.cpp" />
+    <ClCompile Include="msgframe.cpp" />
+    <ClCompile Include="MsgLabel.cpp" />
+    <ClCompile Include="MsgOpts.cpp" />
+    <ClCompile Include="MsgRecord.cpp" />
+    <ClCompile Include="MsgSplitter.cpp" />
+    <ClCompile Include="msgutils.cpp" />
+    <ClCompile Include="MTRANSOP.CPP" />
+    <ClCompile Include="MultiReader.cpp" />
+    <ClCompile Include="namenick.cpp" />
+    <ClCompile Include="NameToolBarDialog.cpp" />
+    <ClCompile Include="newmbox.cpp" />
+    <ClCompile Include="NewSignatureDialog.cpp" />
+    <ClCompile Include="nickdoc.cpp" />
+    <ClCompile Include="NicknamesWazooWnd.cpp" />
+    <ClCompile Include="nickpage.cpp" />
+    <ClCompile Include="nicksht.cpp" />
+    <ClCompile Include="nicktree.cpp" />
+    <ClCompile Include="nickview.cpp" />
+    <ClCompile Include="NSPrefs.cpp" />
+    <ClCompile Include="ObjectSpec.cpp" />
+    <ClCompile Include="OleDoc.cpp" />
+    <ClCompile Include="PaigeEdtView.cpp" />
+    <ClCompile Include="PaigePreviewDC.cpp" />
+    <ClCompile Include="PaigeStyle.cpp" />
+    <ClCompile Include="Paige_io.cpp" />
+    <ClCompile Include="password.cpp" />
+    <ClCompile Include="PaymentAndRegistrationDlg.cpp" />
+    <ClCompile Include="persona.cpp" />
+    <ClCompile Include="PersonalityView.cpp" />
+    <ClCompile Include="PersonalityWazooWnd.cpp" />
+    <ClCompile Include="PersParams.cpp" />
+    <ClCompile Include="PgCntrItem.cpp" />
+    <ClCompile Include="PgCompMsgView.cpp" />
+    <ClCompile Include="PGDEFTBL.C" />
+    <ClCompile Include="PgDocumentFrame.cpp" />
+    <ClCompile Include="PgEditMsg.cpp" />
+    <ClCompile Include="PgEmbeddedImage.cpp" />
+    <ClCompile Include="PgEmbeddedObject.cpp" />
+    <ClCompile Include="PGEXPORT.CPP" />
+    <ClCompile Include="PgFixedCompMsgView.cpp" />
+    <ClCompile Include="PgGlobals.cpp" />
+    <ClCompile Include="PgHLinks.cpp" />
+    <ClCompile Include="PGHTMDEF.C" />
+    <ClCompile Include="PGHTMEXP.CPP" />
+    <ClCompile Include="PGHTMIMP.CPP" />
+    <ClCompile Include="PGIMPORT.CPP" />
+    <ClCompile Include="PgMsgView.cpp" />
+    <ClCompile Include="PGNATIVE.CPP" />
+    <ClCompile Include="PgReadMsgPreview.cpp" />
+    <ClCompile Include="PgReadMsgView.cpp" />
+    <ClCompile Include="PGRTFDEF.C" />
+    <ClCompile Include="PGRTFEXP.CPP" />
+    <ClCompile Include="PGRTFIMP.CPP" />
+    <ClCompile Include="PgStuffBucket.cpp" />
+    <ClCompile Include="PgStyleUtils.cpp" />
+    <ClCompile Include="PgTextExport.cpp" />
+    <ClCompile Include="PgTextTranslator.cpp" />
+    <ClCompile Include="PGWMF.C" />
+    <ClCompile Include="PictureLinkDlg.cpp" />
+    <ClCompile Include="PooterButton.cpp" />
+    <ClCompile Include="pop.cpp" />
+    <ClCompile Include="POPGssapi.cpp" />
+    <ClCompile Include="pophost.cpp" />
+    <ClCompile Include="POPSession.cpp" />
+    <ClCompile Include="PopupText.cpp" />
+    <ClCompile Include="PrintPreviewView.cpp" />
+    <ClCompile Include="ProfileNag.cpp" />
+    <ClCompile Include="progress.cpp" />
+    <ClCompile Include="QC3DTabWnd.cpp" />
+    <ClCompile Include="QCAutomationCommand.cpp" />
+    <ClCompile Include="QCAutomationDirector.cpp" />
+    <ClCompile Include="QCChildToolBar.cpp" />
+    <ClCompile Include="QCCommandDirector.cpp" />
+    <ClCompile Include="QCCommandObject.cpp" />
+    <ClCompile Include="QCCommandStack.cpp" />
+    <ClCompile Include="QCCustomizeGeneralPage.cpp" />
+    <ClCompile Include="QCCustomizePersPage.cpp" />
+    <ClCompile Include="QCCustomizePluginsPage.cpp" />
+    <ClCompile Include="QCCustomizeRecipientsPage.cpp" />
+    <ClCompile Include="QCCustomizeSignaturesPage.cpp" />
+    <ClCompile Include="QCCustomizeStationeryPage.cpp" />
+    <ClCompile Include="QCCustomizeToolBar.cpp" />
+    <ClCompile Include="QCCustomToolBar.cpp" />
+    <ClCompile Include="QCError.cpp" />
+    <ClCompile Include="QCFindMgr.cpp" />
+    <ClCompile Include="QCGraphics.cpp" />
+    <ClCompile Include="QCImageList.cpp" />
+    <ClCompile Include="QCLabelDirector.cpp" />
+    <ClCompile Include="QCMailboxCommand.cpp" />
+    <ClCompile Include="QCMailboxDirector.cpp" />
+    <ClCompile Include="QCMailboxTreeCtrl.cpp" />
+    <ClCompile Include="QCMailSettings.cpp" />
+    <ClCompile Include="QCMbxCustomizeToolbarPage.cpp" />
+    <ClCompile Include="QCOleDropSource.cpp" />
+    <ClCompile Include="QComApplication.cpp" />
+    <ClCompile Include="QComFolder.cpp" />
+    <ClCompile Include="QComFolders.cpp" />
+    <ClCompile Include="QComMessage.cpp" />
+    <ClCompile Include="QComMessages.cpp" />
+    <ClCompile Include="QCPersonalityCommand.cpp" />
+    <ClCompile Include="QCPersonalityDirector.cpp" />
+    <ClCompile Include="QCPluginCommand.cpp" />
+    <ClCompile Include="QCPluginDirector.cpp" />
+    <ClCompile Include="QCProtocol.cpp" />
+    <ClCompile Include="QCRecipientCommand.cpp" />
+    <ClCompile Include="QCRecipientDirector.cpp" />
+    <ClCompile Include="QCSelectedTextURLCommand.cpp" />
+    <ClCompile Include="QCSharewareManager.cpp" />
+    <ClCompile Include="QCSignatureCommand.cpp" />
+    <ClCompile Include="QCSignatureDirector.cpp" />
+    <ClCompile Include="QCSocketStub.cpp" />
+    <ClCompile Include="QCStationeryCommand.cpp" />
+    <ClCompile Include="QCStationeryDirector.cpp" />
+    <ClCompile Include="QCTaskManager.cpp" />
+    <ClCompile Include="QCToolbarCmdPage.cpp" />
+    <ClCompile Include="QCToolBarManager.cpp" />
+    <ClCompile Include="qctree.cpp" />
+    <ClCompile Include="QCWorkerThreadMT.cpp" />
+    <ClCompile Include="QICommandClient.cpp" />
+    <ClCompile Include="QP.cpp" />
+    <ClCompile Include="qtwrapper.cpp" />
+    <ClCompile Include="ReadMessageDoc.cpp" />
+    <ClCompile Include="ReadMessageFrame.cpp" />
+    <ClCompile Include="ReadMessageToolBar.cpp" />
+    <ClCompile Include="ReadReceiptDialog.cpp" />
+    <ClCompile Include="regif.cpp" />
+    <ClCompile Include="RegInfoReader.cpp" />
+    <ClCompile Include="RegistrationCodeDlg.cpp" />
+    <ClCompile Include="reltoabs.cpp" />
+    <ClCompile Include="RInstDlg.cpp" />
+    <ClCompile Include="rs.cpp" />
+    <ClCompile Include="sasl.cpp" />
+    <ClCompile Include="saveas.cpp" />
+    <ClCompile Include="SaveAsDialog.cpp" />
+    <ClCompile Include="SearchBar.cpp" />
+    <ClCompile Include="SearchDoc.cpp" />
+    <ClCompile Include="SearchManager.cpp" />
+    <ClCompile Include="SearchManagerInfo.cpp" />
+    <ClCompile Include="SearchManagerPersistence.cpp" />
+    <ClCompile Include="SearchManagerSearching.cpp" />
+    <ClCompile Include="SearchManagerTaskInfo.cpp" />
+    <ClCompile Include="SearchManagerUtils.cpp" />
+    <ClCompile Include="SearchView.cpp" />
+    <ClCompile Include="SelectMBox.cpp" />
+    <ClCompile Include="SelectPersonalityDlg.cpp" />
+    <ClCompile Include="sendmail.cpp" />
+    <ClCompile Include="settings.cpp" />
+    <ClCompile Include="signatur.cpp" />
+    <ClCompile Include="SignatureTree.cpp" />
+    <ClCompile Include="SignatureWazooWnd.cpp" />
+    <ClCompile Include="SingleReader.cpp" />
+    <ClCompile Include="SITE.CPP" />
+    <ClCompile Include="SmtpAuth.cpp" />
+    <ClCompile Include="SMTPGssapi.cpp" />
+    <ClCompile Include="SMTPSession.cpp" />
+    <ClCompile Include="spell.cpp" />
+    <ClCompile Include="SpellDialog.cpp" />
+    <ClCompile Include="SpellEditLexDialog.cpp" />
+    <ClCompile Include="SpellOptionsDialog.cpp" />
+    <ClCompile Include="spellpaige.cpp" />
+    <ClCompile Include="SplitHlp.cpp" />
+    <ClCompile Include="SpoolMgr.cpp" />
+    <ClCompile Include="SSLConnectionDlg.cpp" />
+    <ClCompile Include="SSLSettings.cpp" />
+    <ClCompile Include="statbar.cpp" />
+    <ClCompile Include="StationeryTree.cpp" />
+    <ClCompile Include="StationeryWazooWnd.cpp" />
+    <ClCompile Include="StatMng.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="StripRich.cpp" />
+    <ClCompile Include="summary.cpp" />
+    <ClCompile Include="TaskErrorDlg.cpp" />
+    <ClCompile Include="TaskErrorMT.cpp" />
+    <ClCompile Include="TaskErrorView.cpp" />
+    <ClCompile Include="TaskErrorWazooWnd.cpp" />
+    <ClCompile Include="TaskInfo.cpp" />
+    <ClCompile Include="TaskObject.cpp" />
+    <ClCompile Include="TaskStatus.cpp" />
+    <ClCompile Include="TaskStatusView.cpp" />
+    <ClCompile Include="TaskStatusWazooWnd.cpp" />
+    <ClCompile Include="TaskSummary.cpp" />
+    <ClCompile Include="TBarBmpCombo.cpp" />
+    <ClCompile Include="TBarCombo.cpp" />
+    <ClCompile Include="TBarEdit.cpp" />
+    <ClCompile Include="TBarMenuButton.cpp" />
+    <ClCompile Include="TBarSendButton.cpp" />
+    <ClCompile Include="TBarStatic.cpp" />
+    <ClCompile Include="Text2Html.cpp" />
+    <ClCompile Include="textfile.cpp" />
+    <ClCompile Include="TextFileView.cpp" />
+    <ClCompile Include="TextReader.cpp" />
+    <ClCompile Include="TextToSpeech.cpp" />
+    <ClCompile Include="timestmp.cpp" />
+    <ClCompile Include="TipOfDayDlg.cpp" />
+    <ClCompile Include="tocdoc.cpp" />
+    <ClCompile Include="TocFrame.cpp" />
+    <ClCompile Include="tocview.cpp" />
+    <ClCompile Include="TransReader.cpp" />
+    <ClCompile Include="TreeCtrlCheck.cpp" />
+    <ClCompile Include="TridentPreviewView.cpp" />
+    <ClCompile Include="TridentReadMessageView.cpp" />
+    <ClCompile Include="TridentView.cpp" />
+    <ClCompile Include="Trnslate.cpp" />
+    <ClCompile Include="urledit.cpp" />
+    <ClCompile Include="URLUtils.cpp" />
+    <ClCompile Include="UsgStatsDoc.cpp" />
+    <ClCompile Include="UsgStatsView.cpp" />
+    <ClCompile Include="utils.cpp" />
+    <ClCompile Include="uudecode.cpp" />
+    <ClCompile Include="ValidEdit.cpp" />
+    <ClCompile Include="WarnEditHTMLDialog.cpp" />
+    <ClCompile Include="WazooBar.cpp" />
+    <ClCompile Include="WazooBarMgr.cpp" />
+    <ClCompile Include="WazooWnd.cpp" />
+    <ClCompile Include="WebView.cpp" />
+    <ClCompile Include="WebWazooWnd.cpp" />
+    <ClCompile Include="workbook.cpp" />
+    <ClCompile Include="X1EmailIndexItem.cpp" />
+    <ClCompile Include="X1EmailScanner.cpp" />
+    <ClCompile Include="X1EventListener.cpp" />
+    <ClCompile Include="XMLWriter.cpp" />
+    <ClCompile Include="XPThemedAppearance.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="EudoraExe.idl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">midl /Oicf /h "EudoraExe.h" /iid "EudoraExe_i.c" /tlb "EudoraExe.tlb"                                                                            "EudoraExe.idl"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EudoraExe.idl;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EudoraExe.tlb;EudoraExe_i.c;EudoraExe.h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">midl /Oicf /h "EudoraExe.h" /iid "EudoraExe_i.c" /tlb "EudoraExe.tlb"                                                                            "EudoraExe.idl"
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">EudoraExe.idl;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">EudoraExe.tlb;EudoraExe_i.c;EudoraExe.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <Midl Include="GoogleDesktopSearchAPI.idl">
+      <MkTypLibCompatible Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</MkTypLibCompatible>
+      <MkTypLibCompatible Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</MkTypLibCompatible>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\PlaylistClient\plstclnt_dll\xml_parser_base.h" />
+    <ClInclude Include="..\QCUtils\public\inc\debug.h" />
+    <ClInclude Include="..\regcode\regcode_charsets.h" />
+    <ClInclude Include="..\regcode\regcode_eudora.h" />
+    <ClInclude Include="3dformv.h" />
+    <ClInclude Include="AboutDlg.h" />
+    <ClInclude Include="AboutEMS.h" />
+    <ClInclude Include="acapdlg.h" />
+    <ClInclude Include="address.h" />
+    <ClInclude Include="AdView.h" />
+    <ClInclude Include="AdWazooBar.h" />
+    <ClInclude Include="AdWazooWnd.h" />
+    <ClInclude Include="all.h" />
+    <ClInclude Include="Anchor.h" />
+    <ClInclude Include="AuditEvents.h" />
+    <ClInclude Include="AuditLog.h" />
+    <ClInclude Include="AuthRPA.h" />
+    <ClInclude Include="AutoCompleteSearcher.h" />
+    <ClInclude Include="Automation.h" />
+    <ClInclude Include="Base64.h" />
+    <ClInclude Include="binhex.h" />
+    <ClInclude Include="BlahBlahBlahView.h" />
+    <ClInclude Include="bmpcombo.h" />
+    <ClInclude Include="BossProtector.h" />
+    <ClInclude Include="Bstr.h" />
+    <ClInclude Include="CAdFailureNagTask.h" />
+    <ClInclude Include="Callbacks.h" />
+    <ClInclude Include="CAuditNagTask.h" />
+    <ClInclude Include="CDemoExpireNagTask.h" />
+    <ClInclude Include="CertManagerDlg.h" />
+    <ClInclude Include="CEudoraModule.h" />
+    <ClInclude Include="CFullFeatureNagTask.h" />
+    <ClInclude Include="changeq.h" />
+    <ClInclude Include="ClipboardMgr.h" />
+    <ClInclude Include="CNagManager.h" />
+    <ClInclude Include="CNagTask.h" />
+    <ClInclude Include="COLORLIS.H" />
+    <ClInclude Include="ColorToolbarButton.h" />
+    <ClInclude Include="ComboBoxEnhanced.h" />
+    <ClInclude Include="CompMessageFrame.h" />
+    <ClInclude Include="compmsgd.h" />
+    <ClInclude Include="ConConMessage.h" />
+    <ClInclude Include="ConConProfile.h" />
+    <ClInclude Include="ContainerView.h" />
+    <ClInclude Include="ContentConcentrator.h" />
+    <ClInclude Include="controls.h" />
+    <ClInclude Include="Convhtml.h" />
+    <ClInclude Include="CoolButton.h" />
+    <ClInclude Include="CRegisterNagTask.h" />
+    <ClInclude Include="CUpdateNagTask.h" />
+    <ClInclude Include="cursor.h" />
+    <ClInclude Include="ddeclien.h" />
+    <ClInclude Include="ddeserve.h" />
+    <ClInclude Include="ddestr.h" />
+    <ClInclude Include="Decode.h" />
+    <ClInclude Include="doc.h" />
+    <ClInclude Include="DockBar.h" />
+    <ClInclude Include="DynamicMailboxMenu.h" />
+    <ClInclude Include="DynamicMenu.h" />
+    <ClInclude Include="DynamicPersonalityMenu.h" />
+    <ClInclude Include="DynamicPluginMenu.h" />
+    <ClInclude Include="DynamicRecipientMenu.h" />
+    <ClInclude Include="DynamicSavedSearchMenu.h" />
+    <ClInclude Include="DynamicStationeryMenu.h" />
+    <ClInclude Include="ehlo.h" />
+    <ClInclude Include="EmoticonManager.h" />
+    <ClInclude Include="EmoticonMenu.h" />
+    <ClInclude Include="EmoticonToolbarButton.h" />
+    <ClInclude Include="ems-wglu.h" />
+    <ClInclude Include="emsapi-win.h" />
+    <ClInclude Include="Encode.h" />
+    <ClInclude Include="etf2html.h" />
+    <ClInclude Include="eudora.h" />
+    <ClInclude Include="EudoraMsgs.h" />
+    <ClInclude Include="eudordoc.h" />
+    <ClInclude Include="eudorvw.h" />
+    <ClInclude Include="eugraph.h" />
+    <ClInclude Include="eumapi.h" />
+    <ClInclude Include="ExceptionHandler.h" />
+    <ClInclude Include="ExtLaunchMgr.h" />
+    <ClInclude Include="FaceNameDialog.h" />
+    <ClInclude Include="FaceTime.h" />
+    <ClInclude Include="FileBrowseView.h" />
+    <ClInclude Include="FileBrowseWazooWnd.h" />
+    <ClInclude Include="FileLineReader.h" />
+    <ClInclude Include="fileutil.h" />
+    <ClInclude Include="FilterReportView.h" />
+    <ClInclude Include="FilterReportWazooWnd.h" />
+    <ClInclude Include="filtersd.h" />
+    <ClInclude Include="filtersv.h" />
+    <ClInclude Include="FiltersWazooWnd.h" />
+    <ClInclude Include="FindDlg.h" />
+    <ClInclude Include="font.h" />
+    <ClInclude Include="GenericReader.h" />
+    <ClInclude Include="GoogleDesktopComponentRegistration.h" />
+    <ClInclude Include="guiutils.h" />
+    <ClInclude Include="header.h" />
+    <ClInclude Include="headervw.h" />
+    <ClInclude Include="helpcntx.h" />
+    <ClInclude Include="helpxdlg.h" />
+    <ClInclude Include="hexbin.h" />
+    <ClInclude Include="hostlist.h" />
+    <ClInclude Include="html2text.h" />
+    <ClInclude Include="HTMLUtils.h" />
+    <ClInclude Include="ImportAdvDlog.h" />
+    <ClInclude Include="ImportMailDlog.h" />
+    <ClInclude Include="InsertLinkDialog.h" />
+    <ClInclude Include="jjnet.h" />
+    <ClInclude Include="JunkMail.h" />
+    <ClInclude Include="Kclient.h" />
+    <ClInclude Include="LabelComboBox.h" />
+    <ClInclude Include="lex822.h" />
+    <ClInclude Include="LHOfflineLinkDialog.h" />
+    <ClInclude Include="LHRemindDialog.h" />
+    <ClInclude Include="LineReader.h" />
+    <ClInclude Include="LinkHistoryList.h" />
+    <ClInclude Include="LinkHistoryManager.h" />
+    <ClInclude Include="LinkHistoryWazooWnd.h" />
+    <ClInclude Include="ListCtrlEx.h" />
+    <ClInclude Include="mainfrm.h" />
+    <ClInclude Include="MakeFilter.h" />
+    <ClInclude Include="mapi.h" />
+    <ClInclude Include="MAPIImport.h" />
+    <ClInclude Include="mapiinst.h" />
+    <ClInclude Include="mboxtree.h" />
+    <ClInclude Include="MBoxTreeCtrlCheck.h" />
+    <ClInclude Include="MboxWazooWnd.h" />
+    <ClInclude Include="md5.h" />
+    <ClInclude Include="mdichild.h" />
+    <ClInclude Include="mdidrag.h" />
+    <ClInclude Include="mime.h" />
+    <ClInclude Include="MIMEMap.h" />
+    <ClInclude Include="MIMEReader.h" />
+    <ClInclude Include="MimeStorage.h" />
+    <ClInclude Include="ModifyAcctDlgs.h" />
+    <ClInclude Include="ModifyAcctSheet.h" />
+    <ClInclude Include="MoodMailStatic.h" />
+    <ClInclude Include="MoodWatch.h" />
+    <ClInclude Include="MoreHelpWnd.h" />
+    <ClInclude Include="msgdoc.h" />
+    <ClInclude Include="msgframe.h" />
+    <ClInclude Include="MsgLabel.h" />
+    <ClInclude Include="MsgOpts.h" />
+    <ClInclude Include="MsgRecord.h" />
+    <ClInclude Include="MsgSplitter.h" />
+    <ClInclude Include="msgutils.h" />
+    <ClInclude Include="MTRANSOP.H" />
+    <ClInclude Include="MultiReader.h" />
+    <ClInclude Include="namenick.h" />
+    <ClInclude Include="NameToolBarDialog.h" />
+    <ClInclude Include="newmbox.h" />
+    <ClInclude Include="NewSignatureDialog.h" />
+    <ClInclude Include="nickdoc.h" />
+    <ClInclude Include="NicknamesWazooWnd.h" />
+    <ClInclude Include="nickpage.h" />
+    <ClInclude Include="nicksht.h" />
+    <ClInclude Include="nicktree.h" />
+    <ClInclude Include="nickview.h" />
+    <ClInclude Include="NSPrefs.h" />
+    <ClInclude Include="ObjectSpec.h" />
+    <ClInclude Include="OleDoc.h" />
+    <ClInclude Include="PaigeEdtView.h" />
+    <ClInclude Include="PaigePreviewDC.h" />
+    <ClInclude Include="PaigeStyle.h" />
+    <ClInclude Include="Paige_io.h" />
+    <ClInclude Include="password.h" />
+    <ClInclude Include="PaymentAndRegistrationDlg.h" />
+    <ClInclude Include="persona.h" />
+    <ClInclude Include="PersonalityView.h" />
+    <ClInclude Include="PersonalityWazooWnd.h" />
+    <ClInclude Include="PersParams.h" />
+    <ClInclude Include="PgCntrItem.h" />
+    <ClInclude Include="PgCompMsgView.h" />
+    <ClInclude Include="PgDocumentFrame.h" />
+    <ClInclude Include="PgEmbeddedImage.h" />
+    <ClInclude Include="PgEmbeddedObject.h" />
+    <ClInclude Include="PgFixedCompMsgView.h" />
+    <ClInclude Include="PgGlobals.h" />
+    <ClInclude Include="PgHLinks.h" />
+    <ClInclude Include="PgMsgView.h" />
+    <ClInclude Include="PgReadMsgPreview.h" />
+    <ClInclude Include="PgReadMsgView.h" />
+    <ClInclude Include="PgStuffBucket.h" />
+    <ClInclude Include="PgStyleUtils.h" />
+    <ClInclude Include="PgTextExport.h" />
+    <ClInclude Include="PgTextTranslator.h" />
+    <ClInclude Include="PGTXRCPP.H" />
+    <ClInclude Include="PictureLinkDlg.h" />
+    <ClInclude Include="PooterButton.h" />
+    <ClInclude Include="pop.h" />
+    <ClInclude Include="POPGssapi.h" />
+    <ClInclude Include="pophost.h" />
+    <ClInclude Include="POPSession.h" />
+    <ClInclude Include="PopupText.h" />
+    <ClInclude Include="PrintPreviewView.h" />
+    <ClInclude Include="ProfileNag.h" />
+    <ClInclude Include="progress.h" />
+    <ClInclude Include="QC3DTabWnd.h" />
+    <ClInclude Include="QCAutomationCommand.h" />
+    <ClInclude Include="QCAutomationDirector.h" />
+    <ClInclude Include="QCChildToolBar.h" />
+    <ClInclude Include="QCCommandActions.h" />
+    <ClInclude Include="QCCommandDirector.h" />
+    <ClInclude Include="QCCommandObject.h" />
+    <ClInclude Include="QCCommandStack.h" />
+    <ClInclude Include="QCCustomizeGeneralPage.h" />
+    <ClInclude Include="QCCustomizePersPage.h" />
+    <ClInclude Include="QCCustomizePluginsPage.h" />
+    <ClInclude Include="QCCustomizeRecipientsPage.h" />
+    <ClInclude Include="QCCustomizeSignaturesPage.h" />
+    <ClInclude Include="QCCustomizeStationeryPage.h" />
+    <ClInclude Include="QCCustomizeToolBar.h" />
+    <ClInclude Include="QCCustomToolBar.h" />
+    <ClInclude Include="QCFileIO.h" />
+    <ClInclude Include="QCFindMgr.h" />
+    <ClInclude Include="QCGraphics.h" />
+    <ClInclude Include="QCImageList.h" />
+    <ClInclude Include="QCLabelDirector.h" />
+    <ClInclude Include="QCMailboxCommand.h" />
+    <ClInclude Include="QCMailboxDirector.h" />
+    <ClInclude Include="QCMailboxTreeCtrl.h" />
+    <ClInclude Include="QCMbxCustomizeToolbarPage.h" />
+    <ClInclude Include="QCNetSettings.h" />
+    <ClInclude Include="QCOleDropSource.h" />
+    <ClInclude Include="QComApplication.h" />
+    <ClInclude Include="QComApplicationEvents.h" />
+    <ClInclude Include="QComFolder.h" />
+    <ClInclude Include="QComFolders.h" />
+    <ClInclude Include="QComMessage.h" />
+    <ClInclude Include="QComMessages.h" />
+    <ClInclude Include="QCPersonalityCommand.h" />
+    <ClInclude Include="QCPersonalityDirector.h" />
+    <ClInclude Include="QCPluginCommand.h" />
+    <ClInclude Include="QCPluginDirector.h" />
+    <ClInclude Include="QCPOPSettings.h" />
+    <ClInclude Include="QCProtocol.h" />
+    <ClInclude Include="QCRecipientCommand.h" />
+    <ClInclude Include="QCRecipientDirector.h" />
+    <ClInclude Include="QCSelectedTextURLCommand.h" />
+    <ClInclude Include="QCSharewareManager.h" />
+    <ClInclude Include="QCSignatureCommand.h" />
+    <ClInclude Include="QCSignatureDirector.h" />
+    <ClInclude Include="QCSMTPSettings.h" />
+    <ClInclude Include="QCStationeryCommand.h" />
+    <ClInclude Include="QCStationeryDirector.h" />
+    <ClInclude Include="QCTaskManager.h" />
+    <ClInclude Include="QCToolbarCmdPage.h" />
+    <ClInclude Include="QCToolBarManager.h" />
+    <ClInclude Include="qctree.h" />
+    <ClInclude Include="QCWorkerThreadMT.h" />
+    <ClInclude Include="QICommandClient.h" />
+    <ClInclude Include="QP.h" />
+    <ClInclude Include="qtwrapper.h" />
+    <ClInclude Include="ReadMessageDoc.h" />
+    <ClInclude Include="ReadMessageFrame.h" />
+    <ClInclude Include="ReadMessageToolBar.h" />
+    <ClInclude Include="ReadReceiptDialog.h" />
+    <ClInclude Include="regif.h" />
+    <ClInclude Include="RegInfoReader.h" />
+    <ClInclude Include="RegistrationCodeDlg.h" />
+    <ClInclude Include="reltoabs.h" />
+    <ClInclude Include="rescomm.h" />
+    <ClInclude Include="resdel.h" />
+    <ClInclude Include="reseud.h" />
+    <ClInclude Include="resfree.h" />
+    <ClInclude Include="resizbar.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="resource16.h" />
+    <ClInclude Include="resource32.h" />
+    <ClInclude Include="RInstDlg.h" />
+    <ClInclude Include="rs.h" />
+    <ClInclude Include="sasl.h" />
+    <ClInclude Include="saveas.h" />
+    <ClInclude Include="SaveAsDialog.h" />
+    <ClInclude Include="SearchBar.h" />
+    <ClInclude Include="SearchDoc.h" />
+    <ClInclude Include="SearchManager.h" />
+    <ClInclude Include="SearchManagerInfo.h" />
+    <ClInclude Include="SearchManagerPersistence.h" />
+    <ClInclude Include="SearchManagerSearching.h" />
+    <ClInclude Include="SearchManagerTaskInfo.h" />
+    <ClInclude Include="SearchManagerUtils.h" />
+    <ClInclude Include="SearchView.h" />
+    <ClInclude Include="SelectMBox.h" />
+    <ClInclude Include="SelectPersonalityDlg.h" />
+    <ClInclude Include="sendmail.h" />
+    <ClInclude Include="settings.h" />
+    <ClInclude Include="signatur.h" />
+    <ClInclude Include="SignatureTree.h" />
+    <ClInclude Include="SignatureWazooWnd.h" />
+    <ClInclude Include="SingleReader.h" />
+    <ClInclude Include="Site.h" />
+    <ClInclude Include="SmtpAuth.h" />
+    <ClInclude Include="SMTPGssapi.h" />
+    <ClInclude Include="SMTPSession.h" />
+    <ClInclude Include="spell.h" />
+    <ClInclude Include="SpellDialog.h" />
+    <ClInclude Include="SpellEditLexDialog.h" />
+    <ClInclude Include="SpellOptionsDialog.h" />
+    <ClInclude Include="spellpaige.h" />
+    <ClInclude Include="SplitHlp.h" />
+    <ClInclude Include="SpoolMgr.h" />
+    <ClInclude Include="ssce.h" />
+    <ClInclude Include="SSLConnectionDlg.h" />
+    <ClInclude Include="SSLSettings.h" />
+    <ClInclude Include="statbar.h" />
+    <ClInclude Include="station.h" />
+    <ClInclude Include="StationeryTree.h" />
+    <ClInclude Include="StationeryWazooWnd.h" />
+    <ClInclude Include="StatMng.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="StripRich.h" />
+    <ClInclude Include="summary.h" />
+    <ClInclude Include="TaskErrorDlg.h" />
+    <ClInclude Include="TaskErrorMT.h" />
+    <ClInclude Include="TaskErrorTypes.h" />
+    <ClInclude Include="TaskErrorView.h" />
+    <ClInclude Include="TaskErrorWazooWnd.h" />
+    <ClInclude Include="TaskInfo.h" />
+    <ClInclude Include="TaskObject.h" />
+    <ClInclude Include="TaskStatus.h" />
+    <ClInclude Include="TaskStatusView.h" />
+    <ClInclude Include="TaskStatusWazooWnd.h" />
+    <ClInclude Include="TaskSummary.h" />
+    <ClInclude Include="TBarBmpCombo.h" />
+    <ClInclude Include="TBarCombo.h" />
+    <ClInclude Include="TBarEdit.h" />
+    <ClInclude Include="TBarMenuButton.h" />
+    <ClInclude Include="TBarSendButton.h" />
+    <ClInclude Include="TBarStatic.h" />
+    <ClInclude Include="textfile.h" />
+    <ClInclude Include="TextFileView.h" />
+    <ClInclude Include="TextReader.h" />
+    <ClInclude Include="TextToSpeech.h" />
+    <ClInclude Include="timestmp.h" />
+    <ClInclude Include="TipOfDayDlg.h" />
+    <ClInclude Include="tocdoc.h" />
+    <ClInclude Include="TocFrame.h" />
+    <ClInclude Include="tocview.h" />
+    <ClInclude Include="TransReader.h" />
+    <ClInclude Include="TreeCtrlCheck.h" />
+    <ClInclude Include="TridentPreviewView.h" />
+    <ClInclude Include="TridentReadMessageView.h" />
+    <ClInclude Include="TridentView.h" />
+    <ClInclude Include="trnslate.h" />
+    <ClInclude Include="urledit.h" />
+    <ClInclude Include="URLUtils.h" />
+    <ClInclude Include="UsgStatsDoc.h" />
+    <ClInclude Include="UsgStatsView.h" />
+    <ClInclude Include="utils.h" />
+    <ClInclude Include="uudecode.h" />
+    <ClInclude Include="ValidEdit.h" />
+    <ClInclude Include="WarnEditHTMLDialog.h" />
+    <ClInclude Include="WazooBar.h" />
+    <ClInclude Include="WazooBarMgr.h" />
+    <ClInclude Include="WazooWnd.h" />
+    <ClInclude Include="WebView.h" />
+    <ClInclude Include="WebWazooWnd.h" />
+    <ClInclude Include="winsock.h" />
+    <ClInclude Include="workbook.h" />
+    <ClInclude Include="X1EmailIndexItem.h" />
+    <ClInclude Include="X1EmailScanner.h" />
+    <ClInclude Include="X1EventListener.h" />
+    <ClInclude Include="X1Wrapper.h" />
+    <ClInclude Include="XMLWriter.h" />
+    <ClInclude Include="XPThemedAppearance.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="RES\ICONS\EUDORA.ICO" />
+    <Image Include="RES\ICONS\NOMAIL.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="EudoraExe.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="Eudora.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QComApplication.rgs" />
+    <None Include="QComAppTypeLib.rgs" />
+    <None Include="QComFolder.rgs" />
+    <None Include="QComFolders.rgs" />
+    <None Include="QComMessage.rgs" />
+    <None Include="QComMessages.rgs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AccountWizard\AccountWizard.vcxproj">
+      <Project>{a3893849-e600-4229-859c-fb2e524a02af}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\DirectoryServices\DirectoryServicesUI\DirectoryServicesUI.vcxproj">
+      <Project>{e7deb109-6e69-405b-8178-d2e51e8bf864}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\EudoraOldIcons\EudoraOldIcons.vcxproj">
+      <Project>{8d8cc924-3876-4418-baff-d08e2139fc92}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\EuImap\EuImap.vcxproj">
+      <Project>{d50f60f5-cfcf-48f4-867f-ef743a8fd120}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\EuLang\EuLang.vcxproj">
+      <Project>{1cdab9e1-9d9a-4df1-8316-fd68c439ff8c}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Imapdll\imap.vcxproj">
+      <Project>{96301c25-2fe7-4a25-830f-1d7084cc12e6}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Importers\NSImport\NSImport.vcxproj">
+      <Project>{26fcccee-fff9-4908-85a6-088944a0d1fd}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Importers\OEImport\OEImport.vcxproj">
+      <Project>{45b16d5b-2cf8-4b87-bd81-184523bfed8f}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Importers\OLImport\OLImport.vcxproj">
+      <Project>{63f4f8f8-dad9-4356-951c-4b8c929fef74}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\OT501\Src\OT501.vcxproj">
+      <Project>{36eb689a-7c2c-4c2e-8f1c-744fdd4ddfa2}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\PlaylistClient\plstclnt_dll\plstclnt.vcxproj">
+      <Project>{5039d1cb-8a81-4d6d-b131-06d88a24cbf5}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\QCSocket\QCSocket.vcxproj">
+      <Project>{eb832ea8-35cf-45fd-b644-e423affc4feb}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\QCSSL\QCSSL.vcxproj">
+      <Project>{022798e2-47f3-4ca5-b4b1-391d2fa3f920}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\QCUtils\QCUtils.vcxproj">
+      <Project>{8153db1a-f996-48a8-a1a6-b183c086a94d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\SearchEngine\SearchEngine.vcxproj">
+      <Project>{fbe55c67-e107-45c2-87bf-31e55d7fcafc}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="EudoraRes.vcxproj">
+      <Project>{2be84818-8850-49ad-92e6-93a2b7a6565c}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="EudoraExe.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

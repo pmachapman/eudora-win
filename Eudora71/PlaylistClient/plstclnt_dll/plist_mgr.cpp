@@ -165,7 +165,7 @@ char *g_statusNames[] = {
 // sooper dooper looper
 // this actually gets used outside this file, but we admit defeat in modularizing
 // the code and just declare it extern where we need it.
-typedef (*adproc)( void *dbRef, PlaylistRecPtr plrp, EntryRecPtr erp, PlaylistRecPtr plrpWas, EntryRecPtr erpWas, void *userRef );
+typedef int (*adproc)( void *dbRef, PlaylistRecPtr plrp, EntryRecPtr erp, PlaylistRecPtr plrpWas, EntryRecPtr erpWas, void *userRef );
 int ForEntriesDo( void *dbRef, adproc proc, int startPlaylistID, int startServerID, int startEntryID, void *userRef );
 
 
@@ -173,7 +173,7 @@ int ForEntriesDo( void *dbRef, adproc proc, int startPlaylistID, int startServer
 // top secret intelligence
 
 static void schedule_next( db_reference* pRef, bool forceNew );
-static get_entry_info( PrivCachePtr pcp, Entry* pe, ENTRY_INFO** pei );
+static int get_entry_info( PrivCachePtr pcp, Entry* pe, ENTRY_INFO** pei );
 static char* prep_html_source( PrivCachePtr pcp, char* url );
 static int ad_end_bookkeeping( db_reference *pRef, int playlistID, int serverID, int entryID, Entry *pe );
 static int valid_entry_for_display( EntryRecPtr erp, enum EntryType desiredType, bool today, bool rerun, time_t rerunAge );
@@ -808,7 +808,7 @@ void MGR_UserTweaked( long dbRef, const char *entryID, TweakType tweak )
 	
 	pRef->tweaks[pRef->nTweaks].tweak = tweak;
 	pRef->tweaks[pRef->nTweaks].serverID = atoi( entryID );
-	char *period = strchr( entryID, '.' );
+	const char *period = strchr( entryID, '.' );
 	pRef->tweaks[pRef->nTweaks].entryID = period ? atoi( period+1 ) : 0;
 	
 	pRef->nTweaks++;

@@ -109,7 +109,7 @@ protected:
 #define QCSTR_CASE_SENSITIVE true
 #define QCSTR_CASE_INSENSITIVE false
 
-char *QCStrstr(const char * str1,  const char * str2, 
+const char *QCStrstr(const char * str1,  const char * str2, 
 				   bool bMatchCase = QCSTR_CASE_SENSITIVE, int nWholeWord = QCSTR_SUBSTR_SEARCH);
 
 

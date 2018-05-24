@@ -158,7 +158,7 @@ bool CompareTextSearchCriteria(CString& strText, SearchCriteria& Sct) //, Criter
 	
 	case CRITERIA_TEXT_COMPARE_CONTAINSWORD: 
 		{
-			char *ptr;
+			const char *ptr;
 			if(ptr = strstr(text, findme))
 			{
 				unsigned char bChar = (ptr == text)? ' ': *(ptr-1);
@@ -1548,7 +1548,7 @@ int GetAttachments(CSummary *pSum, char *szMessage/* = NULL*/, std::list<CString
 	if ((pAttachStrList) && (!bFullPath))
 	{
 		CString tmpStr;
-		char *cp = NULL;
+		const char *cp = NULL;
 
 		for (std::list<CString>::iterator itr = pAttachStrList->begin(); itr != pAttachStrList->end(); itr++)
 		{
@@ -1655,7 +1655,7 @@ unsigned int ChopList(LPCSTR pStr, char cDelim /* = ';' */, std::list<CString> *
 //#define QCSTR_BEGWORD_SEARCH   (2)
 //#define QCSTR_ENDWORD_SEARCH   (3)
 
-char *QCStrstr(const char * str1,  const char * str2, 
+const char *QCStrstr(const char * str1,  const char * str2, 
 				   bool bMatchCase /*= QCSTR_CASE_SENSITIVE*/, int nWholeWord /* = QCSTR_SUBSTR_SEARCH */)
 {
        

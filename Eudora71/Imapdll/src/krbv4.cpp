@@ -31,13 +31,6 @@ BOOL (CALLBACK* SetUserName)(LPSTR) = NULL;
 BOOL (CALLBACK* GetTicketForService)(LPSTR, LPSTR, LPDWORD) = NULL;
 BOOL (CALLBACK* SendTicketForService)(LPSTR service, LPSTR version, int fd) = NULL;
 
-// Internal functions
-//
-unsigned long	ntohl (unsigned long ulNet);
-unsigned short	ntohs (unsigned short usNet);
-unsigned long	htonl (unsigned long ulHost);
-unsigned short	htons (unsigned short usHost);
-
 
 /////////////////////////////////////////////////////////////////////////
 // CramMD5Authenticator 
@@ -713,47 +706,4 @@ BOOL CKrb4::Stage2Challenge (unsigned long ulRndNum)
 
 	return bRet;
 }
-
-
-
-
-unsigned long ntohl (unsigned long ulNet)
-{
-	// 
-	unsigned long b0 = (ulNet & 0xFF000000) >> 24;
-	unsigned long b1 = (ulNet & 0x00FF0000) >> 8;
-
-	unsigned long b2 = (ulNet & 0x000000FF) << 24;
-	unsigned long b3 = (ulNet & 0x0000FF00) << 8;
-
-	return b0 | b1 | b2 | b3;
-}
-
-
-
-unsigned short ntohs (unsigned short usNet)
-{
-	// 
-	unsigned short b0 = (unsigned short) ( (usNet & 0xFF00) >> 8 );
-	unsigned short b1 = (unsigned short) ( (usNet & 0x00FF) << 8 );
-
-	return (unsigned short) (b0 | b1);
-}
-
-
-unsigned long htonl (unsigned long ulHost)
-{
-	return ntohl (ulHost);
-}
-
-
-unsigned short htons (unsigned short usHost)
-{
-	return ntohs (usHost);
-}
-
-
-
-
-
 #endif // IMAP4

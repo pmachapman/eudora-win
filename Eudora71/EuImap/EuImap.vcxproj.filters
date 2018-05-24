@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{a5c58637-84b4-4326-8bd7-861aa9062975}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Public Include Files">
+      <UniqueIdentifier>{6336fe8e-c83d-4bcb-806d-43009094e839}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Private Include Files">
+      <UniqueIdentifier>{d980c105-121d-4c3e-a3f7-201892689586}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ImapAccount.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImapAccountMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImapActionQueue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImapAppend.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImapChecker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImapConnection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImapConnectionMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImapDownload.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImapFiltersd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imapgets.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImapGuiUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImapHeader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImapJournal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImapLex822.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImapLoginDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImapMailbox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImapMailMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImapMboxTree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imapmime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImapMlistMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImapResyncer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImapSettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImapSum.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImapThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImapToc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImapTypes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImHexbin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImSingle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImUudecode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\QCImapMailboxCommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\QCImapMailboxDirector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\searchutil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="public\inc\ImapAccount.h">
+      <Filter>Public Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\ImapAccountMgr.h">
+      <Filter>Public Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\ImapConnection.h">
+      <Filter>Public Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\ImapExports.h">
+      <Filter>Public Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\ImapFiltersd.h">
+      <Filter>Public Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\ImapGuiUtils.h">
+      <Filter>Public Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\ImapJournal.h">
+      <Filter>Public Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\ImapMailbox.h">
+      <Filter>Public Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\IMapMailMgr.h">
+      <Filter>Public Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\ImapResyncer.h">
+      <Filter>Public Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\ImapSum.h">
+      <Filter>Public Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\ImapTypes.h">
+      <Filter>Public Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="public\inc\QCImapMailboxCommand.h">
+      <Filter>Public Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ImapActionQueue.h">
+      <Filter>Private Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ImapChecker.h">
+      <Filter>Private Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ImapConnectionMgr.h">
+      <Filter>Private Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ImapDownload.h">
+      <Filter>Private Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\imapgets.h">
+      <Filter>Private Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ImapHeader.h">
+      <Filter>Private Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ImapLex822.h">
+      <Filter>Private Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\imapmime.h">
+      <Filter>Private Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ImapSettings.h">
+      <Filter>Private Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Imapthread.h">
+      <Filter>Private Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ImHexbin.h">
+      <Filter>Private Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ImSingle.h">
+      <Filter>Private Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ImUudecode.h">
+      <Filter>Private Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\searchutil.h">
+      <Filter>Private Include Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

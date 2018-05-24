@@ -204,7 +204,8 @@ int ParseURLs(char * pszIn, ParseURLCallback pFn, long userRef, char ** ppszOut)
                     // intervening, which should nominally close the tag before the attribute. These
                     // problems would be caught by a correct SGML parser.
 
-                    for (int nSearch = nPos - 2; (0 <= nSearch) && ('<' != pszIn[nSearch]); nSearch--)
+					int nSearch;
+                    for (nSearch = nPos - 2; (0 <= nSearch) && ('<' != pszIn[nSearch]); nSearch--)
                         ;
 
                     if (0 <= nSearch) {

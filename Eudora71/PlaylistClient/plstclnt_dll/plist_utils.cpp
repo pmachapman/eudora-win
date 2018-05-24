@@ -95,7 +95,7 @@ char* DupeString( const char* str )
 char* MimeString( const char* url )
 {
 	char* mimeString = 0;
-	char* pType = strrchr( url, '.' );
+	char* pType = (char*)strrchr( url, '.' );
 
 	if ( pType ) {
 		if ( strstr( ++pType, "htm" ) )

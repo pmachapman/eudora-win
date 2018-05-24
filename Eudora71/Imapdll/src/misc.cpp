@@ -204,7 +204,7 @@ unsigned long find_rightmost_bit (unsigned long *valptr)
 {
   register long value= *valptr;
   register long clearbit;	/* bit to clear */
-  register bitno;		/* bit number to return */
+  register long bitno;		/* bit number to return */
 
 	// Sanity:
 	if (!valptr)

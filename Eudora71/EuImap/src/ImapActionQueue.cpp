@@ -27,6 +27,8 @@ DAMAGE. */
 
 #ifdef IMAP4 // Only for IMAP.
 
+#include <memory>
+
 #include "ImapActionQueue.h"
 
 #include "POPSession.h"

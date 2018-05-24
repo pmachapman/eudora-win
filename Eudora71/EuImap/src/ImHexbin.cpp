@@ -248,7 +248,7 @@ int ImapDecodeBH::Decode(const char* In, LONG InLen, char* Out, LONG& OutLen)
 	//
 	if (m_ResultCode == HexGood)
 	{
-		char *InPtr = strchr(In, ':') + 1;
+		char *InPtr = (char *)strchr(In, ':') + 1;
 		while (InPtr - In < InLen)
 		{
 			m_pOutBuf[m_OutBufIndex++] = *InPtr++;

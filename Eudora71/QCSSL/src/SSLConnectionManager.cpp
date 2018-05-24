@@ -79,7 +79,7 @@ ConnectionInfo *ConnectionInfoMap::AddConnectionInfo(const CString &uniquename)
 		// can share the ConnectionInfo object so don't delete the object
 		// if this is an IMAP connection.
 		bool	 bIsIMAP = false;
-		char	*strProtocol = strchr(uniquename, '\n');
+		char	*strProtocol = (char*)strchr(uniquename, '\n');
 		if (strProtocol)
 		{
 			++strProtocol;
