@@ -77,7 +77,7 @@ BEGIN_MESSAGE_MAP(CDirectoryStatic, CStatic)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
-UINT CDirectoryStatic::OnNcHitTest(CPoint point)
+LRESULT CDirectoryStatic::OnNcHitTest(CPoint point)
 {
 	return HTCLIENT;
 }

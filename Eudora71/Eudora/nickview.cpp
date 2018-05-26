@@ -409,7 +409,8 @@ void CNicknamesViewRight::OnInitialUpdate()
 	//
 	// Kludge to get DoDataExchange() to run to initialize all page
 	// member variables with valid window handles.
-	for (int page_idx = 0; page_idx < m_PropSheet.GetPageCount(); page_idx++)
+	int page_idx;
+	for (page_idx = 0; page_idx < m_PropSheet.GetPageCount(); page_idx++)
 		m_PropSheet.SetActivePage(page_idx);
 
 	m_PropSheet.InitCustomPages();

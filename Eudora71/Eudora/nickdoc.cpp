@@ -3437,7 +3437,7 @@ CNickname* CNicknamesDoc::ReadNickname(const char* Name, JJFile& in, int Start /
 	POSITION pos = m_NicknameFiles.GetHeadPosition();
 
 	char *floater;
-	if (floater = strstr(Name, "::"))	// We're dealing with the special case of a nickname file being specified in the nickname
+	if (floater = (char*)strstr(Name, "::"))	// We're dealing with the special case of a nickname file being specified in the nickname
 	{									// Under normal circumstances you'll only see this when the nickname is ambiguous.
 		char *pNNFile = NULL;
 		char *pTheNickname = NULL;

@@ -622,7 +622,8 @@ BOOL CFiltersViewLeft::DoFindNext(const char* szSearch, BOOL bMatchCase, BOOL bW
 
 	int iFiltCount = m_FiltersList.GetCount();
 
-	for(int i = 0; i < iFiltCount; i++)
+	int i;
+	for(i = 0; i < iFiltCount; i++)
 	{
 		if(m_FiltersList.GetSel(i) > 0)
 			break;
@@ -903,7 +904,8 @@ CFiltersViewRight::CFiltersViewRight()
 	m_Action4 = -1;
 	//}}AFX_DATA_INIT
 	m_ActionIndex = -1;
-	for (int i = 0; i < NUM_FILT_ACTS; i++)
+	int i;
+	for (i = 0; i < NUM_FILT_ACTS; i++)
 	{
 		m_ActionCommands[i] = ID_FLT_NONE;
 		m_RCheckValue[i] = 0;
@@ -1361,7 +1363,8 @@ void CFiltersViewRight::DoDataExchange(CDataExchange* pDX)
 	//}}AFX_DATA_MAP
 
 	//Data Exchange for  dynamic controls
-	for (int i = 0; i < NUM_FILT_ACTS; i++)
+	int i;
+	for (i = 0; i < NUM_FILT_ACTS; i++)
 		DataEx(pDX,m_ActionCommands[i],i);
 
 	

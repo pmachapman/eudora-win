@@ -26,6 +26,7 @@ DAMAGE. */
 #ifndef _UTILS_H
 #define _UTILS_H
 
+#include "afxpriv.h"
 #include <string.h>
 
 #ifndef _IS_

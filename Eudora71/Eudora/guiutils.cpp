@@ -1414,8 +1414,8 @@ BOOL SaveAttachmentSomewhere(const char *Filename, char *newPath/*=NULL*/)
 	CRString filterFormat(IDS_SAVEAS_FILTER_FORMAT);
 	char title[MAX_PATH+65];
 	char path[MAX_PATH+1];
-	char *ext = strrchr(Filename,'.');
-	char *bslash = strrchr(Filename,'\\');
+	char *ext = (char*)strrchr(Filename,'.');
+	char *bslash = (char*)strrchr(Filename,'\\');
 	char filter[MAX_PATH];
 
 	if (ext) ext++;

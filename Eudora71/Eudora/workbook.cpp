@@ -1684,7 +1684,8 @@ void QCWorkbook::RecalcToolTipRects()
 		// Blow away all existing tools.
 		//
 		LRESULT nNumTools = ::SendMessage(m_hWndTooltip, TTM_GETTOOLCOUNT, 0, 0);
-		for (int i = 0; i < nNumTools; i++)
+		int i;
+		for (i = 0; i < nNumTools; i++)
 		{
 			ti.uId = i;
 			::SendMessage(m_hWndTooltip, TTM_DELTOOL, 0, LPARAM(&ti));

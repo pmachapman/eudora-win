@@ -1538,7 +1538,7 @@ inline BOOL CImage::TransparentBlt( HDC hDestDC, const RECT& rectDest,
 inline BOOL CImage::IsTransparencySupported() throw()
 {
 #if WINVER >= 0x0500
-	return( _AtlBaseModule.m_bNT5orWin98 );
+	return( TRUE );
 #else  // WINVER < 0x0500
 	return( FALSE );
 #endif  // WINVER >= 0x0500

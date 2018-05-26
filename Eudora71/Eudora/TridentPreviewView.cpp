@@ -347,7 +347,7 @@ BOOL		bIncludeHeaders)
 	StripNBSP( szMsgInPane.GetBuffer( 0 ) );	
 	szMsgInPane.ReleaseBuffer();
 
-	char *EndOfHeader = strstr(szFullMessage, "\r\n\r\n");
+	char *EndOfHeader = (char*)strstr(szFullMessage, "\r\n\r\n");
 	if (EndOfHeader)
 		*EndOfHeader = 0;
 
@@ -357,7 +357,7 @@ BOOL		bIncludeHeaders)
 	if (EndOfHeader)
 		*EndOfHeader = 65;	// I don't know what it was, but it better not be zero or CString's gonna have a fit.
 
-	EndOfHeader = strstr(szMsgInPane, "\r\n\r\n");
+	EndOfHeader = (char*)strstr(szMsgInPane, "\r\n\r\n");
 
 	szMsg += EndOfHeader;
 

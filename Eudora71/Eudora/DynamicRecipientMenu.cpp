@@ -46,7 +46,7 @@ CDynamicRecipientMenu::~CDynamicRecipientMenu()
 
 extern QCRecipientDirector g_theRecipientDirector;
 
-/*virtual*/ CDynamicRecipientMenu::BuildMenu(UINT nIndex, BOOL bSysMenu)
+/*virtual*/ BOOL CDynamicRecipientMenu::BuildMenu(UINT nIndex, BOOL bSysMenu)
 {
 	g_theRecipientDirector.NewMessageCommands(m_CommandAction, this);
 

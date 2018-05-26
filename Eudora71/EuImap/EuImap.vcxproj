@@ -63,7 +63,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\SearchEngine\PublicInc;..\QCUtils\public\inc;..\Eudora;..\EuMemMgr\Include;.\public\inc;..\OT501\Include;..\Imapdll\public\inc;..\;..\expat\Source\lib;..\PlaylistClient\plstclnt_dll;..\QCSocket\inc;..\tae;..\QCSSL\SSLPlus\include;..\QCSSL\SSLPlus\tools\securitybuilder\win32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\SearchEngine\PublicInc;..\QCUtils\public\inc;..\Eudora;..\EuMemMgr\Include;.\public\inc;..\StingrayStudio\_Include\RW;..\Imapdll\public\inc;..\;..\expat\Source\lib;..\PlaylistClient\plstclnt_dll;..\QCSocket\inc;..\tae;..\QCSSL\SSLPlus\include;..\QCSSL\SSLPlus\tools\securitybuilder\win32\include;..\GSSupport;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_DEBUG;COMMERCIAL=1;OEMRESOURCE;WIN32_COMPILE;WIN32;_WINDOWS;IMAP4;THREADED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -88,7 +88,7 @@
     <ClCompile>
       <Optimization>MinSpace</Optimization>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>..\SearchEngine\PublicInc;..\QCUtils\public\inc;..\Eudora;..\EuMemMgr\Include;.\public\inc;..\OT501\Include;..\Imapdll\public\inc;..\;..\expat\Source\lib;..\PlaylistClient\plstclnt_dll;..\QCSocket\inc;..\tae;..\QCSSL\SSLPlus\include;..\QCSSL\SSLPlus\tools\securitybuilder\win32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\SearchEngine\PublicInc;..\QCUtils\public\inc;..\Eudora;..\EuMemMgr\Include;.\public\inc;..\StingrayStudio\_Include\RW;..\Imapdll\public\inc;..\;..\expat\Source\lib;..\PlaylistClient\plstclnt_dll;..\QCSocket\inc;..\tae;..\QCSSL\SSLPlus\include;..\QCSSL\SSLPlus\tools\securitybuilder\win32\include;..\GSSupport;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG;COMMERCIAL=1;OEMRESOURCE;WIN32_COMPILE;WIN32;_WINDOWS;IMAP4;THREADED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -336,7 +336,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Imapdll\imap.vcxproj">
       <Project>{96301c25-2fe7-4a25-830f-1d7084cc12e6}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

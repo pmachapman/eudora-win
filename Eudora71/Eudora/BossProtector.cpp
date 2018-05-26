@@ -415,7 +415,7 @@ COLORREF CBossProtector::GetBPColorCode()
 
 bool CBossProtector::IsOnBPDomainList(const char* address)
 {
-	char* domain = strchr(address, '@');
+	char* domain = (char*)strchr(address, '@');
 	bool bMatch = false;
 	if (domain)
 	{

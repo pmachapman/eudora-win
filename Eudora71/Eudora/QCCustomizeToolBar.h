@@ -5,7 +5,7 @@
 #if !defined(AFX_QCCUSTOMIZETOOLBAR_H__E4CE4467_ECC1_11D0_97FF_00805FD2F268__INCLUDED_)
 #define AFX_QCCUSTOMIZETOOLBAR_H__E4CE4467_ECC1_11D0_97FF_00805FD2F268__INCLUDED_
 
-#include "tbarpage.h"
+#include "toolkit\tbarpage.h"
 
 #if _MSC_VER >= 1000
 #pragma once

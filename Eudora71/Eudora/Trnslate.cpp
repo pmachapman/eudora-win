@@ -1053,7 +1053,7 @@ BOOL CTLAddress::CreateAddressList(const char *to,
 	if (rawHeaders && *rawHeaders)
 	{
 		// Just grab off the header of the message
-		char *endOfHeader = strstr(rawHeaders, "\r\n\r\n");
+		char *endOfHeader = (char*)strstr(rawHeaders, "\r\n\r\n");
 		int len = 0;
 		if (endOfHeader)
 			len = endOfHeader - rawHeaders;
@@ -1461,7 +1461,7 @@ CAttacher::~CAttacher()
 }
 
 // =======================================================================
-CAttacher::GetIcon(HICON &icn)
+BOOL CAttacher::GetIcon(HICON &icn)
 {
 	if (m_MenuItem.icon && *m_MenuItem.icon)
 	{
@@ -1565,7 +1565,7 @@ CSpecial::CSpecial(CTransAPI *ptlAPI, long id) : CAttacher(ptlAPI, id, FALSE)
 }
 
 // =======================================================================
-CSpecial::GetIcon(HICON &icn)
+BOOL CSpecial::GetIcon(HICON &icn)
 {
 	if (m_MenuItem.icon && *m_MenuItem.icon)
 	{
@@ -3207,7 +3207,7 @@ CTranslatorManager::CTranslatorManager(short numArgs, ...)
 //================================================================
 // CTranslatorManager: this manages the dll's and all the translators
 // =======================================================================
-CTranslatorManager::LoadModule(const char *path, HINSTANCE libHandle, ModeTypeEnum theMode )
+BOOL CTranslatorManager::LoadModule(const char *path, HINSTANCE libHandle, ModeTypeEnum theMode )
 {
 	CTransAPI *ptrapi = NULL;
 	void FAR*globals = NULL;
@@ -3343,7 +3343,8 @@ CTranslatorManager::LoadModule(const char *path, HINSTANCE libHandle, ModeTypeEn
 		
 		fnTransInfoFun = GetProcAddress(libHandle, EMS_TRANS_INFO);
 		// Create the translators
-		for( short trIndex = 1; fnTransInfoFun && (numTrans > 0 && trIndex <= numTrans); trIndex++) 
+		short trIndex;
+		for( trIndex = 1; fnTransInfoFun && (numTrans > 0 && trIndex <= numTrans); trIndex++) 
 		{
 			// Get info on each translator and create a translator object for it
 			int TransNumInAPI = m_Translators.GetSize();
@@ -3692,7 +3693,7 @@ CTranslatorManager::GetSortedTranslators(const char* sel, const long context /*=
             sel += 1;
 
         ModuleID = atoi(sel);
-        dot = strchr(sel,'.');
+        dot = (char*)strchr(sel,'.');
 
         if (dot)
         {
@@ -3703,8 +3704,8 @@ CTranslatorManager::GetSortedTranslators(const char* sel, const long context /*=
             break;
 
 
-        comma = strchr(sel,',');
-        space = strchr(sel,' ');
+        comma = (char*)strchr(sel,',');
+        space = (char*)strchr(sel,' ');
         CTranslator *tltr = GetTranslator(ModuleID, TransID);
 
         if ( tltr && tltr->ModeNeeded()<=forMode ) {
@@ -3779,7 +3780,7 @@ int CTranslatorManager::ValidateTransIDs
     
     while ( sel ) {
         ModuleID = atoi( sel );
-        dot = strchr( sel,'.' );
+        dot = (char*)strchr( sel,'.' );
 
         if ( dot ) {
             sel = dot + 1;
@@ -3788,8 +3789,8 @@ int CTranslatorManager::ValidateTransIDs
         else
             break;
 
-        comma = strchr( sel, ',' );
-        space = strchr( sel, ' ' );
+        comma = (char*)strchr( sel, ',' );
+        space = (char*)strchr( sel, ' ' );
         CTranslator *tltr = GetTranslator( ModuleID, TransID );
 
         if ( tltr && (tltr->GetFlags() & context) ) {
@@ -4188,7 +4189,7 @@ long CTranslatorManager::XLateDisplay(QCProtocol* pXLateProtocol, CSummary * pSu
 
 	// Parse out filename the translator  ( drv:\path\filename.ems <xxx.xxx> )
 	char *tltrID = NULL;
-	char *space = strstr(inFileCmd,".ems ");
+	char *space = (char*)strstr(inFileCmd,".ems ");
 	if (space && (space += 4))
 	{
 		*space = 0;
@@ -4316,7 +4317,7 @@ long CTranslatorManager::XLateDisplay(QCProtocol* pXLateProtocol, CSummary * pSu
 				if (*pScan == '"')
 				{
 					pScan++;
-					pEndPath = strchr(pScan, '"');
+					pEndPath = (char*)strchr(pScan, '"');
 
 					if (pEndPath)
 					{
@@ -4344,7 +4345,7 @@ long CTranslatorManager::XLateDisplay(QCProtocol* pXLateProtocol, CSummary * pSu
 					
 					do
 					{
-						pEndPath = strchr(pScan, '\n');
+						pEndPath = (char*)strchr(pScan, '\n');
 
 						if (pEndPath)
 						{

@@ -416,13 +416,13 @@ void CMsgRecord::SetDate(const char* pszDate)
 
 	char* pszEndChar = NULL;		// not used
 	//const unsigned long JAN_1_2038 = ( 24836UL * 60 * 60 * 24 );
-	unsigned long ulDate = strtoul( pszDate, &pszEndChar, 10 );
+	time_t ulDate = strtoul( pszDate, &pszEndChar, 10 );
 	if ( ulDate == 0 || ulDate > JAN_1_2038 )
 		bDateUndefined = TRUE;
 
 	if (bDateUndefined)
 	{
-		long lCurrentTime = 0;
+		time_t lCurrentTime = 0;
 		time(&lCurrentTime);
 		lCurrentTime -= _timezone;		// apply GMT offset
 		//sprintf(m_szDate, "%ld", lCurrentTime); 

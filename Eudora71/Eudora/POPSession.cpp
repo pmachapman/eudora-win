@@ -1708,7 +1708,7 @@ BOOL CPOPSession::OpenPOPConnection_()
 	//
 	// Extract the POP server from the POP account string.
 	//
-	char* pszPOPServer = strrchr(szPOPAccount, '@');
+	char* pszPOPServer = (char*)strrchr(szPOPAccount, '@');
 	if (!pszPOPServer || !*++pszPOPServer)
 	{
 		if (!gbAutomationCheckMail)
@@ -2229,7 +2229,7 @@ int CPOPSession::POPAuthenticate_()
 				return -1;
 			}
 			// Extract the POP server from the POP account string.
-			char* pszPOPServer = strrchr(szPOPAccount, '@');
+			char* pszPOPServer = (char*)strrchr(szPOPAccount, '@');
 			if (!pszPOPServer || !*++pszPOPServer)
 			{
 				ASSERT(0);
@@ -2426,7 +2426,7 @@ void CPOPSession::ExtractMessageID_(const char* pszBuffer, char *pszMsgId)
 	//
 	// "Message-ID: <some junk>\r\n"
 	//
-	char* pszBuf = strchr(pszBuffer,'<');
+	char* pszBuf = (char*)strchr(pszBuffer,'<');
 	if (pszBuf != NULL)
 	{
 		//
@@ -2470,7 +2470,7 @@ void CPOPSession::ExtractDateTime_(const char* pszBuffer, char* pszDate)
 	//                                                     ^ ^^^ ^^^^ ^^ ^^ ^^ ^^^^^
 	// From that we need to extract and return that to the caller
 	//
-	char* pszBuf = strchr(pszBuffer, ',');
+	char* pszBuf = (char*)strchr(pszBuffer, ',');
 	if (pszBuf != NULL)
 	{
 		//

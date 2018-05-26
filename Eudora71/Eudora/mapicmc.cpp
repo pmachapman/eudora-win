@@ -168,7 +168,7 @@ static BOOL ProcessMAPIData(
 		//
 		CString current_line;
 		{
-			char* pszNewline = strchr(pszData, '\n');
+			char* pszNewline = (char*)strchr(pszData, '\n');
 			if (pszNewline)
 			{
 				*pszNewline = '\0';		// temporary NULL termination

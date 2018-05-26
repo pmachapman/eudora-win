@@ -48,9 +48,9 @@ END_MESSAGE_MAP()
 
 
 //	Constants
-const CComboBoxEnhanced::kDefaultPadding = 3;
-const CComboBoxEnhanced::kDroppedPadding = 10;
-const CComboBoxEnhanced::kIndentPadding = 10;
+const int CComboBoxEnhanced::kDefaultPadding = 3;
+const int CComboBoxEnhanced::kDroppedPadding = 10;
+const int CComboBoxEnhanced::kIndentPadding = 10;
 
 
 // ------------------------------------------------------------------------------------------

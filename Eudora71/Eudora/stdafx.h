@@ -37,7 +37,9 @@
 ///////////////////////////////////////////////////////////////////////////////
 // Stingray Objective Toolkit includes
 
-#include "secall.h"			// Stingray Objective Toolkit
+#define _SECDLL
+#define _SFLDLL
+#include "toolkit\secall.h"			// Stingray Objective Toolkit
 
 #include "qcassert.h"		// ASSERT/VERIFY logging
 

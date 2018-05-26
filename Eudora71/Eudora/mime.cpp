@@ -2200,7 +2200,7 @@ HRESULT PutWithEscapedFileMarkers(const char* pBuffer /*= NULL*/, long lNumBytes
 				ASSERT(TRUE);	// Caught ya!
 
 				//	If we're dealing with HTML, find the colon
-				char *	pColon = bIsHTML ? static_cast<char *>(memchr(pBuffer, ':', lNumBytesToWrite)) : NULL;
+				char *	pColon = bIsHTML ? static_cast<char *>((char*)memchr(pBuffer, ':', lNumBytesToWrite)) : NULL;
 				
 				if (pColon)
 				{

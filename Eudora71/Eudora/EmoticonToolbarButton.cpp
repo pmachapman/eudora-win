@@ -41,7 +41,7 @@ const DWORD		MAGICROP		= 0xb8074a;
 
 extern EmoticonDirector g_theEmoticonDirector;
 
-IMPLEMENT_BUTTON(EmoticonToolbarButton)
+TOOLKIT_IMPLEMENT_BUTTON(EmoticonToolbarButton)
 
 
 EmoticonToolbarButton::EmoticonToolbarButton()

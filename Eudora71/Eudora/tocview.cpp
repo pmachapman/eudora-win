@@ -1994,7 +1994,7 @@ void CTocListBox::FindTTS()
 											pSum->GetFrom();
 
 				// Match case insensitively, and allow substring matches
-				LPSTR		pFound = QCStrstr( pTargetString, m_pFindPhrase,
+				LPSTR		pFound = (LPTSTR)QCStrstr( pTargetString, m_pFindPhrase,
 											   QCSTR_CASE_INSENSITIVE, QCSTR_SUBSTR_SEARCH );
 				if (pFound)
 				{
@@ -2868,7 +2868,8 @@ void CTocView::OnInitialUpdate()
 	m_SumListBox.SetItemHeight(0, ScreenFont.CellHeight() + 2);
 
 	// Set the font of the header controls and the compact button
-	for (UINT i = ID_EDIT_SORT_SORTBYSTATUS; i <= ID_EDIT_SORT_SORTBYSUBJECT; i++)
+	UINT i;
+	for (i = ID_EDIT_SORT_SORTBYSTATUS; i <= ID_EDIT_SORT_SORTBYSUBJECT; i++)
 	{
 		CWnd* Button = GetDlgItem(i);
 		
@@ -3028,7 +3029,8 @@ void CTocView::OnFileSaveAs()
 
 	//Get the Filename to save the multiple messages
 
-	for (int i = 0, j = SelCount; j && i < TotalCount && !FoundOne; i++)
+	int i, j;
+	for (i = 0, j = SelCount; j && i < TotalCount && !FoundOne; i++)
 	{
 		if (m_SumListBox.GetSel(i) <= 0 )
 		{

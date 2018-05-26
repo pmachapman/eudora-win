@@ -11,7 +11,7 @@
 //
 class CTBarStaticBtn : public CStatic, public SECWndBtn
 {
-	DECLARE_BUTTON(CTBarStaticBtn);
+	TOOLKIT_DECLARE_BUTTON(CTBarStaticBtn);
 
 // Construction
 public:

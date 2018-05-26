@@ -31,12 +31,12 @@ DAMAGE. */
 #include <shlobj.h>
 
 // STRUCTURES
-typedef struct tagLISTDATA
+typedef struct tagLLISTDATA
 {
 	LPSHELLFOLDER	piParentShellFolder;
 	LPITEMIDLIST	pIdList;
 	ULONG			ulAttribs;
-} LISTDATA, *LPLISTDATA;
+} LLISTDATA, *LPLLISTDATA;
 
 typedef struct tagTREEDATA
 {
@@ -250,11 +250,11 @@ protected:
 	BOOL InitListViewImageLists();
 	BOOL PopulateListView(LPSHELLFOLDER lpsf);
 	void SortListView(LPITEMIDLIST pFullyQualifiedIdList);
-	LPITEMIDLIST GetFullyQualifiedPidlFromListItem(LPLISTDATA pListData);
+	LPITEMIDLIST GetFullyQualifiedPidlFromListItem(LPLLISTDATA pListData);
 	LPITEMIDLIST GetFullyQualPidlFromPath(LPCTSTR lpszFullPathName);
 	LPITEMIDLIST* CreateListSelectionPIDL(UINT& Count);
-	BOOL OpenItem(LPLISTDATA pListData);
-	LPLISTDATA GetListDataAtPoint(CPoint ptScreen);
+	BOOL OpenItem(LPLLISTDATA pListData);
+	LPLLISTDATA GetListDataAtPoint(CPoint ptScreen);
 
 
 private:

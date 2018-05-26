@@ -184,7 +184,8 @@ CWazooBar* CWazooBarMgr::CreateNewWazooBar(CMDIFrameWnd* pFrameWnd)
 	// First, figure out the next available Wazoo Bar ID.  The idea is
 	// to use the smallest unused ID starting at IDC_WAZOOBAR_BASE.
 	//
-	for (int nNextBarId = IDC_WAZOOBAR_BASE; ; nNextBarId++)
+	int nNextBarId;
+	for (nNextBarId = IDC_WAZOOBAR_BASE; ; nNextBarId++)
 	{
 		BOOL bFoundMatch = FALSE;
 		POSITION pos = m_WazooBarList.GetHeadPosition();

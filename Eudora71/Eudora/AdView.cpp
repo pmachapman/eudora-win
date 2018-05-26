@@ -40,7 +40,7 @@ DAMAGE. */
 #include "QCSharewareManager.h"
 #include "AuditEvents.h"
 #include "FaceTime.h"
-
+#include "Foundation\Compatibility\Common\sloadbmp.h"
 
 #include "DebugNewHelpers.h"
 
@@ -347,7 +347,7 @@ void CAdView::OnIdleUpdateCmdUI()
 void CAdView::InitBlankBitmap()
 {
 	m_BlankTimeBitmap.DeleteObject();
-	VERIFY(SECLoadSysColorBitmap(m_BlankTimeBitmap, MAKEINTRESOURCE(IDB_AD_BLANK_TIME), FALSE));
+	VERIFY(SECLoadSysColorBitmap(m_BlankTimeBitmap, MAKEINTRESOURCE(IDB_AD_BLANK_TIME)));
 }
 
 void CAdView::OnSysColorChange()

@@ -29,7 +29,7 @@ DAMAGE. */
 #include "statbar.h"
 #include "WazooBarMgr.h"
 #include "workbook.h"
-#include "sbarmgr.h"
+#include "toolkit\sbarmgr.h"
 #include "PersonalityView.h"
 #include "DynamicMailboxMenu.h"
 #include "DynamicPersonalityMenu.h"
@@ -524,7 +524,7 @@ protected:
 	afx_msg void OnProcessAllofThem();
 	afx_msg void OnInitMenuPopup(CMenu* pPopupMenu, UINT nIndex, BOOL bSysMenu);
 	afx_msg void OnMenuSelect(UINT nItemID, UINT nFlags, HMENU hSysMenu);
-	afx_msg UINT OnNcHitTest(CPoint point);
+	afx_msg LRESULT OnNcHitTest(CPoint point);
 	afx_msg void OnEnable(BOOL bEnable);
 	afx_msg BOOL OnNcActivate(BOOL bActive);
 	afx_msg void OnEnterIdle(UINT nWhy, CWnd* pWho);

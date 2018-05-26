@@ -183,7 +183,7 @@ private:
 	char			m_szUIDLID[LMOS_UIDL_SIZE+1];	
 	char			m_szMesgID[LMOS_MSGID_SIZE+1];	
 	//char			m_szDate[LMOS_DATE_SIZE+1];
-	unsigned long m_ulDate;
+	time_t m_ulDate;
 	int				m_nMsgNum;
 	unsigned long	m_ulHashValue;
 	unsigned long			m_ulEstimatedSize;

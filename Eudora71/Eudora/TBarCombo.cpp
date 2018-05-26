@@ -2,7 +2,7 @@
 #include "eudora.h"
 #include "TBarCombo.h"
 
-IMPLEMENT_BUTTON(CTBarComboBtn);
+TOOLKIT_IMPLEMENT_BUTTON(CTBarComboBtn);
 
 #include "DebugNewHelpers.h"
 

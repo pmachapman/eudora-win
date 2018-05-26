@@ -7,7 +7,7 @@
 
 class CTBarComboBtn : public SECComboBtn
 {
-	DECLARE_BUTTON(CTBarComboBtn);
+	TOOLKIT_DECLARE_BUTTON(CTBarComboBtn);
 
 	// Construction
 public:

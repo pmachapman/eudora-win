@@ -974,7 +974,7 @@ HRESULT QCSMTPThreadMT::DoWork()
 		strncpy(Server, m_Settings->GetSMTPServer(),sizeof(Server)); 
 	   	::TrimWhitespaceMT(Server);
 		char* s;
-		if (!*Server && (s = strrchr(m_Settings->GetPOPAccount(), '@')))
+		if (!*Server && (s = (char*)strrchr(m_Settings->GetPOPAccount(), '@')))
 			strcpy(Server, s + 1);
  		
 

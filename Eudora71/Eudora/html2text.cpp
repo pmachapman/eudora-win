@@ -978,7 +978,7 @@ void CHtml2Text::GetAttributeList(LPCTSTR* pszText, CStringArray& theArray)
 		while( *szStart )
 		{
 			// find the next "--" sequence
-			szCurrent = strstr( szStart, "--" );
+			szCurrent = (LPTSTR)strstr( szStart, "--" );
 			
 			// set the next starting place if necessary			
 			szStart = szCurrent + 1;

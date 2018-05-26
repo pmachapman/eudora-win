@@ -46,7 +46,7 @@ CDynamicStationeryMenu::~CDynamicStationeryMenu()
 
 extern QCStationeryDirector g_theStationeryDirector;
 
-/*virtual*/ CDynamicStationeryMenu::BuildMenu(UINT nIndex, BOOL bSysMenu)
+/*virtual*/ BOOL CDynamicStationeryMenu::BuildMenu(UINT nIndex, BOOL bSysMenu)
 {
 	g_theStationeryDirector.NewMessageCommands(m_CommandAction, this);
 

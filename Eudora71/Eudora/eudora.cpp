@@ -1173,7 +1173,7 @@ BOOL CEudoraApp::InitInstance()
 	if (CMI)
 	{
 		SetIniShort( IDS_INI_CHECK_FOR_MAIL,
-					 _MAX(CMI, GetIniShort(IDS_MIN_MAIL_CHECK_INTERVAL)) );
+					 MAX(CMI, GetIniShort(IDS_MIN_MAIL_CHECK_INTERVAL)) );
 	}
    	
    	// Make sure only one encoding type is selected
@@ -4622,7 +4622,7 @@ static void ResetEudoraIni(void)
 		IDS_INI_SHOW_TIP_OF_THE_DAY,
 		IDS_INI_CURRENT_TIP_OF_THE_DAY
 	};
-	const nSettings = sizeof(settingsToKeep)/sizeof(settingsToKeep[0]);
+	const int nSettings = sizeof(settingsToKeep)/sizeof(settingsToKeep[0]);
 	CString settings[nSettings];
 	BOOL ok;
 	int errStrID = 0;
@@ -4742,7 +4742,7 @@ static void ResetEudoraIni(void)
 		CString sLine;
 		CString sLcLine;
 		const CRString sToolbar(IDS_RI_TOOLBAR_SECTION);
-		const maxLineLen = 1024;
+		const int maxLineLen = 1024;
 
 		do
 		{

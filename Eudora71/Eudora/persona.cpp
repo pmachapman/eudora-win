@@ -529,7 +529,8 @@ BOOL CPersonality::Remove( const char* Name )
 		return FALSE;
 	}
 	// make sure the personality exists
-	for ( int i = 0; 1 /* forever */; i++ )
+	int i;
+	for ( i = 0; 1 /* forever */; i++ )
 	{
 		sprintf( Persona, "Persona%d", i );
 		GetPrivateProfileString( m_szPersonality, Persona, "", Entry, sizeof( Entry ), INIPath );

@@ -220,7 +220,7 @@ void PgDataTranslator::ExportData( COleDataSource* pDataSource,
 										 "EndHTML:00000000\r\n"
 										 "StartFragment:00000000\r\n"
 										 "EndFragment:00000000\r\n";
-		const			kCF_HTMLPrefixLength = strlen(kCF_HTMLPrefix);
+		const size_t	kCF_HTMLPrefixLength = strlen(kCF_HTMLPrefix);
 
 		// Allocate zero byte sizes for the export memory-ref (1 byte rec-size, 0 recs)
 		memory_ref exportMemRef = MemoryAlloc( PgMemGlobalsPtr(), 1, 0, 0 );

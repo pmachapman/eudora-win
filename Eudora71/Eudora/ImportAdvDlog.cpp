@@ -91,8 +91,8 @@ void CImportAdvDlog::OnMailBrowseBtn()
 	CString szSel;
 	CString szMailPath;
 
-
-	for (int i=0; i < m_ProgramListBox.GetCount(); i++)
+	int i;
+	for (i=0; i < m_ProgramListBox.GetCount(); i++)
 	{
 		if(m_ProgramListBox.GetSel(i) > 0)
 			m_ProgramListBox.GetText(i, szSel);
@@ -129,8 +129,8 @@ void CImportAdvDlog::OnAddrBrowseBtn()
 	CString szSel;
 	CString szAddrPath;
 
-
-	for (int i=0; i < m_ProgramListBox.GetCount(); i++)
+	int i;
+	for (i=0; i < m_ProgramListBox.GetCount(); i++)
 	{
 		if(m_ProgramListBox.GetSel(i) > 0)
 			m_ProgramListBox.GetText(i, szSel);
@@ -180,7 +180,8 @@ void CImportAdvDlog::OnImportAdvOk()
 
 	CString szSel;
 
-	for (int i=0; i < m_ProgramListBox.GetCount(); i++)
+	int i;
+	for (i=0; i < m_ProgramListBox.GetCount(); i++)
 	{
 		if(m_ProgramListBox.GetSel(i) > 0)
 			m_ProgramListBox.GetText(i, szSel);
@@ -324,8 +325,8 @@ void CImportAdvDlog::OnImportAdvOk()
 void CImportAdvDlog::OnSelchangeImportProgramList() 
 {
 	CString szSel;
-
-	for (int i=0; i < m_ProgramListBox.GetCount(); i++)
+	int i;
+	for (i=0; i < m_ProgramListBox.GetCount(); i++)
 	{
 		if(m_ProgramListBox.GetSel(i) > 0)
 			m_ProgramListBox.GetText(i, szSel);

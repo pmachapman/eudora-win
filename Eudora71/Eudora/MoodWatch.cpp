@@ -87,7 +87,8 @@ BOOL CMoodWatch::Init()
 				}
 				// Parse the words into m_ppszWhitelist.
 				m_ppszWhitelist = (char**)malloc(sizeof(char*) * (iWhitelistWords + 1));
-				for (int i = 0, iPos = 0; i < iWhitelistWords; ++i)
+				int i;
+				for (i = 0, iPos = 0; i < iWhitelistWords; ++i)
 				{
 					iPos = strWhitelist.Find(",");
 					if (iPos == -1)	iPos = strWhitelist.GetLength();

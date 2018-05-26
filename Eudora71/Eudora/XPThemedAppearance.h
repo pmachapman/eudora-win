@@ -30,7 +30,6 @@ DAMAGE. */
 
 
 #include <uxtheme.h>
-#include <tmschema.h>
 
 
 class CXPThemedAppearance

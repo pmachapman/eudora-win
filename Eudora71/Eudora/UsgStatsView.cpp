@@ -36,10 +36,10 @@ BEGIN_MESSAGE_MAP(CUsageStatisticsView, CPaigeEdtView)
 	ON_WM_SIZE()
 	ON_WM_KEYDOWN()
 	ON_WM_SYSKEYDOWN()
+	ON_WM_DISPLAYCHANGE()
 	//}}AFX_MSG_MAP
 	// Standard printing commands
 	ON_REGISTERED_MESSAGE( uRefreshUsageStatisticsWindow, OnRefreshUsageStatisticsWindow)
-	ON_MESSAGE(WM_DISPLAYCHANGE, OnDisplayChange)
 END_MESSAGE_MAP()
 
 
@@ -975,12 +975,11 @@ void CUsageStatisticsView::OnSize(UINT nType, int cx, int cy)
 	m_nTimerEventID = SetTimer(m_nTimerEventID , 5, (TIMERPROC) NULL);	
 }
 
-
-LRESULT CUsageStatisticsView::OnDisplayChange(WPARAM wParam, LPARAM lParam)
+void CUsageStatisticsView::OnDisplayChange(UINT nImageDepth, int cxScreen, int cyScreen)
 {
 	long lPrevWidth = glFirstColPercentWidth ;
 
-	if (LOWORD(lParam) > 800)
+	if (cxScreen > 800)
 		glFirstColPercentWidth = 30;
 	else
 		glFirstColPercentWidth = 18;
@@ -990,7 +989,7 @@ LRESULT CUsageStatisticsView::OnDisplayChange(WPARAM wParam, LPARAM lParam)
 	if (lPrevWidth != glFirstColPercentWidth)
 		ReloadData((short)gsPeriodSelected,(BOOL)gbMoreStatistics);		
 	
-	return CPaigeEdtView::OnDisplayChange(wParam, lParam);
+	return CPaigeEdtView::OnDisplayChange(nImageDepth, cxScreen, cyScreen);
 }
 
 void CUsageStatisticsView::OnSysKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)

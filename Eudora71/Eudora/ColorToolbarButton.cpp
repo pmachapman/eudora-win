@@ -38,7 +38,7 @@ DAMAGE. */
 #include "DebugNewHelpers.h"
 
 
-IMPLEMENT_BUTTON(CColorToolbarButton)
+TOOLKIT_IMPLEMENT_BUTTON(CColorToolbarButton)
 
 
 ////////////////////////////////////////////////////////////////////////
@@ -50,7 +50,7 @@ IMPLEMENT_BUTTON(CColorToolbarButton)
 void CColorToolbarButton::DrawFace(SECBtnDrawData& data, BOOL bForce, int& x, int& y, 
 						 int& nWidth, int& nHeight, int nImgWidth)
 {
-	SECTwoPartBtn::DrawFace(data, bForce, x, y, nWidth, nHeight, nImgWidth);
+	SECTwoPartBtn::DrawFace(data, bForce, x, y, nWidth, nHeight, nImgWidth, data.m_drawDC);
 
 	// Draw the colored rectangle, but only for the left side of the button.
 	// The only way you can tell the left side from the right is the width.

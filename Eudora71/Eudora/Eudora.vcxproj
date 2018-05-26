@@ -68,7 +68,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\SearchEngine\PublicInc;..\SpeechSDK\Include;..\AccountWizard\PublicInc;..\PaigeDLL\PGHEADER;..\Qt3.x\CIncludes;..\QCUtils\public\inc;..\QCSocket\inc;..\OT501\Include;..\EuImap\public\inc;..\imapdll\public\inc;..\DirectoryServices\DirectoryServicesUI\public\inc;..\PlaylistClient\plstclnt_dll;..\EuLang\public\inc;..\EuMemMgr\Include;..\tae;..\expat\Source\lib;..\QCSSL\public\inc;..\QCSSL\SSLPlus\include;..\QCSSL\SSLPlus\tools\securitybuilder\win32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\SearchEngine\PublicInc;..\SpeechSDK\Include;..\AccountWizard\PublicInc;..\PaigeDLL\PGHEADER;..\Qt3.x\CIncludes;..\QCUtils\public\inc;..\QCSocket\inc;..\StingrayStudio\_Include\RW;..\EuImap\public\inc;..\imapdll\public\inc;..\DirectoryServices\DirectoryServicesUI\public\inc;..\PlaylistClient\plstclnt_dll;..\EuLang\public\inc;..\EuMemMgr\Include;..\tae;..\expat\Source\lib;..\QCSSL\public\inc;..\QCSSL\SSLPlus\include;..\QCSSL\SSLPlus\tools\securitybuilder\win32\include;..\GSSupport;..\MAPIHeaders;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_DEBUG;COMMERCIAL;WIN32;_WINDOWS;OEMRESOURCE;WIN32_COMPILE;IMAP4;EXPFLAG;THREADED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -110,7 +110,7 @@
     <ClCompile>
       <Optimization>MinSpace</Optimization>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>..\SearchEngine\PublicInc;..\SpeechSDK\Include;..\AccountWizard\PublicInc;..\PaigeDLL\PGHEADER;..\Qt3.x\CIncludes;..\QCUtils\public\inc;..\QCSocket\inc;..\OT501\Include;..\EuImap\public\inc;..\imapdll\public\inc;..\DirectoryServices\DirectoryServicesUI\public\inc;..\PlaylistClient\plstclnt_dll;..\EuLang\public\inc;..\EuMemMgr\Include;..\tae;..\expat\Source\lib;..\QCSSL\public\inc;..\QCSSL\SSLPlus\include;..\QCSSL\SSLPlus\tools\securitybuilder\win32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\SearchEngine\PublicInc;..\SpeechSDK\Include;..\AccountWizard\PublicInc;..\PaigeDLL\PGHEADER;..\Qt3.x\CIncludes;..\QCUtils\public\inc;..\QCSocket\inc;..\StingrayStudio\_Include\RW;..\EuImap\public\inc;..\imapdll\public\inc;..\DirectoryServices\DirectoryServicesUI\public\inc;..\PlaylistClient\plstclnt_dll;..\EuLang\public\inc;..\EuMemMgr\Include;..\tae;..\expat\Source\lib;..\QCSSL\public\inc;..\QCSSL\SSLPlus\include;..\QCSSL\SSLPlus\tools\securitybuilder\win32\include;..\GSSupport;..\MAPIHeaders;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG;COMMERCIAL=1;WIN32;_WINDOWS;OEMRESOURCE;WIN32_COMPILE;IMAP4;EXPFLAG;THREADED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -1009,10 +1009,6 @@ MakeDox.pl Eudora.sln DevDox
     </ProjectReference>
     <ProjectReference Include="..\Importers\OLImport\OLImport.vcxproj">
       <Project>{63f4f8f8-dad9-4356-951c-4b8c929fef74}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="..\OT501\Src\OT501.vcxproj">
-      <Project>{36eb689a-7c2c-4c2e-8f1c-744fdd4ddfa2}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="..\PlaylistClient\plstclnt_dll\plstclnt.vcxproj">

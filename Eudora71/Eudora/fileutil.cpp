@@ -795,7 +795,8 @@ HRESULT CascadeBackupFile(const char * in_szFilePath, const int nBackup)
 	}
 	
 	// now, let's delete the ones we don't need
-	for (int i=n;i>0 && i>=nBackup;i--)
+	int i;
+	for (i=n;i>0 && i>=nBackup;i--)
 	{
 		sBackupPath.Format(IDS_BACKUP_FILE_FMT,in_szFilePath,i);
 

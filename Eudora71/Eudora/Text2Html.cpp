@@ -919,7 +919,7 @@ CString	Text2Html(LPCTSTR szSource, BOOL bConvertURLs, BOOL bProcessAttachmentAn
 							else
 								bUrlCloseDivTag = TRUE;
 
-							urlNextCR = strchr(urlTemp, '\r');
+							urlNextCR = (char*)strchr(urlTemp, '\r');
 							if ((urlNextCR != NULL) && (urlNextCR < pUrlEnd))
 							{
 								temp = CString(urlTemp, urlNextCR - urlTemp);

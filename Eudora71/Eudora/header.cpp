@@ -237,7 +237,7 @@ int HeaderDesc::Read(LineReader* pLR, bool bWriteHeader /*= true*/)
 					break;
 				case hReceived:
 					{
-						char* comma = strchr((const char*)l822s.Token, ',');
+						char* comma = (char*)strchr((const char*)l822s.Token, ',');
 						if (comma && !*receivedDate)
 						{
 							strncpy(receivedDate, ::TrimWhitespaceMT(comma + 1), sizeof(receivedDate) - 1);

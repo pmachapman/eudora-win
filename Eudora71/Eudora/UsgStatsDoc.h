@@ -12,7 +12,7 @@
 #include "MDIchild.h"
 #include "doc.h"
 #include "resource.h"
-#include "sbardlg.h"
+#include "toolkit\sbardlg.h"
 
 class CUsageStatisticsDoc : public CDoc  
 {

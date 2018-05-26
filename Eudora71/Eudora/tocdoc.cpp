@@ -2151,7 +2151,8 @@ BOOL CTocDoc::GetMessageById(
 			// Estimate how big to make the 'messageData' buffer.
 			//
 			int nLength = messageData.GetLength();
-			for (const char* b = pszBody; *b; b++, nLength++)
+			const char* b;
+			for (b = pszBody; *b; b++, nLength++)
 			{
 				// Each line gets replaced with "BODY: <original line>"
 				if (*b == '\n')
@@ -2166,7 +2167,7 @@ BOOL CTocDoc::GetMessageById(
 
 			while (*pszBody)
 			{
-				char* pszNewline = strchr(pszBody, '\n');
+				char* pszNewline = (char*)strchr(pszBody, '\n');
 				if (pszNewline)
 				{
 					// temporary NULL termination
@@ -2821,7 +2822,7 @@ CSummary* CTocDoc::Xfer(CTocDoc* TargetToc, CSummary* SingleSum /*= NULL*/,
 							if( tNext )
 							{
 								// See if it is a mbx file, we may have generated a toc ourselves
-								char * lpszExt = strrchr(szAttachmentPathname, '.');
+								char * lpszExt = (char*)strrchr(szAttachmentPathname, '.');
 
 								if(lpszExt)
 								{

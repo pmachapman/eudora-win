@@ -10,7 +10,7 @@
 #include "DebugNewHelpers.h"
 
 
-IMPLEMENT_BUTTON(CMoodMailStatic)
+TOOLKIT_IMPLEMENT_BUTTON(CMoodMailStatic)
 /////////////////////////////////////////////////////////////////////////////
 // CMoodMailStatic
 

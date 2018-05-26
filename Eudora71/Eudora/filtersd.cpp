@@ -863,7 +863,8 @@ BOOL CFilter::MatchCondition(int NumCondition, const char* text, CSummary *pSum)
 			// Did we get something
 			if (!t)
 				break;
-			for (const char* s = t - 1; s[-1] == '\r' || s[-1] == '\n'; s--)
+			const char* s;
+			for (s = t - 1; s[-1] == '\r' || s[-1] == '\n'; s--)
 				;
 			const char* colon = strchr(header, ':');
 			if (!colon)
@@ -1091,7 +1092,8 @@ int CFilter::Action(const char* text, CSummary*& Sum, CFilterActions* fltAct, CO
 	}
 
 	// First Level
-	for (int i = 0; i < NUM_FILT_ACTS; i++)
+	int i;
+	for (i = 0; i < NUM_FILT_ACTS; i++)
 	{
 		// Skip restricted actions
 		if (IsRestrictedFilterAction(m_Actions[i]))
@@ -2380,7 +2382,8 @@ void CFiltersDoc::LoadExtraFilters()
 	m_PostFilters.NukeAllData();
 	
 	// Find all the filters files and load 'em up
-	for (int i = IDS_FILTER_PRE_EXT; i <= IDS_FILTER_PST_EXT; i++)
+	int i;
+	for (i = IDS_FILTER_PRE_EXT; i <= IDS_FILTER_PST_EXT; i++)
 	{
 		szPath = EudoraDir + CRString( IDS_FILTER_DIRECTORY ); 
 		szPath += "\\";

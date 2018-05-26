@@ -46,7 +46,7 @@ CDynamicPersonalityMenu::~CDynamicPersonalityMenu()
 
 extern QCPersonalityDirector g_thePersonalityDirector;
 
-/*virtual*/ CDynamicPersonalityMenu::BuildMenu(UINT nIndex, BOOL bSysMenu)
+/*virtual*/ BOOL CDynamicPersonalityMenu::BuildMenu(UINT nIndex, BOOL bSysMenu)
 {
 	g_thePersonalityDirector.NewMessageCommands(CA_CHANGE_PERSONA, this);
 

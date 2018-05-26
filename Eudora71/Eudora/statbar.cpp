@@ -230,7 +230,7 @@ LRESULT CStatusBarEx::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
 	if (message == WM_SETTEXT && lParam)
 	{
 		// Eudora has some multi-line info strings. We only show the first line.
-		char* Newline = strchr((const char*)lParam, '\n');
+		char* Newline = (char*)strchr((const char*)lParam, '\n');
 		if (Newline)
 		{
 			char Buffer[128];

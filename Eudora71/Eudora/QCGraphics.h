@@ -2,8 +2,9 @@
 #ifndef _QCGraphics_h_
 #define _QCGraphics_h_
 
-#include "SecImage.h"
-#include "SecJpeg.h"
+#include "Foundation\Compatibility\Common\SecImage.h"
+#include "Foundation\Compatibility\Common\SecDib.h"
+#include "Foundation\Compatibility\Common\SecJpeg.h"
 
 typedef struct structQCMetaFileInfo
 {

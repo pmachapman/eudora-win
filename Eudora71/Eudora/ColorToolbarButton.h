@@ -30,7 +30,7 @@ DAMAGE. */
 
 class CColorToolbarButton : public SECTwoPartBtn
 {
-	DECLARE_BUTTON(CColorToolbarButton)
+	TOOLKIT_DECLARE_BUTTON(CColorToolbarButton)
 
 protected:
 	virtual void DrawFace(SECBtnDrawData& data, BOOL bForce, int& x, int& y, 

@@ -542,8 +542,9 @@ bool EmoticonDirector::CheckTextForTrigger(const char * szText, int nTextLength,
 			if( szText[i] == '&' ) {
 
 				if ( szText[i+1] == '#' )	{
-					// get the number string	
-					for( int len = 2; ( (i+len) < nTextLength ) && isdigit( (int)(unsigned char)(szText[i+len]) ); len++ );	
+					// get the number string
+					int len;
+					for( len = 2; ( (i+len) < nTextLength ) && isdigit( (int)(unsigned char)(szText[i+len]) ); len++ );	
 					// convert the number to a character
 					ch = ( char ) ( atoi( static_cast<LPCTSTR>(szText)+i ) & 0xFF );
 					incrementLength = (len - 1); // -1 since len gets incremented extra before exiting the loop
@@ -711,7 +712,8 @@ bool EmoticonDirector::ParseWordForEmoticons(CString &szWord, bool bIsHTML/*=fal
 EmoticonDirector::~EmoticonDirector()
 {
 	//delete the emoticon lists... we have stored pointers to the loaded images... delete them 
-	for(POSITION pos=m_EmoticonList.GetHeadPosition(); pos!=NULL; ) {
+	POSITION pos;
+	for(pos=m_EmoticonList.GetHeadPosition(); pos!=NULL; ) {
 		Emoticon* emoticonObj = m_EmoticonList.GetNext(pos);
 		delete emoticonObj;
 	}

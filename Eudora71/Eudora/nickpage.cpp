@@ -998,7 +998,8 @@ void SwapHomeAndWork(CNicknamesHomePage *homePage, CNicknamesWorkPage *workPage)
 {
 	if (homePage && workPage)
 	{
-		for (int i = 0; i < homePage->m_NumFieldsInUse; ++i)
+		int i;
+		for (i = 0; i < homePage->m_NumFieldsInUse; ++i)
 		{
 			CString		homelabel;
 			CString		worklabel;

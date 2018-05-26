@@ -1031,7 +1031,7 @@ BOOL CMessageDoc::SaveModified()
 
 	case IDYES:
 		// If so, either Save or Update, as appropriate
-		if (!DoSave(m_strPathName))
+		if (!DoSave(m_strPathName, TRUE))
 			return (FALSE);       // don't continue
 		break;
 	

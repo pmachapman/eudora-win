@@ -12,7 +12,7 @@
 
 class CMoodMailStatic : public SECStdBtn
 {
-DECLARE_BUTTON(CMoodMailStatic)
+	TOOLKIT_DECLARE_BUTTON(CMoodMailStatic)
 // Construction
 public:
 	CMoodMailStatic();

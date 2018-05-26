@@ -127,7 +127,8 @@ void PGS_DrawUnderline( HDC hDC, POINT* ptStart, int length, underline_type kind
 	MoveToEx(hDC, ptStart->x, ++ptStart->y, NULL);
 	int distance = ptStart->x;
 	int pen_toggle = 0;
-	for(int j =0; j<nIntervals; j++)
+	int j;
+	for(j =0; j<nIntervals; j++)
 	{
 		distance +=(ID_UNDERLINE_DISTANCE-2);
 		LineTo(hDC,distance,ptStart->y);

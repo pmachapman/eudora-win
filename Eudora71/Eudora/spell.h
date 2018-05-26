@@ -20,7 +20,7 @@ private:
 	int ErrMsg(int ret);
 
 public:
-	virtual Check(CRichEditCtrl* hEdit, int LinesFromTop = 0, BOOL autoCheck = FALSE);
+	virtual int Check(CRichEditCtrl* hEdit, int LinesFromTop = 0, BOOL autoCheck = FALSE);
 	virtual int Check(CEdit* hEdit, int LinesFromTop = 0, BOOL autoCheck = FALSE,BOOL bInteractive =FALSE);
 	
 
@@ -34,7 +34,7 @@ private:
 	virtual int BlockIsDoubledWord(const char* curWord); 
 
 protected:
-	virtual ReallyCheck(int LinesFromTop, BOOL autoCheck);
+	virtual int ReallyCheck(int LinesFromTop, BOOL autoCheck);
 	BOOL IsPunctuation(char CurChar);
 
 	int ParseLine(char* CurLin, char* CurWord, int LinLen, BOOL quoteLine = FALSE);
@@ -52,7 +52,7 @@ protected:
 	CEdit* m_hEdit;
 /*04-27-01 changed the buffer size 	to fix crash
 	UCHAR m_prevWord[30];*/
-	UCHAR m_prevWord[SpellCheck_MAX_WORD_SZ];
+	UCHAR m_prevWord[SSCE_MAX_WORD_SZ];
 	UCHAR m_termChar;
 
 	BOOL	m_HasQuotedText;

@@ -46,7 +46,7 @@ CDynamicPluginMenu::~CDynamicPluginMenu()
 
 extern QCPluginDirector g_thePluginDirector;
 
-/*virtual*/ CDynamicPluginMenu::BuildMenu(UINT nIndex, BOOL bSysMenu)
+/*virtual*/ BOOL CDynamicPluginMenu::BuildMenu(UINT nIndex, BOOL bSysMenu)
 {
 	g_thePluginDirector.NewMessageCommands(m_CommandAction, this);
 

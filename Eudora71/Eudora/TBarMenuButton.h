@@ -9,14 +9,12 @@
 #pragma once
 #endif // _MSC_VER >= 1000
 
-#include "tbtnstd.h"
-
 class CTBarMenuButton : public SECStdBtn  
 {
 		HMENU	m_hMenu;
 
 public:
-	DECLARE_BUTTON(CTBarMenuButton);
+	TOOLKIT_DECLARE_BUTTON(CTBarMenuButton);
 
 	CTBarMenuButton();
 	virtual ~CTBarMenuButton();

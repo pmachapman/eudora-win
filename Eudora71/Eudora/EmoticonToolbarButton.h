@@ -32,7 +32,7 @@ class Emoticon;
 
 class EmoticonToolbarButton : public SECTwoPartBtn
 {
-	DECLARE_BUTTON(EmoticonToolbarButton)
+	TOOLKIT_DECLARE_BUTTON(EmoticonToolbarButton)
 
 public:
 				EmoticonToolbarButton();

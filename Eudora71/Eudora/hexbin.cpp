@@ -183,7 +183,7 @@ int DecodeBH::Decode(const char* In, LONG InLen, char* Out, LONG& OutLen)
 		WriteAttachNote(m_ATFile, IDS_ATTACH_CONVERTED);
 
 		OutLen = 0;
-		char *InPtr = strchr(In, ':') + 1;
+		char *InPtr = (char*)strchr(In, ':') + 1;
 		while (InPtr - In < InLen)
 		{
 			*Out++ = *InPtr++;

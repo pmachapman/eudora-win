@@ -10,7 +10,7 @@
 
 class TBarSendButton : public SECStdBtn
 {
-	DECLARE_BUTTON(TBarSendButton)
+	TOOLKIT_DECLARE_BUTTON(TBarSendButton)
 public:
 	TBarSendButton():m_bBPWarning(false) {};
 	~TBarSendButton() {};

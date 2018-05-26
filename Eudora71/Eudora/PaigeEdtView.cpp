@@ -1701,7 +1701,8 @@ bool CPaigeEdtView::NewPaigeObject(long AddFlags /*= 0*/, long AddFlags2 /*= 0*/
 void CPaigeEdtView::DeletePaigeObject()
 {
     undo_ref *theRef;
-    for (int i = m_undoStack.GetCount(); i ; i--)
+	int i;
+    for (i = m_undoStack.GetCount(); i ; i--)
     {
         theRef = m_undoStack.GetTail();
         pgDisposeUndo(*theRef);
@@ -2516,9 +2517,9 @@ BOOL CPaigeEdtView::OnSetCursor( CWnd* pWnd, UINT nHitTest, UINT message )
 							// Ad hack for now: skip redirect part and show just final destination URL.
 							// This should go away when we implement clickbase.
 							char* s;
-							if (s = strstr(DisplayURL, "url="))
+							if (s = (char*)strstr(DisplayURL, "url="))
 								DisplayURL = s + 4;
-							if (s = strstr(DisplayURL, "&distributorid"))
+							if (s = (char*)strstr(DisplayURL, "&distributorid"))
 								*s = 0;
 						}
 						else if (bShouldCheckLink)

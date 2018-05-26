@@ -1827,7 +1827,7 @@ CCompMessageDoc* CSummary::SendAgain
 		else
 		{
 			// search for the first Recieved: line
-			Start = strstr( mes2, CRString( IDS_NEWLINE_RECEIVED ) );
+			Start = (char*)strstr( mes2, CRString( IDS_NEWLINE_RECEIVED ) );
 			
 			if( Start != NULL ) 
 			{
@@ -1849,7 +1849,7 @@ CCompMessageDoc* CSummary::SendAgain
 						*End++ = 0;
 					else
 						End = Start + strlen(Start);
-					if (Start = strstr(mes2, Start))
+					if (Start = (char*)strstr(mes2, Start))
 					{
 						if (Start = strchr(Start, '\n'))
 							mes2 = Start + 1;

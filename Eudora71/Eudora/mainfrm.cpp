@@ -4845,7 +4845,7 @@ void CMainFrame::GetAttachmentLine(LPCTSTR cmdLine, CString& csAttachLine)
 	// build up attachments line (disregard folders)
 	while (!DONE)
 	{
-		if (c = strchr(cmdLine, ' '))
+		if (c = (char*)strchr(cmdLine, ' '))
 			*c++ = 0;
 		else
 			DONE = TRUE;
@@ -4855,7 +4855,7 @@ void CMainFrame::GetAttachmentLine(LPCTSTR cmdLine, CString& csAttachLine)
 		{
 			*path = 0;
 			char *c = NULL;
-			c = strrchr(cmdLine, '\\');
+			c = (char*)strrchr(cmdLine, '\\');
 			
 			// Make sure we got a full path name
 			if (c)
@@ -8659,7 +8659,7 @@ void CMainFrameOleDropTarget::OnDragLeave(CWnd* pWnd)
 }
 
 
-UINT CMainFrame::OnNcHitTest(CPoint point) 
+LRESULT CMainFrame::OnNcHitTest(CPoint point) 
 {
 	ASSERT(m_pControlBarManager != NULL);
 	ASSERT_KINDOF(SECToolBarManager, m_pControlBarManager);

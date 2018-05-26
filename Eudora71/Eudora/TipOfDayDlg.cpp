@@ -25,8 +25,7 @@ QCTipOfDayDlg::QCTipOfDayDlg
 	BOOL bShowAtStart /*= 1*/,
 	CWnd* pParentWnd /*= NULL*/
 ) :
-	SECTipOfDay(lpszTipFileName, (const TCHAR *) CRString(IDS_DID_YOU_KNOW), nTip,
-	            bShowAtStart, pParentWnd)
+	SECTipOfDay(lpszTipFileName, nTip, bShowAtStart, pParentWnd)
 {
 	//{{AFX_DATA_INIT(QCTipOfDayDlg)
 	//}}AFX_DATA_INIT

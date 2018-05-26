@@ -41,6 +41,7 @@ DAMAGE. */
 #include "rs.h"
 #include "QCCommandStack.h"
 #include "QCSharewareManager.h"
+#include "Foundation\Compatibility\Common\secdib.h"
 
 
 extern QCCommandStack	g_theCommandStack;

@@ -9,7 +9,7 @@
 #pragma once
 #endif // _MSC_VER >= 1000
 
-#include "tbarcust.h"
+#include "toolkit\tbarcust.h"
 #include "SafetyPal.h"
 
 class QCChildToolBar : public SECCustomToolBar  

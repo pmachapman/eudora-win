@@ -203,7 +203,8 @@ int ConvertURIs(const char * pszIn, char ** ppszOut, const URIMap & uriMap)
                   // this is busted if there is a quoted left-bracket attribute before the correct left-angle bracket which
                   // starts the tag, or if there is a right angle-bracket intervening, which should nominally close the tag
                   // before the attribute. These problems would be caught by a correct SGML parser.
-                  for (int nSearch = nPos - 2; (0 <= nSearch) && ('<' != pszIn[nSearch]); nSearch--)
+				   int nSearch;
+                  for (nSearch = nPos - 2; (0 <= nSearch) && ('<' != pszIn[nSearch]); nSearch--)
                      ;
 
                if (0 <= nSearch) {
@@ -486,7 +487,7 @@ int URIMap::BuildURIMap( const char * pMessage, bool bFreePrevious )
 	// first look for X-EmbeddedContent headers
 	const char* pTmp = pMessage;
 	const char* pBody = FindBody(pTmp);
-	while ( pIt = strstr( pTmp, ECHeader ) )
+	while ( pIt = (char*)strstr( pTmp, ECHeader ) )
 	{
 		// Skip by X-EmbeddedContent headers found in the body
 		if (pIt >= pBody)
@@ -567,7 +568,7 @@ int URIMap::BuildURIMap( const char * pMessage, bool bFreePrevious )
 
 	// now look for "Embedded content" trailers
 	pTmp = pMessage;
-	while ( pIt = strstr( pTmp, ECTrailer ) )
+	while ( pIt = (char*)strstr( pTmp, ECTrailer ) )
 	{
 		// verify and parse the parameters
 		// expects "Embedded content \path %x,%x,%x,%x\"

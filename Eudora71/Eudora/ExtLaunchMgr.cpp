@@ -34,7 +34,7 @@ PFNUPDATEDONOTWARNEXTENSIONSSETTING	CExternalLaunchManager::m_pfnUpdateDoNotWarn
 
 	void CExternalLaunchManager::LoadConfig()
 	{
-		static		bAlreadyUnregistered = FALSE;
+		static		BOOL bAlreadyUnregistered = FALSE;
 		TCHAR		szData[1024];
 		DWORD		dwDataBufSize=1024;		
 		DWORD		dwKeyDataType;	

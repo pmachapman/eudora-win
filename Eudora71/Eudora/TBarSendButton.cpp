@@ -13,7 +13,7 @@
 #include "DebugNewHelpers.h"
 
 
-IMPLEMENT_BUTTON(TBarSendButton)
+TOOLKIT_IMPLEMENT_BUTTON(TBarSendButton)
 
 
 ////////////////////////////////////////////////////////////////////////

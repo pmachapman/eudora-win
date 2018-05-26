@@ -1534,7 +1534,7 @@ int SendReferencesHeader(int HeaderNum)
 	while ( Text )
 	{
 		// write one <message id> string per line
-		char * pEnd = strchr( Text, '>' );
+		char * pEnd = (char*)strchr( Text, '>' );
 		if (pEnd)
 			*pEnd = '\0';
 
@@ -2176,7 +2176,7 @@ long EncodingType(const char* fname, MIMEMap& mm, BOOL bIsInline)
 	BYTE ch, LastCh;
 	char* p;
 
-	p = strrchr(fname, '.');
+	p = (char*)strrchr(fname, '.');
 	if (p)
 		mm.Find(p + 1);
 	if (!strcmp(mm.m_Mimetype, "text") || !strncmp(mm.m_Type, CRString(IDS_ATTACH_TEXT_TYPE), 4))

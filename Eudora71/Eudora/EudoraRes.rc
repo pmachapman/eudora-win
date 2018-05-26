@@ -8,7 +8,7 @@
 // Generated from the TEXTINCLUDE 2 resource.
 //
 #include "afxres.h"
-#include "secres.h"
+#include "toolkit\secres.h"
 
 #ifndef DS_CONTEXTHELP
 #define DS_CONTEXTHELP 0x2000L
@@ -11709,7 +11709,7 @@ END
 //
 #include "afxres.rc"  	// Standard components
 #include "afxprint.rc"	// printing/print preview resources
-#include "secres.rc"
+#include "toolkit\secres.rc"
 #include "EudoraResVer.rc"
 
 /////////////////////////////////////////////////////////////////////////////

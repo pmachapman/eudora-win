@@ -250,7 +250,7 @@ void CFileBrowseView::DragHighlightItem(int nItem, BOOL bAdd)
 
 BOOL CFileBrowseView::GetTargetFolder(CPoint pt, LPTSTR FolderBuffer)
 {
-	LPLISTDATA pListData = GetListDataAtPoint(pt);
+	LPLLISTDATA pListData = GetListDataAtPoint(pt);
 	int nItem = -1;
 
 	*FolderBuffer = 0;
@@ -282,7 +282,7 @@ BOOL CFileBrowseView::GetTargetFolder(CPoint pt, LPTSTR FolderBuffer)
 		// or the source is directly inside the folder (no-op)
 		if (*FolderBuffer)
 		{
-			const FolderLen = _tcslen(FolderBuffer);
+			const int FolderLen = _tcslen(FolderBuffer);
 			int SourceLen;
 			for (LPCTSTR pSource = m_DropFiles; *pSource; pSource += SourceLen + 1)
 			{
@@ -622,7 +622,7 @@ void CFileBrowseView::OnOK()
 			lvItem.iItem = FocusIndex;
 			lvItem.iSubItem = 0;
 			if (m_ListCtrl.GetItem(&lvItem))
-				OpenItem((LPLISTDATA)lvItem.lParam);
+				OpenItem((LPLLISTDATA)lvItem.lParam);
 		}
 	}
 }
@@ -2258,7 +2258,7 @@ void CFileBrowseView::OnContextMenu(CWnd* pWnd, CPoint ptScreen)
 	}
 	else if (pWnd->GetSafeHwnd() == m_ListCtrl.GetSafeHwnd())
 	{
-		LPLISTDATA pListData = GetListDataAtPoint(ptScreen);
+		LPLLISTDATA pListData = GetListDataAtPoint(ptScreen);
 		if (pListData)
 			DoTheMenuThing(GetSafeHwnd(), pListData->piParentShellFolder, NULL, &ptScreen);
 		else
@@ -2294,7 +2294,7 @@ void CFileBrowseView::OnContextMenu(CWnd* pWnd, CPoint ptScreen)
 //
 // Called when the user double-clicks or hits Enter on a ListCtrl item
 ////////////////////////////////////////////////////////////////////////
-BOOL CFileBrowseView::OpenItem(LPLISTDATA pListData)
+BOOL CFileBrowseView::OpenItem(LPLLISTDATA pListData)
 {
 	BOOL bResult = FALSE;
 
@@ -2331,7 +2331,7 @@ BOOL CFileBrowseView::OpenItem(LPLISTDATA pListData)
 //
 // Helper routine to get the list data at a particular point on the screen
 ////////////////////////////////////////////////////////////////////////
-LPLISTDATA CFileBrowseView::GetListDataAtPoint(CPoint ptScreen)
+LPLLISTDATA CFileBrowseView::GetListDataAtPoint(CPoint ptScreen)
 {
 	LV_HITTESTINFO lvhti;
 	CPoint pt(ptScreen);
@@ -2349,7 +2349,7 @@ LPLISTDATA CFileBrowseView::GetListDataAtPoint(CPoint ptScreen)
 		lvi.iSubItem = 0;
 
 		if (m_ListCtrl.GetItem(&lvi))
-			return (LPLISTDATA)lvi.lParam;
+			return (LPLLISTDATA)lvi.lParam;
 	}
 
 	return NULL;
@@ -2368,7 +2368,7 @@ LRESULT CFileBrowseView::NotifyHandler(UINT, WPARAM, LPARAM lParam)
 	NM_TREEVIEW *pnmtv   = (NM_TREEVIEW *)lParam;
 	NM_LISTVIEW *pnmlv   = (NM_LISTVIEW *)lParam;
 	LPTREEDATA   pTreeData = NULL;  //Long pointer to TreeView item data
-	LPLISTDATA   pListData = NULL;  //Long pointer to ListView item data
+	LPLLISTDATA   pListData = NULL;  //Long pointer to ListView item data
 	HRESULT        hr;
 	LPSHELLFOLDER  piShellFolder2 = NULL;
 	static char    szBuff[MAX_PATH];
@@ -2499,7 +2499,7 @@ LRESULT CFileBrowseView::NotifyHandler(UINT, WPARAM, LPARAM lParam)
 		case NM_DBLCLK:
 			{
 				::GetCursorPos((LPPOINT)&pt);
-				LPLISTDATA pListData = GetListDataAtPoint(pt);
+				LPLLISTDATA pListData = GetListDataAtPoint(pt);
 				if (pListData)
 					OpenItem(pListData);
 			}
@@ -2515,7 +2515,7 @@ LRESULT CFileBrowseView::NotifyHandler(UINT, WPARAM, LPARAM lParam)
 
 				if (! m_ListCtrl.GetItem(&lvi))
 					return 0;
-				pListData = (LPLISTDATA)lvi.lParam;
+				pListData = (LPLLISTDATA)lvi.lParam;
 
 				ASSERT(pListData && pListData->piParentShellFolder);
 				pListData->piParentShellFolder->Release();
@@ -2528,7 +2528,7 @@ LRESULT CFileBrowseView::NotifyHandler(UINT, WPARAM, LPARAM lParam)
 		case LVN_GETDISPINFO:
 			{
 				plvdi = (LV_DISPINFO *) lParam;
-				pListData = (LPLISTDATA) plvdi->item.lParam;
+				pListData = (LPLLISTDATA) plvdi->item.lParam;
 
 				if (NULL == plvdi)
 				{
@@ -2880,7 +2880,7 @@ BOOL CFileBrowseView::PopulateListView
 		while (S_OK == piEnumList->Next(1, &pIdList, &ulFetched))
 		{
 			// Get some memory for the ITEMDATA structure.
-			LPLISTDATA pListData = (LPLISTDATA) m_piMalloc->Alloc(sizeof(LISTDATA));
+			LPLLISTDATA pListData = (LPLLISTDATA) m_piMalloc->Alloc(sizeof(LLISTDATA));
 			if (!pListData)
 			{
 				bStatus = FALSE;
@@ -2975,8 +2975,8 @@ int CALLBACK CFileBrowseView::ListViewCompareProc(LPARAM lParam1,
 								 LPARAM lParam2,
 								 LPARAM lParamSort)
 {
-	LPLISTDATA pListData1 = (LPLISTDATA) lParam1;
-	LPLISTDATA pListData2 = (LPLISTDATA) lParam2;
+	LPLLISTDATA pListData1 = (LPLLISTDATA) lParam1;
+	LPLLISTDATA pListData2 = (LPLLISTDATA) lParam2;
 	LPLVSORTINFO lpSortInfo = (LPLVSORTINFO) lParamSort;
 
 	ASSERT(lpSortInfo);
@@ -3112,7 +3112,7 @@ int CALLBACK CFileBrowseView::ListViewCompareProc(LPARAM lParam1,
 ////////////////////////////////////////////////////////////////////////
 LPITEMIDLIST CFileBrowseView::GetFullyQualifiedPidlFromListItem
 (
-	LPLISTDATA pListData
+	LPLLISTDATA pListData
 )
 {
 	ASSERT(pListData);
@@ -3449,7 +3449,7 @@ LPITEMIDLIST CFileBrowseView::GetFullyQualPidlFromPath
 						MB_PRECOMPOSED,
 						lpszFullPathName,
 						-1,
-						(USHORT *)szOleChar,
+						szOleChar,
 						sizeof(szOleChar));
 
 	//
@@ -3495,7 +3495,7 @@ LPITEMIDLIST* CFileBrowseView::CreateListSelectionPIDL(UINT& Count)
 		nIndex = m_ListCtrl.GetNextItem(nIndex, LVIS_SELECTED);
 		ASSERT(nIndex != -1);
 
-		LPLISTDATA pListData = LPLISTDATA(m_ListCtrl.GetItemData(nIndex));
+		LPLLISTDATA pListData = LPLLISTDATA(m_ListCtrl.GetItemData(nIndex));
 		ASSERT(pListData);
 		pPidlArray[i] = pListData->pIdList;
 		ASSERT(pPidlArray[i]);

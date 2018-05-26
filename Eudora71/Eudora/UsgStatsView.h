@@ -62,7 +62,7 @@ public:
 	//}}AFX_VIRTUAL
 
 	void ReplaceSpaceFillers();
-	static UpdateFT() { };
+	static int UpdateFT() { };
 
 
 #ifdef _DEBUG
@@ -101,7 +101,7 @@ protected:
 		//}}AFX_MSG
 
 	afx_msg long OnRefreshUsageStatisticsWindow( WPARAM	wParam, LPARAM	lParam );
-	afx_msg LRESULT OnDisplayChange(WPARAM, LPARAM);
+	void OnDisplayChange(UINT nImageDepth, int cxScreen, int cyScreen);
 
 	LPDISPATCH GetIDispatch(COleClientItem *pItem);
 public:

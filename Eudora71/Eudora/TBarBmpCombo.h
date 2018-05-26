@@ -13,7 +13,7 @@
 //
 class CTBarBitmapComboBtn : public CBitmapCombo, public SECWndBtn
 {
-	DECLARE_BUTTON(CTBarBitmapComboBtn);
+	TOOLKIT_DECLARE_BUTTON(CTBarBitmapComboBtn);
 
 // Construction
 public:

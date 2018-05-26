@@ -27,8 +27,8 @@ DAMAGE. */
 #include "atlimage.h"
 
 #include "QCGraphics.h" 
-#include "SecImage.h"
-#include "SecDib.h"
+#include "Foundation\Compatibility\Common\SecImage.h"
+#include "Foundation\Compatibility\Common\SecDib.h"
 #include "SafetyPal.h"
 #include "resource.h"
 #include "rs.h"

@@ -161,7 +161,7 @@ void CListCtrlEx::DrawItemLabel(CDC *pDC,
 
 			if ((cFirstChar >= '0') && (cFirstChar <= '9'))
 			{
-				char *pColon = strchr(LPCSTR(LabelStr), ':');
+				char *pColon = (char*)strchr(LPCSTR(LabelStr), ':');
 
 				COLORREF cCompleted = m_GraphCompletedColor, cRemain = m_GraphRemainColor;
 
@@ -860,7 +860,8 @@ unsigned int CListCtrlEx::SetColDisplayType(unsigned int nCol, unsigned int nTyp
 	{
 		unsigned int *pArr = DEBUG_NEW unsigned int [nCol + 1];
 
-		for (unsigned int i=0; i<m_DispTypeArrLen; i++)
+		unsigned int i;
+		for (i=0; i<m_DispTypeArrLen; i++)
 			pArr[i] = m_DispTypeArr[i];
 
 		for (i=m_DispTypeArrLen; i <= nCol; i++)
@@ -886,7 +887,8 @@ bool CListCtrlEx::SetColImageList(unsigned int nCol, CImageList *pImageList)
 	{
 		CImageListPtr *pArr = DEBUG_NEW CImageListPtr[nCol + 1];
 
-		for (unsigned int i=0; i<m_DispImageListArrLen; i++)
+		unsigned int i;
+		for (i=0; i<m_DispImageListArrLen; i++)
 			pArr[i] = m_DispImageListArr[i];
 
 		for (i=m_DispImageListArrLen; i <= nCol; i++)
@@ -950,7 +952,8 @@ void CListCtrlEx::SetColImageWidth(unsigned int nCol, unsigned int nWidth)
 	{
 		unsigned int *pArr = DEBUG_NEW unsigned int[nCol + 1];
 
-		for (unsigned int i=0; i<m_ImageWidthArrLen; i++)
+		unsigned int i;
+		for (i=0; i<m_ImageWidthArrLen; i++)
 			pArr[i] = m_ImageWidthArr[i];
 
 		for (i=m_ImageWidthArrLen; i <= nCol; i++)
@@ -992,7 +995,8 @@ void CListCtrlEx::SetColImageHeight(unsigned int nCol, unsigned int nHeight)
 	{
 		unsigned int *pArr = DEBUG_NEW unsigned int[nCol + 1];
 
-		for (unsigned int i=0; i<m_ImageHeightArrLen; i++)
+		unsigned int i;
+		for (i=0; i<m_ImageHeightArrLen; i++)
 			pArr[i] = m_ImageHeightArr[i];
 
 		for (i=m_ImageHeightArrLen; i <= nCol; i++)
@@ -1351,7 +1355,8 @@ void CListCtrlEx::InsertArr(unsigned int *& pArr, unsigned int &nLen, unsigned i
 	{
 		unsigned int *pTemp = DEBUG_NEW unsigned int [nLen + 1];
 
-		for (unsigned int i=0; i<nIdx; i++)
+		unsigned int i;
+		for (i=0; i<nIdx; i++)
 			pTemp[i] = pArr[i];
 
 		pTemp[nIdx] = nDefault;
@@ -1371,7 +1376,8 @@ void CListCtrlEx::DeleteArr(unsigned int *& pArr, unsigned int &nLen, unsigned i
 	{
 		unsigned int *pTemp = DEBUG_NEW unsigned int [nLen - 1];
 
-		for (unsigned int i=0; i<nIdx; i++)
+		unsigned int i;
+		for (i=0; i<nIdx; i++)
 			pTemp[i] = pArr[i];
 
 		for (i=nIdx + 1; i < nLen; i++)
@@ -1393,7 +1399,8 @@ void CListCtrlEx::NotifyInsertedCol(unsigned int nCol)
 	{
 		CImageList **pTemp = DEBUG_NEW CImageList *[m_DispImageListArrLen + 1];
 
-		for (unsigned int i=0; i<nCol; i++)
+		unsigned int i;
+		for (i=0; i<nCol; i++)
 			pTemp[i] = m_DispImageListArr[i];
 
 		pTemp[nCol] = NULL;
@@ -1417,7 +1424,8 @@ void CListCtrlEx::NotifyDeletedCol(unsigned int nCol)
 	{
 		CImageList **pTemp = DEBUG_NEW CImageList *[m_DispImageListArrLen - 1];
 
-		for (unsigned int i=0; i<nCol; i++)
+		unsigned int i;
+		for (i=0; i<nCol; i++)
 			pTemp[i] = m_DispImageListArr[i];
 
 		for (i=nCol + 1; i < m_DispImageListArrLen; i++)

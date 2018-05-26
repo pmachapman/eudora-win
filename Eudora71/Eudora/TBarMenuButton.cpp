@@ -9,7 +9,7 @@
 #include "DebugNewHelpers.h"
 
 
-IMPLEMENT_BUTTON(CTBarMenuButton);
+TOOLKIT_IMPLEMENT_BUTTON(CTBarMenuButton);
 
 //////////////////////////////////////////////////////////////////////
 // Construction/Destruction

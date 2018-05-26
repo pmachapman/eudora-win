@@ -61,7 +61,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\..\QCUtils\public\inc;..\..\OT501\Include;.\inc;.\public\inc;..\System\CritSectionImpl\inc;..\System\CritSectionImpl\public\inc;..\Kernel\public\inc;..\..\Eudora;..\..\EuMemMgr\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\QCUtils\public\inc;..\..\StingrayStudio\_Include\RW;.\inc;.\public\inc;..\System\CritSectionImpl\inc;..\System\CritSectionImpl\public\inc;..\Kernel\public\inc;..\..\Eudora;..\..\EuMemMgr\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -86,7 +86,7 @@
     <ClCompile>
       <Optimization>MinSpace</Optimization>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>..\..\QCUtils\public\inc;..\..\OT501\Include;.\inc;.\public\inc;..\System\CritSectionImpl\inc;..\System\CritSectionImpl\public\inc;..\Kernel\public\inc;..\..\Eudora;..\..\EuMemMgr\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\QCUtils\public\inc;..\..\StingrayStudio\_Include\RW;.\inc;.\public\inc;..\System\CritSectionImpl\inc;..\System\CritSectionImpl\public\inc;..\Kernel\public\inc;..\..\Eudora;..\..\EuMemMgr\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>

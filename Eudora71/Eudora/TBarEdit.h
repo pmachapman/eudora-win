@@ -11,7 +11,7 @@
 //
 class CTBarEditBtn : public CEdit, public SECWndBtn
 {
-	DECLARE_BUTTON(CTBarEditBtn);
+	TOOLKIT_DECLARE_BUTTON(CTBarEditBtn);
 
 // Construction
 public:

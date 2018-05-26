@@ -2900,7 +2900,7 @@ ContentConcentrator::Message::CopyText(
 				
 				do
 				{
-					pScan = static_cast<char *>( memchr(pScan, '<', in_pStop-pScan) );
+					pScan = static_cast<char *>( (char*)memchr(pScan, '<', in_pStop-pScan) );
 					
 					if (pScan)
 					{
@@ -2964,7 +2964,7 @@ ContentConcentrator::Message::CopyText(
 				do
 				{
 					//	Look for the end of the line
-					pLineEnd = static_cast<char *>( memchr(pLineStart, '\r', in_pStop-pLineStart) );
+					pLineEnd = static_cast<char *>((char*)memchr(pLineStart, '\r', in_pStop-pLineStart) );
 					if ( pLineEnd && (pLineEnd < in_pStop) )
 					{
 						pLineEnd++;

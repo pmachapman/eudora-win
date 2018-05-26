@@ -2396,8 +2396,8 @@ GetBodyAsHTML(
 			*((char*)pStartNext) = '\0';
 
 			if ( PartType == IS_HTML &&
-					(((pHtml1 = strstr( pCurrent, HtmlOff )) || (pHtml1 = strstr( pCurrent, HtmlOffUpper )) ) ||	// </x-html>
-					( (pHtml2 = strstr( pCurrent, Html2Off )) || (pHtml2 = strstr( pCurrent, Html2OffUpper )) ) ) )	// </html>
+					(((pHtml1 = (char*)strstr( pCurrent, HtmlOff )) || (pHtml1 = (char*)strstr( pCurrent, HtmlOffUpper )) ) ||	// </x-html>
+					( (pHtml2 = (char*)strstr( pCurrent, Html2Off )) || (pHtml2 = (char*)strstr( pCurrent, Html2OffUpper )) ) ) )	// </html>
 			{
 				//Restore the char at the end of the line
 				*((char *)pStartNext) = temp;
