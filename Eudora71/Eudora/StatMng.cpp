@@ -306,7 +306,7 @@ static DWORD SaveStats(BOOL force);
 static DWORD SaveStatsAsXML(char *pFileName = NULL);
 
 static void UpdateNumStatLo(StatType which, long value);
-static void UpdateNumStatWithTime(StatType which, long value, uLong seconds);
+static void UpdateNumStatWithTime(StatType which, long value, ULONG seconds);
 
 static void CheckTimeChange(void);
 static void UpdateFacetimeLo(FacetimeMode facetimeMode = FACETIMEMODENULL);
@@ -739,7 +739,7 @@ static void UpdateNumStatLo(StatType which, long value)
 }
 
 
-void UpdateNumStatWithTime(StatType which, long value, uLong seconds)
+void UpdateNumStatWithTime(StatType which, long value, ULONG seconds)
 {
 	ULONG			curSeconds;
 	NumericStats	*pNum = NULL;
@@ -2784,7 +2784,8 @@ void StatsXmlParser::WriteDataField( int id, long *plValue, short sCount)
 	CString	csStr = "";
 	if (plValue)
 	{
-		for (int i = 0; i < sCount - 1; i++)
+		int i;
+		for (i = 0; i < sCount - 1; i++)
 		{
 			sprintf(szBuf,"%ld\0",plValue[i]);
 			csStr += szBuf;

@@ -103,10 +103,10 @@ public:
 	//{{AFX_DATA(CPaymentAndRegistrationDlg)
 	enum { IDD = IDD_PAYMENT_REGISTRATION };
 
-	SECBitmapButton	m_RegisterButton;
-	SECBitmapButton	m_DemographicsButton;
-	SECBitmapButton	m_FindVersionsButton;
-	SECBitmapButton	m_ChangeRegistrationButton;
+	stingray::foundation::SECBitmapButton	m_RegisterButton;
+	stingray::foundation::SECBitmapButton	m_DemographicsButton;
+	stingray::foundation::SECBitmapButton	m_FindVersionsButton;
+	stingray::foundation::SECBitmapButton	m_ChangeRegistrationButton;
 	CString m_ProfileYourself;
 	CString m_Register;
 	//}}AFX_DATA

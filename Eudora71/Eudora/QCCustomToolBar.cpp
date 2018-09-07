@@ -317,7 +317,7 @@ BOOL QCCustomToolBar::RemoveButton(int nIndex, BOOL bNoUpdate /* = FALSE */, INT
 		pTheFrame->ToolBarButtonDeleted(this, nIndex);
 	}
 
-	return SECCustomToolBar::RemoveButton(nIndex, bNoUpdate, pIndex);
+	return SECCustomToolBar::RemoveButton(nIndex, bNoUpdate);
 }
 
 BOOL QCCustomToolBar::DestroyWindow()
@@ -347,8 +347,8 @@ void QCCustomToolBar::GetBarInfoEx(SECControlBarInfo* pInfo)
 				( m_btns[i]->m_nID == m_btns[i]->m_ulData ) )
 			{
 				// only process non-customized buttons
-				SECCustomToolBarInfoEx::BtnInfo* pBtnInfo = 
-					DEBUG_NEW SECCustomToolBarInfoEx::BtnInfo;
+				SECBtnInfo* pBtnInfo = 
+					DEBUG_NEW SECBtnInfo;
 				pBtnInfo->m_nID = (m_btns[i]->m_nStyle & TBBS_SEPARATOR) ? 
 					ID_SEPARATOR : m_btns[i]->m_nID;
 

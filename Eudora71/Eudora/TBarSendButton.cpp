@@ -12,6 +12,8 @@
 
 #include "DebugNewHelpers.h"
 
+#include "RWUXTheme.h"
+
 
 TOOLKIT_IMPLEMENT_BUTTON(TBarSendButton)
 

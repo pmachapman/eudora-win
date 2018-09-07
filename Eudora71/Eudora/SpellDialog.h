@@ -96,7 +96,7 @@ class CSpellDialog : public CDialog
 	VERSIONFUNCPTR			m_pfnVersion;
 	
 		
-	SpellCheck_CHAR	m_szSuggestingForTempWord[SpellCheck_MAX_WORD_SZ];
+	SpellCheck_CHAR	m_szSuggestingForTempWord[SSCE_MAX_WORD_SZ];
 
 	// Temporary lexicon ids:
 	short	m_sTmpIgnoreLexId;

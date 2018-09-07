@@ -37,6 +37,8 @@ DAMAGE. */
 
 #include "DebugNewHelpers.h"
 
+#include "RWUXTheme.h"
+
 const DWORD		MAGICROP		= 0xb8074a;
 
 extern EmoticonDirector g_theEmoticonDirector;

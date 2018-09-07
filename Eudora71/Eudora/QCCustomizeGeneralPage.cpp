@@ -62,7 +62,7 @@ BOOL QCCustomizeGeneralPage::OnInitDialog()
 		// Create and initialise the toolbar
 		SECBtnGroup* pGroup = (SECBtnGroup*) m_btnGroups[i];
 		// Add the name of this toolbar to the listbox
-		pList->AddString(pGroup->lpszTitle);
+		pList->AddString(pGroup->GetTitle());
 	}
 
 	pList->SetCurSel(0);

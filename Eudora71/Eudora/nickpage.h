@@ -196,7 +196,7 @@ public:
 		IDD = IDD_NICKNAME_ADDRESS_PAGE
 #endif // WIN32
 	};
-	SECBitmapButton m_Swap;
+	stingray::foundation::SECBitmapButton m_Swap;
 	//}}AFX_DATA
 
 	// ClassWizard generate virtual function overrides

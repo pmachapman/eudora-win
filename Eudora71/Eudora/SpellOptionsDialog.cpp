@@ -63,31 +63,31 @@ BOOL CSpellOptionsDialog::OnInitDialog()
 	CDialog::OnInitDialog();
 	
 	CheckDlgButton( IDC_REPORT_MIXED_CASE_BTN,
-	  (m_ulOptionsMask & SpellCheck_REPORT_MIXED_CASE_OPT) != 0);
+	  (m_ulOptionsMask & SSCE_REPORT_MIXED_CASE_OPT) != 0);
 
 	CheckDlgButton(	IDC_REPORT_DOUBLED_WORDS_BTN,
-	  (m_ulOptionsMask & SpellCheck_REPORT_DOUBLED_WORD_OPT) != 0);
+	  (m_ulOptionsMask & SSCE_REPORT_DOUBLED_WORD_OPT) != 0);
 
 	CheckDlgButton(	IDC_IGNORE_CAPS_BTN,
-	  (m_ulOptionsMask & SpellCheck_IGNORE_CAPPED_WORD_OPT) != 0);
+	  (m_ulOptionsMask & SSCE_IGNORE_CAPPED_WORD_OPT) != 0);
 
 	CheckDlgButton(	IDS_INI_IGNORE_ALL_CAPS,
-	  (m_ulOptionsMask & SpellCheck_IGNORE_ALL_CAPS_WORD_OPT) != 0);
+	  (m_ulOptionsMask & SSCE_IGNORE_ALL_CAPS_WORD_OPT) != 0);
 
 	CheckDlgButton(	IDC_IGNORE_MIXED_DIGITS_BTN,
-	  (m_ulOptionsMask & SpellCheck_IGNORE_MIXED_DIGITS_OPT) != 0);
+	  (m_ulOptionsMask & SSCE_IGNORE_MIXED_DIGITS_OPT) != 0);
 
 	CheckDlgButton(	IDC_IGNORE_MIXED_CASE_BTN,
-	  (m_ulOptionsMask & SpellCheck_IGNORE_MIXED_CASE_OPT) != 0);
+	  (m_ulOptionsMask & SSCE_IGNORE_MIXED_CASE_OPT) != 0);
 
 	CheckDlgButton(	IDS_INI_SUGGEST_SPLIT_WORDS,
-	  (m_ulOptionsMask & SpellCheck_SUGGEST_SPLIT_WORDS_OPT) != 0);
+	  (m_ulOptionsMask & SSCE_SUGGEST_SPLIT_WORDS_OPT) != 0);
 
 	CheckDlgButton(	IDS_INI_SUGGEST_PHONETICS,
-	  (m_ulOptionsMask & SpellCheck_SUGGEST_PHONETIC_OPT) != 0);
+	  (m_ulOptionsMask & SSCE_SUGGEST_PHONETIC_OPT) != 0);
 
 	CheckDlgButton(	IDS_INI_SUGGEST_TYPOGRAPHIC,
-	  (m_ulOptionsMask & SpellCheck_SUGGEST_TYPOGRAPHICAL_OPT) != 0);
+	  (m_ulOptionsMask & SSCE_SUGGEST_TYPOGRAPHICAL_OPT) != 0);
 
 	CheckDlgButton(	IDC_ALWAYS_SUGGEST_BTN, m_bAlwaysSuggest );
 	
@@ -103,73 +103,73 @@ void CSpellOptionsDialog::OnAlwaysSuggestBtn()
 void CSpellOptionsDialog::OnIgnoreCapsBtn() 
 {
 	if (IsDlgButtonChecked(IDC_IGNORE_CAPS_BTN))
-		m_ulOptionsMask |= SpellCheck_IGNORE_CAPPED_WORD_OPT;
+		m_ulOptionsMask |= SSCE_IGNORE_CAPPED_WORD_OPT;
 	else
-		m_ulOptionsMask &= ~SpellCheck_IGNORE_CAPPED_WORD_OPT;
+		m_ulOptionsMask &= ~SSCE_IGNORE_CAPPED_WORD_OPT;
 }
 
 void CSpellOptionsDialog::OnIgnoreMixedCaseBtn() 
 {
 	if (IsDlgButtonChecked(IDC_IGNORE_MIXED_CASE_BTN))
-		m_ulOptionsMask |= SpellCheck_IGNORE_MIXED_CASE_OPT;
+		m_ulOptionsMask |= SSCE_IGNORE_MIXED_CASE_OPT;
 	else
-		m_ulOptionsMask &= ~SpellCheck_IGNORE_MIXED_CASE_OPT;			
+		m_ulOptionsMask &= ~SSCE_IGNORE_MIXED_CASE_OPT;			
 }
 
 void CSpellOptionsDialog::OnIgnoreMixedDigitsBtn() 
 {
 	if (IsDlgButtonChecked(IDC_IGNORE_MIXED_DIGITS_BTN))
-		m_ulOptionsMask |= SpellCheck_IGNORE_MIXED_DIGITS_OPT;
+		m_ulOptionsMask |= SSCE_IGNORE_MIXED_DIGITS_OPT;
 	else
-		m_ulOptionsMask &= ~SpellCheck_IGNORE_MIXED_DIGITS_OPT;
+		m_ulOptionsMask &= ~SSCE_IGNORE_MIXED_DIGITS_OPT;
 }
 
 void CSpellOptionsDialog::OnReportDoubledWordsBtn() 
 {
 	if (IsDlgButtonChecked(IDC_REPORT_DOUBLED_WORDS_BTN))
-		m_ulOptionsMask |= SpellCheck_REPORT_DOUBLED_WORD_OPT;
+		m_ulOptionsMask |= SSCE_REPORT_DOUBLED_WORD_OPT;
 	else
-		m_ulOptionsMask &= ~SpellCheck_REPORT_DOUBLED_WORD_OPT;		
+		m_ulOptionsMask &= ~SSCE_REPORT_DOUBLED_WORD_OPT;		
 }
 
 void CSpellOptionsDialog::OnIniIgnoreAllCaps() 
 {
 	if (IsDlgButtonChecked(IDS_INI_IGNORE_ALL_CAPS))
-		m_ulOptionsMask |= SpellCheck_IGNORE_ALL_CAPS_WORD_OPT;
+		m_ulOptionsMask |= SSCE_IGNORE_ALL_CAPS_WORD_OPT;
 	else
-		m_ulOptionsMask &= ~SpellCheck_IGNORE_ALL_CAPS_WORD_OPT;
+		m_ulOptionsMask &= ~SSCE_IGNORE_ALL_CAPS_WORD_OPT;
 }
 
 void CSpellOptionsDialog::OnIniSuggestPhonetics() 
 {
 	if (IsDlgButtonChecked( IDS_INI_SUGGEST_PHONETICS))
-		m_ulOptionsMask |= SpellCheck_SUGGEST_PHONETIC_OPT;
+		m_ulOptionsMask |= SSCE_SUGGEST_PHONETIC_OPT;
 	else
-		m_ulOptionsMask &= ~SpellCheck_SUGGEST_PHONETIC_OPT;
+		m_ulOptionsMask &= ~SSCE_SUGGEST_PHONETIC_OPT;
 }
 
 void CSpellOptionsDialog::OnIniSuggestSplitWords() 
 {
 	if (IsDlgButtonChecked(IDS_INI_SUGGEST_SPLIT_WORDS))
-		m_ulOptionsMask |= SpellCheck_SUGGEST_SPLIT_WORDS_OPT;
+		m_ulOptionsMask |= SSCE_SUGGEST_SPLIT_WORDS_OPT;
 	else
-		m_ulOptionsMask &= ~SpellCheck_SUGGEST_SPLIT_WORDS_OPT;
+		m_ulOptionsMask &= ~SSCE_SUGGEST_SPLIT_WORDS_OPT;
 }
 
 void CSpellOptionsDialog::OnIniSuggestTypographic() 
 {
 	if (IsDlgButtonChecked(IDS_INI_SUGGEST_TYPOGRAPHIC))
-		m_ulOptionsMask |= SpellCheck_SUGGEST_TYPOGRAPHICAL_OPT;
+		m_ulOptionsMask |= SSCE_SUGGEST_TYPOGRAPHICAL_OPT;
 	else
-		m_ulOptionsMask &= ~SpellCheck_SUGGEST_TYPOGRAPHICAL_OPT;
+		m_ulOptionsMask &= ~SSCE_SUGGEST_TYPOGRAPHICAL_OPT;
 }
 
 void CSpellOptionsDialog::OnReportMixedCaseBtn() 
 {
 	if (IsDlgButtonChecked(IDC_REPORT_MIXED_CASE_BTN))
-		m_ulOptionsMask |= SpellCheck_REPORT_MIXED_CASE_OPT;
+		m_ulOptionsMask |= SSCE_REPORT_MIXED_CASE_OPT;
 	else
-		m_ulOptionsMask &= ~SpellCheck_REPORT_MIXED_CASE_OPT;
+		m_ulOptionsMask &= ~SSCE_REPORT_MIXED_CASE_OPT;
 }
 
 

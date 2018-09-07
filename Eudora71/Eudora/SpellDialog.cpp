@@ -181,21 +181,21 @@ void CSpellDialog::my_SpellCheck_Version(S16 FAR *major, S16 FAR *minor)
 void CSpellDialog::saveOptionMask(unsigned long mask)
 {
 	SetIniShort(IDS_INI_IGNORE_CAPPED_WORDS,
-		(short) ( (mask & SpellCheck_IGNORE_CAPPED_WORD_OPT)? 1 : 0) );
+		(short) ( (mask & SSCE_IGNORE_CAPPED_WORD_OPT)? 1 : 0) );
 	SetIniShort(IDS_INI_IGNORE_ALL_CAPS,
-		(short) ( (mask & SpellCheck_IGNORE_ALL_CAPS_WORD_OPT)? 1 : 0) );
+		(short) ( (mask & SSCE_IGNORE_ALL_CAPS_WORD_OPT)? 1 : 0) );
 	SetIniShort(IDS_INI_IGNORE_MIXED_DIGITS,
-		(short) ( (mask & SpellCheck_IGNORE_MIXED_DIGITS_OPT)? 1 : 0) );
+		(short) ( (mask & SSCE_IGNORE_MIXED_DIGITS_OPT)? 1 : 0) );
 	SetIniShort(IDS_INI_IGNORE_MIXED_CASE,
-		(short) ( (mask & SpellCheck_IGNORE_MIXED_CASE_OPT)? 1 : 0) );
+		(short) ( (mask & SSCE_IGNORE_MIXED_CASE_OPT)? 1 : 0) );
 	SetIniShort(IDS_INI_REPORT_DOUBLED_WORDS,
-		(short) ( (mask & SpellCheck_REPORT_DOUBLED_WORD_OPT)? 1 : 0) );
+		(short) ( (mask & SSCE_REPORT_DOUBLED_WORD_OPT)? 1 : 0) );
 	SetIniShort(IDS_INI_SUGGEST_SPLIT_WORDS,
-		(short) ( (mask & SpellCheck_SUGGEST_SPLIT_WORDS_OPT)? 1 : 0) );
+		(short) ( (mask & SSCE_SUGGEST_SPLIT_WORDS_OPT)? 1 : 0) );
 	SetIniShort(IDS_INI_SUGGEST_PHONETICS,
-		(short) ( (mask & SpellCheck_SUGGEST_PHONETIC_OPT)? 1 : 0) );
+		(short) ( (mask & SSCE_SUGGEST_PHONETIC_OPT)? 1 : 0) );
 	SetIniShort(IDS_INI_SUGGEST_TYPOGRAPHIC,
-		(short) ( (mask & SpellCheck_SUGGEST_TYPOGRAPHICAL_OPT)? 1 : 0) );
+		(short) ( (mask & SSCE_SUGGEST_TYPOGRAPHICAL_OPT)? 1 : 0) );
 	
 }
 
@@ -230,7 +230,7 @@ void CSpellDialog::parseFileList(const char* fileList, char fileNames[][MAX_FILE
 //
 INT CSpellDialog::getSuggestions(const SpellCheck_CHAR* word )
 {
-	SpellCheck_CHAR suggBfr[SpellCheck_MAX_WORD_SZ * MAX_SUGGESTIONS + 1];
+	SpellCheck_CHAR suggBfr[SSCE_MAX_WORD_SZ * MAX_SUGGESTIONS + 1];
 	static S16 scores[MAX_SUGGESTIONS];
 	int n = 0;
 	CWaitCursor wait;
@@ -304,10 +304,10 @@ void CSpellDialog::RunChecker()
 	
 	iResult = m_pSpell->my_CheckBlock( m_ulOptionsMask, szProbWord, szRepWord );
 	
-	if( iResult & SpellCheck_END_OF_BLOCK_RSLT )
+	if( iResult & SSCE_END_OF_BLOCK_RSLT )
 		EndDialog( IDOK );
 
-	if( iResult & SpellCheck_MISSPELLED_WORD_RSLT )
+	if( iResult & SSCE_MISSPELLED_WORD_RSLT )
 	{ 
 		m_bSuggestingFor = FALSE; 
 		m_bUseSugTempForProbWord = FALSE;
@@ -345,7 +345,7 @@ void CSpellDialog::RunChecker()
 		m_pWndReplaceAllBtn->EnableWindow(TRUE);
 //		m_pWndCancelBtn->EnableWindow(TRUE);
 	}
-	else if (iResult & SpellCheck_SUGGEST_WORD_RSLT)
+	else if (iResult & SSCE_SUGGEST_WORD_RSLT)
 	{
 		m_pSpell->myHilightWord();
 		m_bAUserChange = FALSE;
@@ -371,7 +371,7 @@ void CSpellDialog::RunChecker()
 		m_pWndReplaceAllBtn->EnableWindow( TRUE);
 //		m_pWndCancelBtn->EnableWindow( TRUE);
 	}
-	else if (iResult & SpellCheck_UNCAPPED_WORD_RSLT)
+	else if (iResult & SSCE_UNCAPPED_WORD_RSLT)
 	{
 		m_pSpell->myHilightWord();
 		m_pWndProbLblTxt->SetWindowText( (LPCTSTR)CRString(IDS_SPELL_CAPITALIZATION));
@@ -382,7 +382,7 @@ void CSpellDialog::RunChecker()
 		m_pWndReplaceBtn->EnableWindow( TRUE);
 //		m_pWndCancelBtn->EnableWindow( TRUE);
 	}
-	else if (iResult & SpellCheck_MIXED_CASE_WORD_RSLT)
+	else if (iResult & SSCE_MIXED_CASE_WORD_RSLT)
 	{
 		m_pSpell->myHilightWord();
 		m_pWndProbLblTxt->SetWindowText( (LPCTSTR)CRString(IDS_SPELL_MIXED_CASE));
@@ -393,7 +393,7 @@ void CSpellDialog::RunChecker()
 		m_pWndReplaceBtn->EnableWindow( TRUE);
 //		m_pWndCancelBtn->EnableWindow( TRUE);
 	}
-	else if (iResult & SpellCheck_DOUBLED_WORD_RSLT)
+	else if (iResult & SSCE_DOUBLED_WORD_RSLT)
 	{
 		m_pSpell->myHilightWord();
 		m_pWndProbLblTxt->SetWindowText( (LPCTSTR)CRString(IDS_SPELL_DOUBLED_WORD));
@@ -406,7 +406,7 @@ void CSpellDialog::RunChecker()
 		m_pWndReplaceAllBtn->EnableWindow(	FALSE);
 //		m_pWndCancelBtn->EnableWindow(		TRUE);
 	}
-	else if (iResult & SpellCheck_CHANGE_WORD_RSLT)
+	else if (iResult & SSCE_CHANGE_WORD_RSLT)
 	{
 		// Automatically replace the current word with the indicated
 		// replacement.
@@ -544,7 +544,7 @@ INT CSpellDialog::openSpellCheck()
 	}
 
 	// Open the lexicons within the session.
-	if ((m_sTmpChangeLexId = my_SpellCheck_CreateLex(NULL, SpellCheck_CHANGE_LEX_TYPE, m_byLanguage)) < 0)
+	if ((m_sTmpChangeLexId = my_SpellCheck_CreateLex(NULL, SSCE_CHANGE_LEX_TYPE, m_byLanguage)) < 0)
 	{
 //		wsprintf(str, "Error %d opening temp change lexicon", tmpChangeLexId);
 //		logDiagnostic(str);
@@ -552,7 +552,7 @@ INT CSpellDialog::openSpellCheck()
 		m_sid = -1;
 		return (m_sTmpChangeLexId);
 	}
-	if ((m_sTmpIgnoreLexId = my_SpellCheck_CreateLex(NULL, SpellCheck_IGNORE_LEX_TYPE, m_byLanguage)) < 0)
+	if ((m_sTmpIgnoreLexId = my_SpellCheck_CreateLex(NULL, SSCE_IGNORE_LEX_TYPE, m_byLanguage)) < 0)
 	{
 //		wsprintf(str, "Error %d opening temp ignore lexicon", tmpIgnoreLexId);
 //		logDiagnostic(str);
@@ -561,7 +561,7 @@ INT CSpellDialog::openSpellCheck()
 		return (m_sTmpIgnoreLexId);
 	}
 
-	if ((m_sTmpSuggestLexId = my_SpellCheck_CreateLex(NULL, SpellCheck_SUGGEST_LEX_TYPE, m_byLanguage)) < 0)
+	if ((m_sTmpSuggestLexId = my_SpellCheck_CreateLex(NULL, SSCE_SUGGEST_LEX_TYPE, m_byLanguage)) < 0)
 	{
 //		wsprintf(str, "Error %d opening temp suggest lexicon", tmpSuggestLexId);
 //		logDiagnostic(str);
@@ -575,7 +575,7 @@ INT CSpellDialog::openSpellCheck()
 	if ((m_sPermChangeLexId = my_SpellCheck_OpenLex(userPathName, 0L)) < 0)
 	{
 		if ((m_sPermChangeLexId =
-			my_SpellCheck_CreateLex(userPathName, SpellCheck_CHANGE_LEX_TYPE, m_byLanguage)) < 0)
+			my_SpellCheck_CreateLex(userPathName, SSCE_CHANGE_LEX_TYPE, m_byLanguage)) < 0)
 		{
 //			wsprintf(str, "Error %d opening %s", pathName, m_sPermChangeLexId);
 //			logDiagnostic(str);
@@ -589,7 +589,7 @@ INT CSpellDialog::openSpellCheck()
 	if ((m_sPermIgnoreLexId = my_SpellCheck_OpenLex(userPathName, 0L)) < 0)
 	{
 		if ((m_sPermIgnoreLexId =
-			my_SpellCheck_CreateLex(userPathName, SpellCheck_IGNORE_LEX_TYPE, m_byLanguage)) < 0)
+			my_SpellCheck_CreateLex(userPathName, SSCE_IGNORE_LEX_TYPE, m_byLanguage)) < 0)
 		{
 //			wsprintf(str, "Error %d opening %s", pathName, m_sPermIgnoreLexId);
 //			logDiagnostic(str);
@@ -603,7 +603,7 @@ INT CSpellDialog::openSpellCheck()
 	if ((m_sPermSuggestLexId = my_SpellCheck_OpenLex(userPathName, 0L)) < 0)
 	{
 		if ((m_sPermSuggestLexId =
-			my_SpellCheck_CreateLex(userPathName, SpellCheck_SUGGEST_LEX_TYPE, m_byLanguage)) < 0)
+			my_SpellCheck_CreateLex(userPathName, SSCE_SUGGEST_LEX_TYPE, m_byLanguage)) < 0)
 		{
 //			wsprintf(str, "Error %d opening %s", pathName, m_sPermSuggestLexId);
 //			logDiagnostic(str);
@@ -662,31 +662,31 @@ void CSpellDialog::closeSpellCheck()
 void CSpellDialog::SetOptions()
 {
 	U32 prev;
-	if ( m_ulOptionsMask & SpellCheck_SUGGEST_PHONETIC_OPT )
+	if ( m_ulOptionsMask & SSCE_SUGGEST_PHONETIC_OPT )
 	{
-		prev = my_SpellCheck_SetOption( SpellCheck_SUGGEST_PHONETIC_OPT, 1 );
+		prev = my_SpellCheck_SetOption( SSCE_SUGGEST_PHONETIC_OPT, 1 );
 	}
 	else
 	{
-		prev = my_SpellCheck_SetOption( SpellCheck_SUGGEST_PHONETIC_OPT, 0 );
+		prev = my_SpellCheck_SetOption( SSCE_SUGGEST_PHONETIC_OPT, 0 );
 	}
 
-	if ( m_ulOptionsMask & SpellCheck_SUGGEST_TYPOGRAPHICAL_OPT )
+	if ( m_ulOptionsMask & SSCE_SUGGEST_TYPOGRAPHICAL_OPT )
 	{
-		prev = my_SpellCheck_SetOption( SpellCheck_SUGGEST_TYPOGRAPHICAL_OPT, 1 );
+		prev = my_SpellCheck_SetOption( SSCE_SUGGEST_TYPOGRAPHICAL_OPT, 1 );
 	}
 	else
 	{
-		prev = my_SpellCheck_SetOption( SpellCheck_SUGGEST_TYPOGRAPHICAL_OPT, 0 );
+		prev = my_SpellCheck_SetOption( SSCE_SUGGEST_TYPOGRAPHICAL_OPT, 0 );
 	}
 
-	if ( m_ulOptionsMask & SpellCheck_SUGGEST_SPLIT_WORDS_OPT )
+	if ( m_ulOptionsMask & SSCE_SUGGEST_SPLIT_WORDS_OPT )
 	{
-		prev = my_SpellCheck_SetOption( SpellCheck_SUGGEST_SPLIT_WORDS_OPT, 1 );
+		prev = my_SpellCheck_SetOption( SSCE_SUGGEST_SPLIT_WORDS_OPT, 1 );
 	}
 	else
 	{
-		prev = my_SpellCheck_SetOption( SpellCheck_SUGGEST_SPLIT_WORDS_OPT, 0 );
+		prev = my_SpellCheck_SetOption( SSCE_SUGGEST_SPLIT_WORDS_OPT, 0 );
 	}
 
 }
@@ -730,17 +730,17 @@ BOOL CSpellDialog::Init()
 	GetIniString(IDS_INI_USER_SUGGEST_LEX, m_szPermSuggestLexFileName, sizeof( m_szPermSuggestLexFileName));
 
     // Obtain the SpellCheck Dialogs-specific profile settings.
-    m_ulOptionsMask = SpellCheck_REPORT_SPELLING_OPT;
-	if (GetIniShort(IDS_INI_IGNORE_CAPPED_WORDS))	m_ulOptionsMask |= SpellCheck_IGNORE_CAPPED_WORD_OPT;
-	if (GetIniShort(IDS_INI_IGNORE_ALL_CAPS))		m_ulOptionsMask |= SpellCheck_IGNORE_ALL_CAPS_WORD_OPT;
-	if (GetIniShort(IDS_INI_IGNORE_MIXED_DIGITS))	m_ulOptionsMask |= SpellCheck_IGNORE_MIXED_DIGITS_OPT;
-	if (GetIniShort(IDS_INI_IGNORE_MIXED_CASE))		m_ulOptionsMask |= SpellCheck_IGNORE_MIXED_CASE_OPT;
-	if (GetIniShort(IDS_INI_REPORT_DOUBLED_WORDS))	m_ulOptionsMask |= SpellCheck_REPORT_DOUBLED_WORD_OPT;
-	if (GetIniShort(IDS_INI_SUGGEST_SPLIT_WORDS))	m_ulOptionsMask |= SpellCheck_SUGGEST_SPLIT_WORDS_OPT;
-	if (GetIniShort(IDS_INI_SUGGEST_PHONETICS))		m_ulOptionsMask |= SpellCheck_SUGGEST_PHONETIC_OPT;
-	if (GetIniShort(IDS_INI_SUGGEST_TYPOGRAPHIC))	m_ulOptionsMask |= SpellCheck_SUGGEST_TYPOGRAPHICAL_OPT;
+    m_ulOptionsMask = SSCE_REPORT_SPELLING_OPT;
+	if (GetIniShort(IDS_INI_IGNORE_CAPPED_WORDS))	m_ulOptionsMask |= SSCE_IGNORE_CAPPED_WORD_OPT;
+	if (GetIniShort(IDS_INI_IGNORE_ALL_CAPS))		m_ulOptionsMask |= SSCE_IGNORE_ALL_CAPS_WORD_OPT;
+	if (GetIniShort(IDS_INI_IGNORE_MIXED_DIGITS))	m_ulOptionsMask |= SSCE_IGNORE_MIXED_DIGITS_OPT;
+	if (GetIniShort(IDS_INI_IGNORE_MIXED_CASE))		m_ulOptionsMask |= SSCE_IGNORE_MIXED_CASE_OPT;
+	if (GetIniShort(IDS_INI_REPORT_DOUBLED_WORDS))	m_ulOptionsMask |= SSCE_REPORT_DOUBLED_WORD_OPT;
+	if (GetIniShort(IDS_INI_SUGGEST_SPLIT_WORDS))	m_ulOptionsMask |= SSCE_SUGGEST_SPLIT_WORDS_OPT;
+	if (GetIniShort(IDS_INI_SUGGEST_PHONETICS))		m_ulOptionsMask |= SSCE_SUGGEST_PHONETIC_OPT;
+	if (GetIniShort(IDS_INI_SUGGEST_TYPOGRAPHIC))	m_ulOptionsMask |= SSCE_SUGGEST_TYPOGRAPHICAL_OPT;
 
-	m_ulOptionsMask |= SpellCheck_SPLIT_CONTRACTED_WORDS_OPT;
+	m_ulOptionsMask |= SSCE_SPLIT_CONTRACTED_WORDS_OPT;
 
 	m_bAlwaysSuggest = ( BOOL ) GetIniShort(IDS_INI_ALWAYS_SUGGEST);
 	m_byLanguage = (char) GetIniShort(IDS_INI_LEX_LANGUAGE);
@@ -762,7 +762,7 @@ BOOL CSpellDialog::Init()
 
 	if( m_bAlwaysSuggest )
 	{
-		m_sSearchDepth = SpellCheck_AUTO_SEARCH_DEPTH;
+		m_sSearchDepth = SSCE_AUTO_SEARCH_DEPTH;
 	}
 	else
 	{
@@ -1243,7 +1243,7 @@ BOOL CSpellDialog::Popup(char* pWord, POINT& point, BOOL doubledWord,
 	CMenu	menu;
 	menu.CreatePopupMenu( );
 
-	SpellCheck_CHAR suggBfr[SpellCheck_MAX_WORD_SZ * MAX_SUGGESTIONS + 1];
+	SpellCheck_CHAR suggBfr[SSCE_MAX_WORD_SZ * MAX_SUGGESTIONS + 1];
 	static S16 scores[MAX_SUGGESTIONS];
 	UINT n = 0;
 	const SpellCheck_CHAR* p;
@@ -1333,10 +1333,10 @@ BOOL CSpellDialog::DoCoolSpell( BOOL bSilent /* = FALSE */)
         for ( ;; ) {
             iResult = m_pSpell->my_CheckBlock( m_ulOptionsMask, szProbWord, szRepWord );
 
-            if( iResult & SpellCheck_END_OF_BLOCK_RSLT )
+            if( iResult & SSCE_END_OF_BLOCK_RSLT )
                 break;
 
-            if( iResult & (SpellCheck_MISSPELLED_WORD_RSLT | SpellCheck_DOUBLED_WORD_RSLT) ) {
+            if( iResult & (SSCE_MISSPELLED_WORD_RSLT | SSCE_DOUBLED_WORD_RSLT) ) {
                 if ( !bSilent )
                     m_pSpell->myHilightWord(TRUE);    // highlight the misspelled word
                 bRet = FALSE;

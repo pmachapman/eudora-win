@@ -224,7 +224,7 @@ LRESULT*	pResult)
 	// toolbar
 	for( iIndex = 0; iIndex < m_btnGroups.GetSize(); iIndex ++)
 	{
-		if( szName == ((SECBtnGroup*) m_btnGroups[iIndex])->lpszTitle )
+		if( szName == ((SECBtnGroup*) m_btnGroups[iIndex])->GetTitle())
 		{
 			break;
 		}

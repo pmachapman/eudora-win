@@ -14,6 +14,8 @@
 
 #include "DebugNewHelpers.h"
 
+#include "RWUXTheme.h"
+
 extern SEC_AUX_DATA secData;
 
 IMPLEMENT_DYNAMIC(QCCustomizeToolBar, SECCustomizeToolBar);

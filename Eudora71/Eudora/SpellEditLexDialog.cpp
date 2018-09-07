@@ -115,13 +115,13 @@ BOOL CSpellEditLexDialog::OnInitDialog()
 	// edited.
 	switch (lexType)
 	{
-		case SpellCheck_CHANGE_LEX_TYPE:
+		case SSCE_CHANGE_LEX_TYPE:
 			SetWindowText((LPCTSTR)CRString(IDS_SPELL_EDIT_CHANGE_TITLE));
 			break;
-		case SpellCheck_IGNORE_LEX_TYPE:
+		case SSCE_IGNORE_LEX_TYPE:
 			SetWindowText((LPCTSTR)CRString(IDS_SPELL_EDIT_USER_TITLE));
 			break;
-		case SpellCheck_SUGGEST_LEX_TYPE:
+		case SSCE_SUGGEST_LEX_TYPE:
 			SetWindowText((LPCTSTR)CRString(IDS_SPELL_EDIT_SUGGEST_TITLE));
 			break; 
 		default:
@@ -149,7 +149,7 @@ void CSpellEditLexDialog::OnLexClearBtn()
 void CSpellEditLexDialog::OnLexAddBtn() 
 {
 	CEdit*				pWordEdit;
-	SpellCheck_CHAR			szWord[SpellCheck_MAX_WORD_SZ * 2];
+	SpellCheck_CHAR			szWord[SSCE_MAX_WORD_SZ * 2];
 	const SpellCheck_CHAR*	szRepWord;
 	S16					lexType;
 	int					r;
@@ -178,7 +178,7 @@ void CSpellEditLexDialog::OnLexAddBtn()
 	if (strlen((char *) szWord) <= 0)
 		return;	// can't add empty strings
 
-	if (lexType == SpellCheck_CHANGE_LEX_TYPE || lexType == SpellCheck_SUGGEST_LEX_TYPE)
+	if (lexType == SSCE_CHANGE_LEX_TYPE || lexType == SSCE_SUGGEST_LEX_TYPE)
 	{
 		SpellCheck_CHAR* p = (SpellCheck_CHAR*)strchr((char*) szWord, ':');
 
@@ -193,7 +193,7 @@ void CSpellEditLexDialog::OnLexAddBtn()
 
 	r = m_pParent->my_SpellCheck_AddToLex(m_sEditLexID, szWord, szRepWord);
 	
-	if (r == SpellCheck_OUT_OF_MEMORY_ERR)
+	if (r == SSCE_OUT_OF_MEMORY_ERR)
 	{
 		ErrorDialog(IDS_SPELL_ERR_LEX_FULL);
 		return;
@@ -210,7 +210,7 @@ void CSpellEditLexDialog::OnLexAddBtn()
 void CSpellEditLexDialog::OnLexDelBtn() 
 {
 	CEdit*				pWordEdit;
-	SpellCheck_CHAR			szWord[SpellCheck_MAX_WORD_SZ * 2];
+	SpellCheck_CHAR			szWord[SSCE_MAX_WORD_SZ * 2];
 
 	VERIFY( pWordEdit = ( CEdit* ) GetDlgItem(IDC_LEX_WORD_EDIT) );
 	pWordEdit->GetWindowText((char*)szWord, sizeof( szWord));
@@ -226,7 +226,7 @@ void CSpellEditLexDialog::OnSelchangeLexLb()
 	CEdit*			pWordEdit;
 	CListBox*		pLexLB;
 	int				n;
-	char			szSelWord[SpellCheck_MAX_WORD_SZ * 2];
+	char			szSelWord[SSCE_MAX_WORD_SZ * 2];
 	char*			p;
 
 	VERIFY( pLexLB = ( CListBox* ) GetDlgItem(IDC_LEX_LB) );	

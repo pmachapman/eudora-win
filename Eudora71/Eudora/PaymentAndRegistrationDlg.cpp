@@ -220,10 +220,10 @@ BOOL CPaymentAndRegistrationDlg::OnInitDialog()
 	InitBitmapRadioButton(IDC_PAR_PAID, IDB_PAID_BUTTON, m_PaidBitmap);
 	InitBitmapRadioButton(IDC_PAR_FREE, IDB_FREE_BUTTON, m_FreeBitmap);
 	
-	m_RegisterButton.AttachButton(IDC_PAR_REGISTER, SECBitmapButton::Al_Center, IDB_REGISTER_BUTTON, this);
-	m_DemographicsButton.AttachButton(IDC_PAR_DEMOGRAPHICS, SECBitmapButton::Al_Center, IDB_DEMOGRAPHICS_BUTTON, this);
-	m_FindVersionsButton.AttachButton(IDC_PAR_FIND_VERSIONS, SECBitmapButton::Al_Center, IDB_FIND_VERSIONS_BUTTON, this);
-	m_ChangeRegistrationButton.AttachButton(IDC_PAR_CHANGE_REGISTRATION, SECBitmapButton::Al_Center, IDB_CHANGE_REGISTRATION_BUTTON, this);
+	m_RegisterButton.AttachButton(IDC_PAR_REGISTER, stingray::foundation::SECBitmapButton::Al_Center, IDB_REGISTER_BUTTON, this);
+	m_DemographicsButton.AttachButton(IDC_PAR_DEMOGRAPHICS, stingray::foundation::SECBitmapButton::Al_Center, IDB_DEMOGRAPHICS_BUTTON, this);
+	m_FindVersionsButton.AttachButton(IDC_PAR_FIND_VERSIONS, stingray::foundation::SECBitmapButton::Al_Center, IDB_FIND_VERSIONS_BUTTON, this);
+	m_ChangeRegistrationButton.AttachButton(IDC_PAR_CHANGE_REGISTRATION, stingray::foundation::SECBitmapButton::Al_Center, IDB_CHANGE_REGISTRATION_BUTTON, this);
 
 	CDialog::OnInitDialog();
 

@@ -874,7 +874,7 @@ CNicknamesPersonalPage::CNicknamesPersonalPage() :
 BOOL CNicknamesPersonalPage::OnInitDialog()
 {
 	BOOL		bReturn = CNicknamesCustomPage::OnInitDialog();
-	m_Swap.AttachButton(IDC_SWAPNAMES, SECBitmapButton::Al_Center, IDB_SWAP, this);
+	m_Swap.AttachButton(IDC_SWAPNAMES, stingray::foundation::SECBitmapButton::Al_Center, IDB_SWAP, this);
 
 	InitPage();
 

@@ -8,6 +8,7 @@
 #include "rs.h"
 #include "QCImageList.h"
 #include "DebugNewHelpers.h"
+#include "RWUXTheme.h"
 
 
 TOOLKIT_IMPLEMENT_BUTTON(CMoodMailStatic)
