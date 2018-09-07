@@ -6,6 +6,8 @@ Copyright © 1997-2003 John Robbins -- All rights reserved.
 #define _STDAFX_H
 
 #pragma once
+#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_NON_CONFORMING_SWPRINTFS
 #define _CRTDBG_MAP_ALLOC
 #define WIN32_LEAN_AND_MEAN
 #define WINVER 0x0410

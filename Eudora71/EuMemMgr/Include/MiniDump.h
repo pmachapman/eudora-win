@@ -24,8 +24,8 @@ called inside the process space.  Any version of DBGHELP.DLL from WinDBG
 3.0.20 or later, or Windows XP will work just fine.
 
 ----------------------------------------------------------------------*/
-#ifndef _MINIDUMP_H
-#define _MINIDUMP_H
+#ifndef _BUGSLAYER_MINIDUMP_H
+#define _BUGSLAYER_MINIDUMP_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -154,4 +154,4 @@ BUGSUTIL_DLLINTERFACE BSUMDRET
 }
 #endif
 
-#endif // _MINIDUMP_H
+#endif // _BUGSLAYER_MINIDUMP_H

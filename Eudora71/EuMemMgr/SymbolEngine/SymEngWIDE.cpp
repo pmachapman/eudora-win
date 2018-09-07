@@ -68,7 +68,7 @@ DWORD64 CSymbolEngine :: SymLoadModule64 ( IN  HANDLE     hFile       ,
     return ( dwRet ) ;
 }
 
-DWORD UnDecorateSymbolNameW ( PCWSTR DecoratedName       ,
+DWORD __stdcall UnDecorateSymbolNameW ( PCWSTR DecoratedName       ,
                               PWSTR  UnDecoratedName     ,
                               DWORD  UndecoratedLength   ,
                               DWORD  Flags                )

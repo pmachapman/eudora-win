@@ -393,39 +393,6 @@ public      :
 ----------------------------------------------------------------------*/
 public      :
 
-    BOOL SymEnumerateSymbols64 (IN DWORD64                    BaseOfDll,
-                                IN PSYM_ENUMSYMBOLS_CALLBACK64
-                                                    EnumSymbolsCallback,
-                                IN PVOID                   UserContext )
-    {
-        return ( ::SymEnumerateSymbols64 ( m_hProcess          ,
-                                           BaseOfDll           ,
-                                           EnumSymbolsCallback ,
-                                           UserContext          ) ) ;
-    }
-    
-    BOOL SymEnumerateSymbolsW64 ( IN DWORD64                 BaseOfDll,
-                                  IN PSYM_ENUMSYMBOLS_CALLBACK64W
-                                                  EnumSymbolsCallback ,
-                                  IN PVOID                 UserContext )
-    {
-        return ( ::SymEnumerateSymbolsW64 ( m_hProcess          ,
-                                            BaseOfDll           ,
-                                            EnumSymbolsCallback ,
-                                            UserContext          ) ) ;
-    }
-    
-    BOOL SymEnumerateSymbols (IN DWORD64                    BaseOfDll,
-                              IN PSYM_ENUMSYMBOLS_CALLBACK64
-                                                  EnumSymbolsCallback,
-                              IN PVOID                   UserContext )
-    {
-        return ( ::SymEnumerateSymbols64 ( m_hProcess          ,
-                                           BaseOfDll           ,
-                                           EnumSymbolsCallback ,
-                                           UserContext          ) ) ;
-    }
-
     BOOL SymGetSymFromAddr64 ( IN  DWORD64             dwAddr          ,
                                OUT PDWORD64            pdwDisplacement ,
                                OUT PIMAGEHLP_SYMBOL64  Symbol          )

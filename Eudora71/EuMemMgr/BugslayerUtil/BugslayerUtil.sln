@@ -1,39 +1,34 @@
-Microsoft Visual Studio Solution File, Format Version 8.00
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BugslayerUtil", "BugslayerUtil.vcproj", "{B33468BA-E18C-444B-810D-5EF87E9AB41E}"
-	ProjectSection(ProjectDependencies) = postProject
-		{80F67D4C-59AE-445C-A65B-684567043616} = {80F67D4C-59AE-445C-A65B-684567043616}
-		{95100931-3642-4363-A2BC-E31A813CAFAB} = {95100931-3642-4363-A2BC-E31A813CAFAB}
-	EndProjectSection
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2019
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BugslayerUtil", "BugslayerUtil.vcxproj", "{D4CB82B1-7291-478E-A8C3-AE93CB634F0A}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JFX", "..\JFX\JFX.vcproj", "{95100931-3642-4363-A2BC-E31A813CAFAB}"
-	ProjectSection(ProjectDependencies) = postProject
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JFX", "..\JFX\JFX.vcxproj", "{95100931-3642-4363-A2BC-E31A813CAFAB}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SymbolEngine", "..\SymbolEngine\SymbolEngine.vcproj", "{80F67D4C-59AE-445C-A65B-684567043616}"
-	ProjectSection(ProjectDependencies) = postProject
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SymbolEngine", "..\SymbolEngine\SymbolEngine.vcxproj", "{80F67D4C-59AE-445C-A65B-684567043616}"
 EndProject
 Global
-	GlobalSection(SolutionConfiguration) = preSolution
-		Debug = Debug
-		Release = Release
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
 	EndGlobalSection
-	GlobalSection(ProjectConfiguration) = postSolution
-		{B33468BA-E18C-444B-810D-5EF87E9AB41E}.Debug.ActiveCfg = Debug|Win32
-		{B33468BA-E18C-444B-810D-5EF87E9AB41E}.Debug.Build.0 = Debug|Win32
-		{B33468BA-E18C-444B-810D-5EF87E9AB41E}.Release.ActiveCfg = Release|Win32
-		{B33468BA-E18C-444B-810D-5EF87E9AB41E}.Release.Build.0 = Release|Win32
-		{95100931-3642-4363-A2BC-E31A813CAFAB}.Debug.ActiveCfg = Debug|Win32
-		{95100931-3642-4363-A2BC-E31A813CAFAB}.Debug.Build.0 = Debug|Win32
-		{95100931-3642-4363-A2BC-E31A813CAFAB}.Release.ActiveCfg = Release|Win32
-		{95100931-3642-4363-A2BC-E31A813CAFAB}.Release.Build.0 = Release|Win32
-		{80F67D4C-59AE-445C-A65B-684567043616}.Debug.ActiveCfg = Debug|Win32
-		{80F67D4C-59AE-445C-A65B-684567043616}.Debug.Build.0 = Debug|Win32
-		{80F67D4C-59AE-445C-A65B-684567043616}.Release.ActiveCfg = Release|Win32
-		{80F67D4C-59AE-445C-A65B-684567043616}.Release.Build.0 = Release|Win32
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4CB82B1-7291-478E-A8C3-AE93CB634F0A}.Debug|x86.ActiveCfg = Debug|Win32
+		{D4CB82B1-7291-478E-A8C3-AE93CB634F0A}.Release|x86.ActiveCfg = Release|Win32
+		{95100931-3642-4363-A2BC-E31A813CAFAB}.Debug|x86.ActiveCfg = Debug|Win32
+		{95100931-3642-4363-A2BC-E31A813CAFAB}.Debug|x86.Build.0 = Debug|Win32
+		{95100931-3642-4363-A2BC-E31A813CAFAB}.Release|x86.ActiveCfg = Release|Win32
+		{95100931-3642-4363-A2BC-E31A813CAFAB}.Release|x86.Build.0 = Release|Win32
+		{80F67D4C-59AE-445C-A65B-684567043616}.Debug|x86.ActiveCfg = Debug|Win32
+		{80F67D4C-59AE-445C-A65B-684567043616}.Debug|x86.Build.0 = Debug|Win32
+		{80F67D4C-59AE-445C-A65B-684567043616}.Release|x86.ActiveCfg = Release|Win32
+		{80F67D4C-59AE-445C-A65B-684567043616}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-	EndGlobalSection
-	GlobalSection(ExtensibilityAddIns) = postSolution
+		SolutionGuid = {19E4CB39-B012-4263-AFE5-CBB4C3DC86C9}
 	EndGlobalSection
 EndGlobal

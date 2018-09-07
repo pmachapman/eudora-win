@@ -1,21 +1,22 @@
-Microsoft Visual Studio Solution File, Format Version 8.00
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JFX", "JFX.vcproj", "{61420EE0-AC1C-4100-851B-0C85E0C20EAA}"
-	ProjectSection(ProjectDependencies) = postProject
-	EndProjectSection
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2019
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JFX", "JFX.vcxproj", "{95100931-3642-4363-A2BC-E31A813CAFAB}"
 EndProject
 Global
-	GlobalSection(SolutionConfiguration) = preSolution
-		Debug = Debug
-		Release = Release
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
 	EndGlobalSection
-	GlobalSection(ProjectConfiguration) = postSolution
-		{61420EE0-AC1C-4100-851B-0C85E0C20EAA}.Debug.ActiveCfg = Debug|Win32
-		{61420EE0-AC1C-4100-851B-0C85E0C20EAA}.Debug.Build.0 = Debug|Win32
-		{61420EE0-AC1C-4100-851B-0C85E0C20EAA}.Release.ActiveCfg = Release|Win32
-		{61420EE0-AC1C-4100-851B-0C85E0C20EAA}.Release.Build.0 = Release|Win32
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95100931-3642-4363-A2BC-E31A813CAFAB}.Debug|x86.ActiveCfg = Debug|Win32
+		{95100931-3642-4363-A2BC-E31A813CAFAB}.Release|x86.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-	EndGlobalSection
-	GlobalSection(ExtensibilityAddIns) = postSolution
+		SolutionGuid = {6CE77C0E-1F80-478C-8818-3819138D1890}
 	EndGlobalSection
 EndGlobal
