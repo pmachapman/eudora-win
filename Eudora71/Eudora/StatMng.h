@@ -126,8 +126,8 @@ typedef struct
 typedef struct
 {
 	short	version;
-	long	startTime;	//	When did we start collecting stats?
-	long	currentTime;
+	time_t	startTime;	//	When did we start collecting stats?
+	time_t	currentTime;
 	long	unused1	;	//	totalDays;
 	long	unused2	;	//	totalWeeks;
 	long	unused3	;	//	totalMonths;

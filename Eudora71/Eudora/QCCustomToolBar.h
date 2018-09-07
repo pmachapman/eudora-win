@@ -69,6 +69,8 @@ public:
 
 protected:
 	CSafetyPalette m_Palette;
+	UINT           m_nBmpItems;
+	UINT*          m_pBmpItems;
 protected:
 	//{{AFX_MSG(QCCustomToolBar)
 	afx_msg LRESULT OnMyQueryNewPalette(WPARAM wParam, LPARAM lParam);

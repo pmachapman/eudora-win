@@ -29,6 +29,8 @@ public:
 	virtual void NewToolBar( CPoint pt, SECStdBtn& btn, BOOL bPrompt );
 
 protected:
+	UINT           m_nBmpItems;
+	UINT*          m_pBmpItems;
 	CSafetyPalette m_Palette;
 };
 

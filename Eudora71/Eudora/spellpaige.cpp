@@ -89,7 +89,7 @@ int CSpellPaige::ErrMsg(int ret)
 	CString Cause;
 	UINT CauseID = IDS_SPELL_BASE_ERROR;
 
-	if (ret <= SpellCheck_TOO_MANY_SESSIONS_ERR && ret >= SpellCheck_BAD_BLOCK_ID_ERR)
+	if (ret <= SSCE_TOO_MANY_SESSIONS_ERR && ret >= SSCE_BAD_BLOCK_ID_ERR)
 		CauseID += -ret;
 
 	Cause.LoadString(CauseID);
@@ -473,7 +473,7 @@ int CSpellPaige::my_CheckBlock(long options, UCHAR* errWord, UCHAR* repWord)
 				m_prevWord[0] = 0;
 
 				if (m_CurPos >= m_EndChar )
-					return (SpellCheck_END_OF_BLOCK_RSLT);
+					return (SSCE_END_OF_BLOCK_RSLT);
 			}
 		}
 
@@ -487,7 +487,7 @@ int CSpellPaige::my_CheckBlock(long options, UCHAR* errWord, UCHAR* repWord)
 		{
 			long		length = 0;
 			
-			m_pView->GetPgText( reinterpret_cast<char *>(errWord), SpellCheck_MAX_WORD_SZ, m_theSelection, FALSE, &length );
+			m_pView->GetPgText( reinterpret_cast<char *>(errWord), SSCE_MAX_WORD_SZ, m_theSelection, FALSE, &length );
 
 			// If word starts with single quote - remove it
 			if ( (length > 0) && (static_cast<char>(*errWord) == '\'') )
@@ -522,26 +522,26 @@ int CSpellPaige::my_CheckBlock(long options, UCHAR* errWord, UCHAR* repWord)
 
 			// Hack check for dashes, spaces, etc.
 			if ( (strlen((char*)errWord)==1) && ( ispunct((int)(unsigned char)errWord[0]) || isspace((int)(unsigned char)errWord[0] ) ))
-				result = SpellCheck_OK_RSLT; 
+				result = SSCE_OK_RSLT;
 			else
-				result = m_pSpellDialog->my_SpellCheck_CheckWord( options, errWord, repWord, SpellCheck_MAX_WORD_SZ );
+				result = m_pSpellDialog->my_SpellCheck_CheckWord( options, errWord, repWord, SSCE_MAX_WORD_SZ );
 
 			//SDSpellTRACE("Check: %s %d\n",errWord,result);
 
 			// Check for doubled words.
-			if (m_pSpellDialog->GetOptionsMask() & SpellCheck_REPORT_DOUBLED_WORD_OPT)
+			if (m_pSpellDialog->GetOptionsMask() &SSCE_REPORT_DOUBLED_WORD_OPT)
 			{
 				if (BlockIsDoubledWord((char *)errWord))
-					result |= SpellCheck_DOUBLED_WORD_RSLT;
+					result |= SSCE_DOUBLED_WORD_RSLT;
 			}
 	
 			// Exit early if the client must respond to this word.
-			if (result & SpellCheck_CHANGE_WORD_RSLT)
+			if (result & SSCE_CHANGE_WORD_RSLT)
 			{
 				myHilightWord();
 				my_ReplaceBlockWord(errWord, repWord);
 			}
-			else if (result != SpellCheck_OK_RSLT)
+			else if (result != SSCE_OK_RSLT)
 			{
 				m_pSpellDialog->SetMisspellings( TRUE );
 				return (result);
@@ -550,7 +550,7 @@ int CSpellPaige::my_CheckBlock(long options, UCHAR* errWord, UCHAR* repWord)
 			
 	}
 	
-	return (SpellCheck_END_OF_BLOCK_RSLT);
+	return (SSCE_END_OF_BLOCK_RSLT);
 }
 
 
@@ -656,7 +656,7 @@ int CSpellPaige::Popup(CPaigeEdtView* pView, POINT& point, select_pair& sel)
 	BOOL	doubledWord = FALSE;
 	int		nLength = sel.end - sel.begin;
 
-	if (m_pSpellDialog->GetOptionsMask() & SpellCheck_REPORT_DOUBLED_WORD_OPT)
+	if (m_pSpellDialog->GetOptionsMask() & SSCE_REPORT_DOUBLED_WORD_OPT)
 	{
 		if (sel.begin != 0)
 		{

@@ -24,6 +24,11 @@ public:
 	virtual void DeleteAllUnusedBitmaps();
 
 protected:
+	CBitmap  m_bmp;
+	UINT     m_nBmpItems;
+	int      m_nImgWidth;
+	int      m_nImgHeight;
+	UINT*    m_pBmpItems;
 };
 
 class QCToolBarManager : public QCToolBarManagerWithBM  

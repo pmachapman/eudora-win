@@ -268,11 +268,11 @@ void CSpellDialog::RunChecker()
 
 	// FULL-FEATURE
 	
-	SpellCheck_CHAR	szProbWord[SpellCheck_MAX_WORD_SZ];
-	SpellCheck_CHAR	szRepWord[SpellCheck_MAX_WORD_SZ];
+	SpellCheck_CHAR	szProbWord[SSCE_MAX_WORD_SZ];
+	SpellCheck_CHAR	szRepWord[SSCE_MAX_WORD_SZ];
 	INT			iResult;
 	INT			n;
-	char		szFirstWord[SpellCheck_MAX_WORD_SZ];
+	char		szFirstWord[SSCE_MAX_WORD_SZ];
 
 
 	// Disable all the button controls. They will be re-enabled as
@@ -896,7 +896,7 @@ LRESULT CSpellDialog::OnContextMenu(WPARAM wParam, LPARAM lParam)
 
 void CSpellDialog::OnChangeReplacementWord() 
 {
-	SpellCheck_CHAR szRepWord[SpellCheck_MAX_WORD_SZ];
+	SpellCheck_CHAR szRepWord[SSCE_MAX_WORD_SZ];
 	
 	// These may be used later.
 	m_pWndRepWordEdit->GetWindowText( (char*)szRepWord, sizeof(szRepWord)); 
@@ -957,7 +957,7 @@ void CSpellDialog::OnIgnore()
 
 void CSpellDialog::OnIgnoreAll() 
 {
-	SpellCheck_CHAR probWord[SpellCheck_MAX_WORD_SZ];
+	SpellCheck_CHAR probWord[SSCE_MAX_WORD_SZ];
 	
 	m_pWndProbWordTxt->GetWindowText( (char*)probWord, sizeof(probWord));
 	
@@ -984,8 +984,8 @@ void CSpellDialog::OnReplaceIt()
 
 	// FULL-FEATURE
 
-	SpellCheck_CHAR probWord[SpellCheck_MAX_WORD_SZ];
-	SpellCheck_CHAR repWord[SpellCheck_MAX_WORD_SZ];
+	SpellCheck_CHAR probWord[SSCE_MAX_WORD_SZ];
+	SpellCheck_CHAR repWord[SSCE_MAX_WORD_SZ];
 
 	m_pWndProbWordTxt->GetWindowText( (char*)probWord, sizeof(probWord));
 	m_pWndRepWordEdit->GetWindowText( (char*)repWord, sizeof(repWord)); 
@@ -1020,8 +1020,8 @@ void CSpellDialog::OnReplaceAll()
 
 	// FULL-FEATURE
 
-	SpellCheck_CHAR probWord[SpellCheck_MAX_WORD_SZ];
-	SpellCheck_CHAR repWord[SpellCheck_MAX_WORD_SZ];
+	SpellCheck_CHAR probWord[SSCE_MAX_WORD_SZ];
+	SpellCheck_CHAR repWord[SSCE_MAX_WORD_SZ];
 
 	m_pWndProbWordTxt->GetWindowText( (char*)probWord, sizeof(probWord));
 	m_pWndRepWordEdit->GetWindowText( (char*)repWord, sizeof(repWord)); 
@@ -1051,7 +1051,7 @@ void CSpellDialog::OnReplaceAll()
 
 void CSpellDialog::OnAddToLex() 
 {
-	SpellCheck_CHAR probWord[SpellCheck_MAX_WORD_SZ];
+	SpellCheck_CHAR probWord[SSCE_MAX_WORD_SZ];
 
 	m_pWndProbWordTxt->GetWindowText( (char*)probWord, sizeof(probWord));
 
@@ -1067,8 +1067,8 @@ void CSpellDialog::AddToLex(SpellCheck_CHAR* probWord)
 
 void CSpellDialog::OnSuggest() 
 {
-	SpellCheck_CHAR	probWord[SpellCheck_MAX_WORD_SZ];
-	SpellCheck_CHAR	repWord[SpellCheck_MAX_WORD_SZ];
+	SpellCheck_CHAR	probWord[SSCE_MAX_WORD_SZ];
+	SpellCheck_CHAR	repWord[SSCE_MAX_WORD_SZ];
 	INT			n;
 
 	m_pWndProbWordTxt->GetWindowText( (char*)probWord, sizeof(probWord));
@@ -1093,7 +1093,7 @@ void CSpellDialog::OnSuggest()
 	
 	if (n > 0)
 	{
-		char firstWord[SpellCheck_MAX_WORD_SZ];
+		char firstWord[SSCE_MAX_WORD_SZ];
 
 		// Display the first suggestion in the Replacement field.
 		m_pWndSuggestList->SendMessage( LB_GETTEXT, 0, (LPARAM)firstWord);
@@ -1129,7 +1129,7 @@ void CSpellDialog::OnDblclkSuggestList()
 void CSpellDialog::OnSelchangeSuggestList() 
 {
 	int n;
-	char selWord[SpellCheck_MAX_WORD_SZ];
+	char selWord[SSCE_MAX_WORD_SZ];
 
 	// The selected item in the Suggestion List has
 	// changed. Copy the new selection to the Replacement
@@ -1321,8 +1321,8 @@ BOOL CSpellDialog::DoCoolSpell( BOOL bSilent /* = FALSE */)
     {
         // FULL-FEATURE
 
-        SpellCheck_CHAR   szProbWord[SpellCheck_MAX_WORD_SZ];
-        SpellCheck_CHAR   szRepWord[SpellCheck_MAX_WORD_SZ];
+        SpellCheck_CHAR   szProbWord[SSCE_MAX_WORD_SZ];
+        SpellCheck_CHAR   szRepWord[SSCE_MAX_WORD_SZ];
         INT         iResult;
 
         CWaitCursor wait;
